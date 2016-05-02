@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+  pool: 10
+  timeout: 5000
+
+development:
+  <<: *defaults
+  database:  escorts_development
+
+test:
+  <<: *defaults
+  database:  escorts_test
+
+production:
+  <<: *defaults
+  database:  escorts_production
+  username: escorts
+  password: <%= ENV['ESCORTS_DATABASE_PASSWORD'] %>

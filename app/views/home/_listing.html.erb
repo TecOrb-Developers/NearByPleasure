@@ -1,0 +1,434 @@
+<div class="grid list job_listings">
+
+	<%@escorts.each do |e|%>
+	<a class="grid__item" href="<%=page2_path%>" data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
+			<aside class="card__image" style="background-image: url(<%=e.images.first.name%>);">
+			</aside><!-- .card__image -->
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name"><%=e.title%></h2>
+				<div class="card__tagline" itemprop="description"><%=e.contact%></div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul><!-- .card__tags -->
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Exmouth Market</span>
+							<span class="address__street-no">2</span>
+						</div>	
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div><!-- .card__content -->
+		</article><!-- .card.card--listing -->
+	</a><!-- .grid__item -->
+	<%end%>
+	<!-- 			
+	<a class="grid__item" href="<%=page2_path%>" data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5324606" data-longitude="-0.1201026" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/think-eat-drink/" data-categories="Food, Restaurant" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-food.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">Think Eat Drink</h2>
+				<div class="card__tagline" itemprop="description">Sustainability in Hospitality</div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-12 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><g fill="currentColor"><path d="M18.372 36.737h-.036c-1.278 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-3.367 2.39-6.106 5.325-6.106 2.938 0 5.325 2.74 5.325 6.106 0 1.833-.71 3.552-1.946 4.715-.672.634-1.043 1.442-1.043 2.278v10.17c0 1.282-1.04 2.322-2.318 2.322zm-.02-24.55c-2.363 0-4.285 2.273-4.285 5.065 0 1.547.59 2.99 1.617 3.96.884.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.28-.575 1.28-1.28V24.244c0-1.126.487-2.202 1.37-3.034 1.03-.968 1.62-2.41 1.62-3.958.002-2.794-1.922-5.066-4.287-5.066zM29.983 36.737h-.036c-1.28 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-1.406 0-3.155 1.094-4.374.21-.23.49-.357.797-.357.582 0 1.056.46 1.077 1.033l.448 3.343c.01.072.127.053.133-.002l.46-4.1c.015-.487.364-.91.843-1.017.04-.007.075-.013.113-.013h.728c.04 0 .077.004.113.013.478.106.828.53.843 1.016l.46 4.1c.01.075.125.056.132.003l.45-3.343c.02-.572.495-1.032 1.075-1.032.307 0 .588.127.796.358 1.093 1.22 1.093 2.968 1.093 4.374 0 1.833-.71 3.552-1.945 4.715-.67.634-1.042 1.444-1.042 2.278v10.17c-.002 1.282-1.042 2.322-2.323 2.322zm-3.865-23.512l.386.347c-.766.854-.826 2.118-.826 3.68 0 1.547.59 2.99 1.617 3.96.883.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.282-.575 1.282-1.28V24.244c0-1.126.486-2.202 1.37-3.034 1.028-.968 1.617-2.41 1.617-3.958 0-1.562-.062-2.826-.828-3.68 0 .023-.062.067-.066.09l-.452 3.372c-.072.545-.542.956-1.092.956-.57 0-1.042-.42-1.105-.978l-.46-4.126c-.003-.02-.005-.038-.005-.06l.004-.02h-.533c-.008.023-.03.063-.03.08l-.462 4.126c-.062.557-.533.978-1.095.978-.56 0-1.03-.41-1.1-.956l-.453-3.373c-.003-.02-.003-.044-.003-.067l-.452-.368z"></path><path d="M18.397 21.105c-1.72 0-3.118-1.67-3.118-3.723 0-2.054 1.397-3.724 3.117-3.724.216 0 .39.174.39.39 0 .215-.174.39-.39.39-1.29 0-2.338 1.32-2.338 2.944 0 1.623 1.046 2.944 2.337 2.944.216 0 .39.174.39.39 0 .215-.174.39-.39.39z"></path></g></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>	
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Caledonian Road</span>
+							<span class="address__street-no">51</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">N1 9BU</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+
+				
+	<a class="grid__item" href="<%=page2_path%>" data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5266457" data-longitude="-0.0782788" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/house-of-hackney/" data-categories="Furniture / Home, Shops" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-furniture.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">House of Hackney</h2>
+				<div class="card__tagline" itemprop="description">British luxury shop at home.</div>
+				<footer class="card__footer">
+					<div class="card__rating  card__pin">
+						<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+	    				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+	        		<path d="M7,0 C3.13383665,0 0,3.0828692 0,6.88540084 C0,10.68827 6.33390528,20 7,20 C7.66609472,20 14,10.68827 14,6.88540084 C14,3.0828692 10.8661633,0 7,0 L7,0 Z M7,9.87341772 C5.2947838,9.87341772 3.91146191,8.51274262 3.91146191,6.83544304 C3.91146191,5.15814346 5.2947838,3.79746835 7,3.79746835 C8.7052162,3.79746835 10.0885381,5.15814346 10.0885381,6.83544304 C10.0885381,8.51274262 8.7052162,9.87341772 7,9.87341772 L7,9.87341772 Z" id="Imported-Layers-Copy-5" fill="currentColor" sketch:type="MSShapeGroup"></path>
+	    				</g>
+						</svg>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="18" height="26" viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-16 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M18.92 26.79c.11.016.227.03.34.044-.474.387-.843.87-1.017 1.395l-.01.027-2.212 8.043c-.08.295.093.6.388.68.05.013.098.02.147.02.243 0 .466-.162.533-.407l2.21-8.028c.256-.747 1.21-1.406 2.137-1.513-.15.224-.27.474-.335.74l-1.197 5.83c-.046.224.1.443.323.49.028.005.056.008.084.008.193 0 .366-.136.406-.332l1.194-5.813c.087-.353.34-.687.634-.887.704.027 1.437.042 2.19.042.756 0 1.49-.015 2.193-.042.294.2.545.528.63.87l1.197 5.83c.04.196.213.332.406.332.028 0 .056-.003.084-.01.225-.045.37-.264.323-.49l-1.2-5.845c-.065-.26-.18-.503-.33-.722.926.107 1.88.766 2.136 1.512l2.21 8.028c.067.246.29.407.532.407.05 0 .098-.006.147-.02.295-.08.468-.385.387-.68l-2.215-8.043-.008-.028c-.175-.526-.543-1.008-1.02-1.396.116-.015.233-.028.342-.044 1.975-.284 2.82-.67 2.91-1.33.11-.78-.867-1.17-1.837-1.446-2.995-.855-3.438-1.423-3.49-1.628-.073-.295.565-.91 1.128-1.455.702-.677 1.575-1.522 2.11-2.594 1.06-2.13.632-3.628.086-4.51C30.164 11.74 27.028 11 24.736 11c-2.294 0-5.43.74-6.722 2.827-.546.88-.974 2.38.087 4.51.47.942 1.177 1.713 1.802 2.392.602.655 1.225 1.332 1.118 1.71-.076.27-.59.836-3.174 1.574-.97.277-1.947.665-1.838 1.447.093.66.937 1.046 2.913 1.33zm-.77-1.712c2.497-.713 3.674-1.412 3.935-2.34.274-.97-.487-1.798-1.368-2.757-.575-.625-1.227-1.334-1.626-2.137-.668-1.344-.714-2.5-.136-3.433.986-1.59 3.614-2.304 5.78-2.304 2.17 0 4.797.713 5.782 2.304.578.934.532 2.09-.137 3.433-.45.902-1.214 1.64-1.888 2.293-.89.86-1.66 1.604-1.43 2.52.234.934 1.428 1.614 4.258 2.422.352.1.595.19.76.26-.64.225-2.057.47-4.175.596-.042 0-.084-.005-.126-.005-.05 0-.096.007-.14.02-.862.046-1.83.074-2.905.074-1.076 0-2.043-.03-2.904-.075-.044-.013-.09-.02-.14-.02-.04 0-.083.003-.125.004-2.118-.127-3.536-.37-4.175-.595.165-.073.408-.162.76-.262z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-14 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M33.333 19.065h-4V17.03c0-2.602-2.18-5.03-4.766-5.03C21.98 12 20 14.428 20 17.03v2.035h-4l-2 14.912h22l-2.667-14.912zm-12-2.033c0-1.998 1.248-3.462 3.234-3.462 1.985 0 3.433 1.464 3.433 3.462v2.033h-6.667v-2.033zm-4 3.388H20v.68c-.36.233-.6.64-.6 1.104 0 .722.58 1.308 1.292 1.308.714 0 1.292-.586 1.292-1.308 0-.486-.262-.91-.65-1.135v-.65H28v.91c-.206.23-.333.537-.333.874 0 .722.578 1.308 1.292 1.308.712 0 1.29-.586 1.29-1.308 0-.59-.386-1.09-.916-1.252v-.532H32l2 12.2H16l1.334-12.2z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Shoreditch High Street</span>
+							<span class="address__street-no">131</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">E1 6JE</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+
+	<a class="grid__item" href="<%=page2_path%>" data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">Paesan</h2>
+				<div class="card__tagline" itemprop="description">Traditional home cooked recipes</div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Exmouth Market</span>
+							<span class="address__street-no">2</span>
+						</div>	
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+
+				
+	<a class="grid__item" href="<%=page2_path%>" data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5324606" data-longitude="-0.1201026" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/think-eat-drink/" data-categories="Food, Restaurant" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-food.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">Think Eat Drink</h2>
+				<div class="card__tagline" itemprop="description">Sustainability in Hospitality</div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-12 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><g fill="currentColor"><path d="M18.372 36.737h-.036c-1.278 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-3.367 2.39-6.106 5.325-6.106 2.938 0 5.325 2.74 5.325 6.106 0 1.833-.71 3.552-1.946 4.715-.672.634-1.043 1.442-1.043 2.278v10.17c0 1.282-1.04 2.322-2.318 2.322zm-.02-24.55c-2.363 0-4.285 2.273-4.285 5.065 0 1.547.59 2.99 1.617 3.96.884.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.28-.575 1.28-1.28V24.244c0-1.126.487-2.202 1.37-3.034 1.03-.968 1.62-2.41 1.62-3.958.002-2.794-1.922-5.066-4.287-5.066zM29.983 36.737h-.036c-1.28 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-1.406 0-3.155 1.094-4.374.21-.23.49-.357.797-.357.582 0 1.056.46 1.077 1.033l.448 3.343c.01.072.127.053.133-.002l.46-4.1c.015-.487.364-.91.843-1.017.04-.007.075-.013.113-.013h.728c.04 0 .077.004.113.013.478.106.828.53.843 1.016l.46 4.1c.01.075.125.056.132.003l.45-3.343c.02-.572.495-1.032 1.075-1.032.307 0 .588.127.796.358 1.093 1.22 1.093 2.968 1.093 4.374 0 1.833-.71 3.552-1.945 4.715-.67.634-1.042 1.444-1.042 2.278v10.17c-.002 1.282-1.042 2.322-2.323 2.322zm-3.865-23.512l.386.347c-.766.854-.826 2.118-.826 3.68 0 1.547.59 2.99 1.617 3.96.883.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.282-.575 1.282-1.28V24.244c0-1.126.486-2.202 1.37-3.034 1.028-.968 1.617-2.41 1.617-3.958 0-1.562-.062-2.826-.828-3.68 0 .023-.062.067-.066.09l-.452 3.372c-.072.545-.542.956-1.092.956-.57 0-1.042-.42-1.105-.978l-.46-4.126c-.003-.02-.005-.038-.005-.06l.004-.02h-.533c-.008.023-.03.063-.03.08l-.462 4.126c-.062.557-.533.978-1.095.978-.56 0-1.03-.41-1.1-.956l-.453-3.373c-.003-.02-.003-.044-.003-.067l-.452-.368z"></path><path d="M18.397 21.105c-1.72 0-3.118-1.67-3.118-3.723 0-2.054 1.397-3.724 3.117-3.724.216 0 .39.174.39.39 0 .215-.174.39-.39.39-1.29 0-2.338 1.32-2.338 2.944 0 1.623 1.046 2.944 2.337 2.944.216 0 .39.174.39.39 0 .215-.174.39-.39.39z"></path></g></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>	
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Caledonian Road</span>
+							<span class="address__street-no">51</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">N1 9BU</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+				
+	<a class="grid__item" href="<%=page2_path%>"  data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5266457" data-longitude="-0.0782788" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/house-of-hackney/" data-categories="Furniture / Home, Shops" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-furniture.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">House of Hackney</h2>
+				<div class="card__tagline" itemprop="description">British luxury shop at home.</div>
+				<footer class="card__footer">
+					<div class="card__rating  card__pin">
+						<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+	    				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+	        		<path d="M7,0 C3.13383665,0 0,3.0828692 0,6.88540084 C0,10.68827 6.33390528,20 7,20 C7.66609472,20 14,10.68827 14,6.88540084 C14,3.0828692 10.8661633,0 7,0 L7,0 Z M7,9.87341772 C5.2947838,9.87341772 3.91146191,8.51274262 3.91146191,6.83544304 C3.91146191,5.15814346 5.2947838,3.79746835 7,3.79746835 C8.7052162,3.79746835 10.0885381,5.15814346 10.0885381,6.83544304 C10.0885381,8.51274262 8.7052162,9.87341772 7,9.87341772 L7,9.87341772 Z" id="Imported-Layers-Copy-5" fill="currentColor" sketch:type="MSShapeGroup"></path>
+	    				</g>
+						</svg>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="18" height="26" viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-16 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M18.92 26.79c.11.016.227.03.34.044-.474.387-.843.87-1.017 1.395l-.01.027-2.212 8.043c-.08.295.093.6.388.68.05.013.098.02.147.02.243 0 .466-.162.533-.407l2.21-8.028c.256-.747 1.21-1.406 2.137-1.513-.15.224-.27.474-.335.74l-1.197 5.83c-.046.224.1.443.323.49.028.005.056.008.084.008.193 0 .366-.136.406-.332l1.194-5.813c.087-.353.34-.687.634-.887.704.027 1.437.042 2.19.042.756 0 1.49-.015 2.193-.042.294.2.545.528.63.87l1.197 5.83c.04.196.213.332.406.332.028 0 .056-.003.084-.01.225-.045.37-.264.323-.49l-1.2-5.845c-.065-.26-.18-.503-.33-.722.926.107 1.88.766 2.136 1.512l2.21 8.028c.067.246.29.407.532.407.05 0 .098-.006.147-.02.295-.08.468-.385.387-.68l-2.215-8.043-.008-.028c-.175-.526-.543-1.008-1.02-1.396.116-.015.233-.028.342-.044 1.975-.284 2.82-.67 2.91-1.33.11-.78-.867-1.17-1.837-1.446-2.995-.855-3.438-1.423-3.49-1.628-.073-.295.565-.91 1.128-1.455.702-.677 1.575-1.522 2.11-2.594 1.06-2.13.632-3.628.086-4.51C30.164 11.74 27.028 11 24.736 11c-2.294 0-5.43.74-6.722 2.827-.546.88-.974 2.38.087 4.51.47.942 1.177 1.713 1.802 2.392.602.655 1.225 1.332 1.118 1.71-.076.27-.59.836-3.174 1.574-.97.277-1.947.665-1.838 1.447.093.66.937 1.046 2.913 1.33zm-.77-1.712c2.497-.713 3.674-1.412 3.935-2.34.274-.97-.487-1.798-1.368-2.757-.575-.625-1.227-1.334-1.626-2.137-.668-1.344-.714-2.5-.136-3.433.986-1.59 3.614-2.304 5.78-2.304 2.17 0 4.797.713 5.782 2.304.578.934.532 2.09-.137 3.433-.45.902-1.214 1.64-1.888 2.293-.89.86-1.66 1.604-1.43 2.52.234.934 1.428 1.614 4.258 2.422.352.1.595.19.76.26-.64.225-2.057.47-4.175.596-.042 0-.084-.005-.126-.005-.05 0-.096.007-.14.02-.862.046-1.83.074-2.905.074-1.076 0-2.043-.03-2.904-.075-.044-.013-.09-.02-.14-.02-.04 0-.083.003-.125.004-2.118-.127-3.536-.37-4.175-.595.165-.073.408-.162.76-.262z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-14 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M33.333 19.065h-4V17.03c0-2.602-2.18-5.03-4.766-5.03C21.98 12 20 14.428 20 17.03v2.035h-4l-2 14.912h22l-2.667-14.912zm-12-2.033c0-1.998 1.248-3.462 3.234-3.462 1.985 0 3.433 1.464 3.433 3.462v2.033h-6.667v-2.033zm-4 3.388H20v.68c-.36.233-.6.64-.6 1.104 0 .722.58 1.308 1.292 1.308.714 0 1.292-.586 1.292-1.308 0-.486-.262-.91-.65-1.135v-.65H28v.91c-.206.23-.333.537-.333.874 0 .722.578 1.308 1.292 1.308.712 0 1.29-.586 1.29-1.308 0-.59-.386-1.09-.916-1.252v-.532H32l2 12.2H16l1.334-12.2z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Shoreditch High Street</span>
+							<span class="address__street-no">131</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">E1 6JE</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+				
+	<a class="grid__item" href="<%=page2_path%>"  data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5193003" data-longitude="-0.1407246" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/08_listable_demo-450x300.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/the-attendant/" data-categories="Café, Food" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-coffee.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/08_listable_demo-450x300.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">The Attendant</h2>
+				<div class="card__tagline" itemprop="description">Breakfast, Brunch, Lunch &amp; Afternoon Tea</div>
+				<footer class="card__footer">
+						<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+							<meta itemprop="ratingValue" content="5.0">
+							<meta itemprop="reviewCount" content="1; ?>">
+							<span class="js-average-rating">5.0</span>
+						</div>
+						<ul class="card__tags">
+							<li>
+								<div class="card__tag">
+									<div class="pin__icon">
+										<svg width="30" height="23" viewBox="0 0 30 23" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -13)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><g fill="currentColor"><path d="M36.478 24.615c-.562-.218-1.193-.308-1.837-.31H13.16c.4 10.906 8.715 11.425 10.74 11.425 1.387 0 5.722-.245 8.446-3.9.334.067.71.105 1.106.105 1.29 0 2.794-.375 3.75-1.312 1.915-1.877 1.878-4.994-.724-6.008zM28.98 32.67c-1.894 1.186-3.995 1.363-5.08 1.363-1.084 0-3.185-.177-5.08-1.363-2.105-1.32-3.385-3.56-3.816-6.67h17.794c-.43 3.11-1.71 5.35-3.817 6.67zm7.035-3.258c-.52.51-1.502.827-2.563.827-.05 0-.093-.006-.14-.007.56-1.15.98-2.543 1.19-4.225.044 0 .087-.006.13-.006.486 0 .9.065 1.23.194.542.21.853.553.955 1.047.143.7-.172 1.55-.802 2.17zM20.124 23.075c.18 0 .36-.056.513-.173.373-.285.445-.816.16-1.19-.596-.782-.848-1.487-.747-2.095.058-.354.226-.603.44-.917.26-.388.586-.87.7-1.586.177-1.11-.233-2.295-1.217-3.525-.293-.367-.826-.426-1.192-.134-.365.293-.424.827-.132 1.192.674.842.966 1.58.867 2.2-.055.344-.213.578-.432.902-.26.388-.587.87-.707 1.59-.18 1.087.18 2.232 1.073 3.4.166.22.418.335.674.335zM24.01 23.075c.18 0 .36-.056.514-.173.373-.285.444-.816.16-1.19-.597-.782-.848-1.488-.748-2.095.06-.354.227-.603.44-.917.26-.388.587-.87.7-1.587.177-1.108-.233-2.294-1.217-3.524-.293-.367-.827-.426-1.193-.134-.365.293-.425.827-.132 1.192.673.842.965 1.582.867 2.2-.055.344-.213.578-.432.902-.262.388-.588.87-.707 1.59-.18 1.087.18 2.232 1.072 3.4.168.22.42.335.676.335zM27.745 23.075c.18 0 .36-.056.513-.173.373-.285.445-.816.16-1.19-.597-.782-.848-1.487-.747-2.096.06-.353.227-.602.44-.916.262-.388.587-.87.7-1.586.178-1.11-.232-2.295-1.216-3.525-.293-.367-.826-.426-1.192-.134-.366.293-.425.827-.133 1.192.673.842.965 1.58.866 2.2-.055.344-.213.578-.43.902-.263.388-.59.87-.708 1.59-.18 1.087.18 2.232 1.072 3.4.167.22.42.335.675.335z"></path></g></g></svg>									</div>
+								</div>
+							</li>	
+							<li>
+								<div class="card__tag">
+									<div class="pin__icon">
+										<svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-12 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><g fill="currentColor"><path d="M18.372 36.737h-.036c-1.278 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-3.367 2.39-6.106 5.325-6.106 2.938 0 5.325 2.74 5.325 6.106 0 1.833-.71 3.552-1.946 4.715-.672.634-1.043 1.442-1.043 2.278v10.17c0 1.282-1.04 2.322-2.318 2.322zm-.02-24.55c-2.363 0-4.285 2.273-4.285 5.065 0 1.547.59 2.99 1.617 3.96.884.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.28-.575 1.28-1.28V24.244c0-1.126.487-2.202 1.37-3.034 1.03-.968 1.62-2.41 1.62-3.958.002-2.794-1.922-5.066-4.287-5.066zM29.983 36.737h-.036c-1.28 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-1.406 0-3.155 1.094-4.374.21-.23.49-.357.797-.357.582 0 1.056.46 1.077 1.033l.448 3.343c.01.072.127.053.133-.002l.46-4.1c.015-.487.364-.91.843-1.017.04-.007.075-.013.113-.013h.728c.04 0 .077.004.113.013.478.106.828.53.843 1.016l.46 4.1c.01.075.125.056.132.003l.45-3.343c.02-.572.495-1.032 1.075-1.032.307 0 .588.127.796.358 1.093 1.22 1.093 2.968 1.093 4.374 0 1.833-.71 3.552-1.945 4.715-.67.634-1.042 1.444-1.042 2.278v10.17c-.002 1.282-1.042 2.322-2.323 2.322zm-3.865-23.512l.386.347c-.766.854-.826 2.118-.826 3.68 0 1.547.59 2.99 1.617 3.96.883.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.282-.575 1.282-1.28V24.244c0-1.126.486-2.202 1.37-3.034 1.028-.968 1.617-2.41 1.617-3.958 0-1.562-.062-2.826-.828-3.68 0 .023-.062.067-.066.09l-.452 3.372c-.072.545-.542.956-1.092.956-.57 0-1.042-.42-1.105-.978l-.46-4.126c-.003-.02-.005-.038-.005-.06l.004-.02h-.533c-.008.023-.03.063-.03.08l-.462 4.126c-.062.557-.533.978-1.095.978-.56 0-1.03-.41-1.1-.956l-.453-3.373c-.003-.02-.003-.044-.003-.067l-.452-.368z"></path><path d="M18.397 21.105c-1.72 0-3.118-1.67-3.118-3.723 0-2.054 1.397-3.724 3.117-3.724.216 0 .39.174.39.39 0 .215-.174.39-.39.39-1.29 0-2.338 1.32-2.338 2.944 0 1.623 1.046 2.944 2.337 2.944.216 0 .39.174.39.39 0 .215-.174.39-.39.39z"></path></g></g></svg>									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Foley Street</span>
+							<span class="address__street-no">27A</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">W1W 6DY</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+
+	<a class="grid__item" href="<%=page2_path%>"  data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">Paesan</h2>
+				<div class="card__tagline" itemprop="description">Traditional home cooked recipes</div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Exmouth Market</span>
+							<span class="address__street-no">2</span>
+						</div>	
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+				
+	<a class="grid__item" href="<%=page2_path%>"  data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5324606" data-longitude="-0.1201026" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/think-eat-drink/" data-categories="Food, Restaurant" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-food.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/07_listable_demo-450x299.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">Think Eat Drink</h2>
+				<div class="card__tagline" itemprop="description">Sustainability in Hospitality</div>
+				<footer class="card__footer">
+					<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+						<meta itemprop="ratingValue" content="4.0">
+						<meta itemprop="reviewCount" content="1; ?>">
+						<span class="js-average-rating">4.0</span>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="24" height="26" viewBox="0 0 24 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-12 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><g fill="currentColor"><path d="M18.372 36.737h-.036c-1.278 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-3.367 2.39-6.106 5.325-6.106 2.938 0 5.325 2.74 5.325 6.106 0 1.833-.71 3.552-1.946 4.715-.672.634-1.043 1.442-1.043 2.278v10.17c0 1.282-1.04 2.322-2.318 2.322zm-.02-24.55c-2.363 0-4.285 2.273-4.285 5.065 0 1.547.59 2.99 1.617 3.96.884.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.28-.575 1.28-1.28V24.244c0-1.126.487-2.202 1.37-3.034 1.03-.968 1.62-2.41 1.62-3.958.002-2.794-1.922-5.066-4.287-5.066zM29.983 36.737h-.036c-1.28 0-2.32-1.04-2.32-2.32V24.244c0-.836-.37-1.644-1.04-2.278-1.237-1.163-1.946-2.882-1.946-4.715 0-1.406 0-3.155 1.094-4.374.21-.23.49-.357.797-.357.582 0 1.056.46 1.077 1.033l.448 3.343c.01.072.127.053.133-.002l.46-4.1c.015-.487.364-.91.843-1.017.04-.007.075-.013.113-.013h.728c.04 0 .077.004.113.013.478.106.828.53.843 1.016l.46 4.1c.01.075.125.056.132.003l.45-3.343c.02-.572.495-1.032 1.075-1.032.307 0 .588.127.796.358 1.093 1.22 1.093 2.968 1.093 4.374 0 1.833-.71 3.552-1.945 4.715-.67.634-1.042 1.444-1.042 2.278v10.17c-.002 1.282-1.042 2.322-2.323 2.322zm-3.865-23.512l.386.347c-.766.854-.826 2.118-.826 3.68 0 1.547.59 2.99 1.617 3.96.883.83 1.37 1.907 1.37 3.033v10.17c0 .707.575 1.282 1.28 1.282h.036c.706 0 1.282-.575 1.282-1.28V24.244c0-1.126.486-2.202 1.37-3.034 1.028-.968 1.617-2.41 1.617-3.958 0-1.562-.062-2.826-.828-3.68 0 .023-.062.067-.066.09l-.452 3.372c-.072.545-.542.956-1.092.956-.57 0-1.042-.42-1.105-.978l-.46-4.126c-.003-.02-.005-.038-.005-.06l.004-.02h-.533c-.008.023-.03.063-.03.08l-.462 4.126c-.062.557-.533.978-1.095.978-.56 0-1.03-.41-1.1-.956l-.453-3.373c-.003-.02-.003-.044-.003-.067l-.452-.368z"></path><path d="M18.397 21.105c-1.72 0-3.118-1.67-3.118-3.723 0-2.054 1.397-3.724 3.117-3.724.216 0 .39.174.39.39 0 .215-.174.39-.39.39-1.29 0-2.338 1.32-2.338 2.944 0 1.623 1.046 2.944 2.337 2.944.216 0 .39.174.39.39 0 .215-.174.39-.39.39z"></path></g></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>	
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Caledonian Road</span>
+							<span class="address__street-no">51</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">N1 9BU</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+
+				
+	<a class="grid__item" href="<%=page2_path%>"  data-no-turbolink = true target="_blank">
+		<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5266457" data-longitude="-0.0782788" data-img="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/house-of-hackney/" data-categories="Furniture / Home, Shops" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-furniture.svg">
+			<aside class="card__image" style="background-image: url(http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/11/04_listable_demo-450x300.jpg);">
+			</aside>
+			<div class="card__content">
+				<h2 class="card__title" itemprop="name">House of Hackney</h2>
+				<div class="card__tagline" itemprop="description">British luxury shop at home.</div>
+				<footer class="card__footer">
+					<div class="card__rating  card__pin">
+						<svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+	    				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+	        		<path d="M7,0 C3.13383665,0 0,3.0828692 0,6.88540084 C0,10.68827 6.33390528,20 7,20 C7.66609472,20 14,10.68827 14,6.88540084 C14,3.0828692 10.8661633,0 7,0 L7,0 Z M7,9.87341772 C5.2947838,9.87341772 3.91146191,8.51274262 3.91146191,6.83544304 C3.91146191,5.15814346 5.2947838,3.79746835 7,3.79746835 C8.7052162,3.79746835 10.0885381,5.15814346 10.0885381,6.83544304 C10.0885381,8.51274262 8.7052162,9.87341772 7,9.87341772 L7,9.87341772 Z" id="Imported-Layers-Copy-5" fill="currentColor" sketch:type="MSShapeGroup"></path>
+	    				</g>
+						</svg>
+					</div>
+					<ul class="card__tags">
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="18" height="26" viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-16 -11)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M18.92 26.79c.11.016.227.03.34.044-.474.387-.843.87-1.017 1.395l-.01.027-2.212 8.043c-.08.295.093.6.388.68.05.013.098.02.147.02.243 0 .466-.162.533-.407l2.21-8.028c.256-.747 1.21-1.406 2.137-1.513-.15.224-.27.474-.335.74l-1.197 5.83c-.046.224.1.443.323.49.028.005.056.008.084.008.193 0 .366-.136.406-.332l1.194-5.813c.087-.353.34-.687.634-.887.704.027 1.437.042 2.19.042.756 0 1.49-.015 2.193-.042.294.2.545.528.63.87l1.197 5.83c.04.196.213.332.406.332.028 0 .056-.003.084-.01.225-.045.37-.264.323-.49l-1.2-5.845c-.065-.26-.18-.503-.33-.722.926.107 1.88.766 2.136 1.512l2.21 8.028c.067.246.29.407.532.407.05 0 .098-.006.147-.02.295-.08.468-.385.387-.68l-2.215-8.043-.008-.028c-.175-.526-.543-1.008-1.02-1.396.116-.015.233-.028.342-.044 1.975-.284 2.82-.67 2.91-1.33.11-.78-.867-1.17-1.837-1.446-2.995-.855-3.438-1.423-3.49-1.628-.073-.295.565-.91 1.128-1.455.702-.677 1.575-1.522 2.11-2.594 1.06-2.13.632-3.628.086-4.51C30.164 11.74 27.028 11 24.736 11c-2.294 0-5.43.74-6.722 2.827-.546.88-.974 2.38.087 4.51.47.942 1.177 1.713 1.802 2.392.602.655 1.225 1.332 1.118 1.71-.076.27-.59.836-3.174 1.574-.97.277-1.947.665-1.838 1.447.093.66.937 1.046 2.913 1.33zm-.77-1.712c2.497-.713 3.674-1.412 3.935-2.34.274-.97-.487-1.798-1.368-2.757-.575-.625-1.227-1.334-1.626-2.137-.668-1.344-.714-2.5-.136-3.433.986-1.59 3.614-2.304 5.78-2.304 2.17 0 4.797.713 5.782 2.304.578.934.532 2.09-.137 3.433-.45.902-1.214 1.64-1.888 2.293-.89.86-1.66 1.604-1.43 2.52.234.934 1.428 1.614 4.258 2.422.352.1.595.19.76.26-.64.225-2.057.47-4.175.596-.042 0-.084-.005-.126-.005-.05 0-.096.007-.14.02-.862.046-1.83.074-2.905.074-1.076 0-2.043-.03-2.904-.075-.044-.013-.09-.02-.14-.02-.04 0-.083.003-.125.004-2.118-.127-3.536-.37-4.175-.595.165-.073.408-.162.76-.262z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+						<li>
+							<div class="card__tag">
+								<div class="pin__icon">
+									<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-14 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M33.333 19.065h-4V17.03c0-2.602-2.18-5.03-4.766-5.03C21.98 12 20 14.428 20 17.03v2.035h-4l-2 14.912h22l-2.667-14.912zm-12-2.033c0-1.998 1.248-3.462 3.234-3.462 1.985 0 3.433 1.464 3.433 3.462v2.033h-6.667v-2.033zm-4 3.388H20v.68c-.36.233-.6.64-.6 1.104 0 .722.58 1.308 1.292 1.308.714 0 1.292-.586 1.292-1.308 0-.486-.262-.91-.65-1.135v-.65H28v.91c-.206.23-.333.537-.333.874 0 .722.578 1.308 1.292 1.308.712 0 1.29-.586 1.29-1.308 0-.59-.386-1.09-.916-1.252v-.532H32l2 12.2H16l1.334-12.2z" fill="currentColor"></path></g></svg>									</div>
+							</div>
+						</li>
+					</ul>
+					<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+						<div itemprop="streetAddress">
+							<span class="address__street">Shoreditch High Street</span>
+							<span class="address__street-no">131</span>
+						</div>
+						<span class="address__city" itemprop="addressLocality">London</span>
+						<span class="address__postcode" itemprop="postalCode">E1 6JE</span>
+						<span class="address__state-short" itemprop="addressRegion">Greater London</span>
+						<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+					</div>
+				</footer>
+			</div>
+		</article>
+	</a>
+			 -->
+</div>
