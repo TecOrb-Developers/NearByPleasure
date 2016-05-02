@@ -32,7 +32,7 @@
 										    <a href="http://tecorb.com/admin/demo/section1/escorts/listing-category/restaurant/">Escort</a> &gt;&gt;<a href="http://tecorb.com/admin/demo/section1/escorts/listing-category/winery/">Sexy</a>					
 										  </nav>
 										  <h1 class="entry-title" itemprop="name"><%=@escort.title%></h1>
-										  <span class="entry-subtitle" itemprop="description">Book ME I'm waiting for you ...</span>
+										  <span class="entry-subtitle" itemprop="description">Book ME I'm waiting for you</span>
 										  <div class="single-meta">
 										    <!-- <a title="good" href="#comments" class="single-rating review_rate display-only" data-pixrating="4.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"> -->
 										      
@@ -45,7 +45,7 @@
 										      <span class="rating-value">(<span itemprop="reviewCount">1</span>)</span>
 										      <!-- <input readonly="" value="4" name="pixrating" type="hidden"> -->
 										    <!-- </a> -->
-										    <a class="listing-contact  listing--phone" href="tel:020 7837 7139" itemprop="telephone"><%=@escort.title%></a>
+										    <a class="listing-contact  listing--phone" href="tel:020 7837 7139" itemprop="telephone"><%=@escort.contact%></a>
 										    <a class="listing-contact  listing--twitter" href="https://twitter.com/paesanlondon" itemprop="url">@tecorb.com</a>
 										    <a class="listing-contact  listing--website" href="http://tecorb.com" itemprop="url" target="_blank" rel="nofollow">tecorb.com</a>
 										  </div>
@@ -80,9 +80,8 @@
                       </div>
                       <div id="listing_content-2" class="widget  widget_listing_content">
                         <div class="job_description" itemprop="description">
-                          <!-- <p>‘A place to share simple and honest food’? Well, Paesan at Exmouth Market sure don’t let on that there is something very extraordinary about them. Serving you true Italian peasant dishes, lovingly prepared and created, and in a most inspiring place.</p>
-                          <p>Paesan were nominated for Restaurant &amp; Bar Awards as well as shortlisted for menu of the year, doing it all with the simple yet magic formula of aperitivo, small plates, pasta, carne and pesce.</p> -->
-                          <%=@escort.description.html_safe%>
+                          <p>‘A place to share simple and honest food’? Well, Paesan at Exmouth Market sure don’t let on that there is something very extraordinary about them. Serving you true Italian peasant dishes, lovingly prepared and created, and in a most inspiring place.</p>
+                          <p>Paesan were nominated for Restaurant &amp; Bar Awards as well as shortlisted for menu of the year, doing it all with the simple yet magic formula of aperitivo, small plates, pasta, carne and pesce.</p>
                         </div>
                       </div>
                       <div id="listing_comments-2" class="widget  widget_listing_comments">
