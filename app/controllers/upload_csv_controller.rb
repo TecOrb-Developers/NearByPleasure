@@ -42,20 +42,22 @@ class UploadCsvController < ApplicationController
        		if !@subcategory
        			@subcategory= @category.subcategories.create!(@subcat) if  row[2].present?
        		else
-       			@subcategory.update_attributes(@subcat)
+       			# @subcategory.update_attributes(@subcat)
        		end
        		if @cat == "escort"
        			row[11].present? ? @images=row[11].split(',') : @images=[]
        		elsif @cat== "rubmap"
        			row[9].present? ? @images=row[9].split(',') : @images=[]
        		end
-       		if @images.present?
-       			@images.each do |img|
-       				if !@subcategory.images.exists?(:name=>img)
-       					@subcategory.images.create(:name=>img,:category_id=>@category.id)
-       				end
-       			end
-       		end
+          if  row[2].present?
+         		if @images.present?
+         			@images.each do |img|
+         				if !@subcategory.images.exists?(:name=>img)
+         					@subcategory.images.create(:name=>img,:category_id=>@category.id)
+         				end
+         			end
+         		end
+          end
 		    end
         @i+=1
       end
