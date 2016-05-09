@@ -3,7 +3,7 @@
 <div class="single single-job_listing postid-118 listable" data-mapbox-token="" data-mapbox-style="">
   <div id="page" class="hfeed site">
     <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-    <%= render "header"%>
+    <%= render "home/header"%>
     <!-- #masthead -->
     <div id="content" class="site-content">
       <div id="primary" class="content-area">
@@ -18,8 +18,8 @@
             </div>
             <div>
               <div class="single_job_listing"
-                data-latitude="<%=@escort.latitude%>"
-                data-longitude="<%=@escort.longitude%>"
+                data-latitude="<%=@subcat.latitude%>"
+                data-longitude="<%=@subcat.longitude%>"
                 data-categories="Sex"
                 data-icon="">
                 <div class="grid">
@@ -29,7 +29,7 @@
 										    <a href="http://tecorb.com/admin/demo/section1/escorts/jobs/">Listings</a> &gt;&gt;
 										    <a href="http://tecorb.com/admin/demo/section1/escorts/listing-category/restaurant/">Escort</a> &gt;&gt;<a href="http://tecorb.com/admin/demo/section1/escorts/listing-category/winery/">Sexy</a>					
 										  </nav>
-										  <h1 class="entry-title" itemprop="name"><%=@escort.title%></h1>
+										  <h1 class="entry-title" itemprop="name"><%=@subcat.title%></h1>
 										  <span class="entry-subtitle" itemprop="description">Book ME I'm waiting for you</span>
 										  <div class="single-meta">
 										    <!-- <a title="good" href="#comments" class="single-rating review_rate display-only" data-pixrating="4.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"> -->
@@ -43,8 +43,8 @@
 										      <span class="rating-value">(<span itemprop="reviewCount">1</span>)</span>
 										      <!-- <input readonly="" value="4" name="pixrating" type="hidden"> -->
 										    <!-- </a> -->
-										    <a class="listing-contact  listing--phone" href="tel:020 7837 7139" itemprop="telephone"><%=@escort.contact%></a>
-										    <a class="listing-contact  listing--twitter" href="https://twitter.com/paesanlondon" itemprop="url"><%=@escort.email.present? ? @escort.email : "@tecorb.com"%></a>
+										    <a class="listing-contact  listing--phone" href="tel:020 7837 7139" itemprop="telephone"><%=@subcat.contact%></a>
+										    <a class="listing-contact  listing--twitter" href="https://twitter.com/paesanlondon" itemprop="url"><%=@subcat.email.present? ? @subcat.email : "@tecorb.com"%></a>
 										    <!-- <a class="listing-contact  listing--website" href="http://tecorb.com" itemprop="url" target="_blank" rel="nofollow">tecorb.com</a> -->
 										  </div>
 										</header>
@@ -78,7 +78,7 @@
                       </div>
                       <div id="listing_content-2" class="widget  widget_listing_content">
                         <div class="job_description" itemprop="description">
-                          <p><%=@escort.description.html_safe%></p>
+                          <p><%=@subcat.description.html_safe%></p>
                         </div>
                       </div>
                       <div id="listing_comments-2" class="widget  widget_listing_comments">
@@ -150,13 +150,13 @@
                       <div id="listing_sidebar_map-2" class="widget  widget_listing_sidebar_map">
                         <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
                           <div id="map" class="listing-map"></div>
-                          <meta itemprop="latitude" content="<%=@escort.latitude%>"/>
-                          <meta itemprop="longitude" content="<%=@escort.longitude%>"/>
+                          <meta itemprop="latitude" content="<%=@subcat.latitude%>"/>
+                          <meta itemprop="longitude" content="<%=@subcat.longitude%>"/>
                         </div>
                         <div class="listing-map-content">
                           <address class="listing-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                             <div itemprop="streetAddress">
-                              <span class="address__street"><%=@escort.city%></span>
+                              <span class="address__street"><%=@subcat.city%></span>
                               <!-- <span class="address__street-no">2</span> -->
                             </div>
                             <!-- <span class="address__city" itemprop="addressLocality">London</span> -->
@@ -164,7 +164,7 @@
                             <!-- <span class="address__state-short" itemprop="addressRegion">Greater London</span> -->
                             <span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">USA</span>			
                           </address>
-                          <a href="//maps.google.com/maps?daddr=<%=@escort.latitude%>,<%=@escort.longitude%>" class="listing-address-directions" target="_blank">Get directions</a>
+                          <a href="//maps.google.com/maps?daddr=<%=@subcat.latitude.present? ? @subcat.latitude : 25.789%>,<%=@subcat.longitude.present? ? @subcat.longitude : -80.2264%>" class="listing-address-directions" target="_blank">Get directions</a>
                         </div>
                         <!-- .listing-map-content -->
                       </div>
@@ -247,7 +247,7 @@
       <!-- #primary -->
     </div>
     <!-- #content -->
-    <%= render "footer"%>
+    <%= render "home/footer"%>
     <!-- #colophon -->
   </div>
   <!-- #page -->

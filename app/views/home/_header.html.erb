@@ -1,7 +1,7 @@
 
-<header id="masthead" class="site-header <%if params[:action]=='index'%> header--transparent"<%end%> role="banner">
+<header id="masthead" class="site-header <%if params[:controller]=="home" and params[:action]=='index'%> header--transparent"<%end%> role="banner">
   <div class="site-branding">
-    <h1 class="site-title  site-title--text"><a class="site-logo-link" href="<%=root_path%>" rel="home">Find near by escorts.</a></h1>
+    <h1 class="site-title  site-title--text"><a class="site-logo-link" href="<%=root_path%>" rel="home" data-no-turbolink = true>Find near by escorts.</a></h1>
   </div>
   <!-- .site-branding -->
 
@@ -29,92 +29,14 @@
     </button>
 
     <ul id="menu-main-menu" class="primary-menu">
-      <li id="menu-item-11041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11041"><a href="#" class=" ">Explore</a>
+      <li id="menu-item-11041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11041"><a href="#" class=" ">Search by</a>
         <ul class="sub-menu">
-          <li id="menu-item-11075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11075">
-          	<a href="#" class=" ">All Listings</a>
-          </li>
-          <li id="menu-item-11046" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11046">
-          	<a href="#" class=" ">Food</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11047" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11047">
-              	<a href="#" class=" ">Café</a>
-              </li>
-              <li id="menu-item-11058" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11058">
-              	<a href="#" class=" ">Pizza Place</a>
-              </li>
-              <li id="menu-item-11057" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11057">
-              	<a href="#" class=" ">Restaurant</a>
-              </li>
-              <li id="menu-item-11062" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11062">
-              	<a href="#" class=" ">Winery</a>
-              </li>
-            </ul>
-          </li>
-          <li id="menu-item-11044" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11044">
-          	<a href="#" class=" ">Entertainment</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11060" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11060">
-              	<a href="#" class=" ">Art Gallery</a>
-              </li>
-              <li id="menu-item-11061" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11061">
-              	<a href="#" class=" ">Movie Theater</a>
-              </li>
-              <li id="menu-item-11045" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11045">
-              	<a href="#" class=" ">Museum</a>
-              </li>
-              <li id="menu-item-11059" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11059">
-              	<a href="#" class=" ">Stadium</a>
-              </li>
-            </ul>
-          </li>
-          <li id="menu-item-11063" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11063">
-          	<a href="#" class=" ">Lodging</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11065" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11065">
-              	<a href="#" class=" ">Hotels</a>
-              </li>
-              <li id="menu-item-11064" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11064">
-              	<a href="#" class=" ">Apartment</a>
-              </li>
-            </ul>
-          </li>
-          <li id="menu-item-11066" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11066">
-          	<a href="#" class=" ">Nightlife</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11067" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11067">
-              	<a href="#" class=" ">Bar</a>
-              </li>
-              <li id="menu-item-11068" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11068">
-          			<a href="#" class=" ">Brewery</a>
-              </li>
-              <li id="menu-item-11069" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11069">
-              	<a href="#" class=" ">Lounge</a>
-              </li>
-            </ul>
-          </li>
-          <li id="menu-item-11070" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11070">
-          	<a href="#" class=" ">Outdoors</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11071" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11071">
-              	<a href="#" class=" ">Bridge</a>
-              </li>
-              <li id="menu-item-11072" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11072">
-              	<a href="#" class=" ">Park</a>
-              </li>
-            </ul>
-          </li>
-          <li id="menu-item-11043" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-has-children menu-item-11043">
-          	<a href="#" class=" ">Shops</a>
-            <ul class="sub-menu">
-              <li id="menu-item-11073" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11073">
-              	<a href="#" class=" ">Bank</a>
-              </li>
-              <li id="menu-item-11074" class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_category menu-item-11074">
-              	<a href="#" class=" ">Furniture / Home</a>
-              </li>
-            </ul>
-          </li>
+          <%categories.each do |c|%>
+            <li id="menu-item-11075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11075">
+          	 <a href="<%=subcategories_path(search_category: c.id)%>" data-no-turbolink = true><%=c.name%></a>
+            </li>
+          <%end%>
+        
         </ul>
       </li>
       <li id="menu-item-11048" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11048"><a href="#" class=" ">Help</a>
