@@ -21,7 +21,7 @@
                     Your satisfaction make us the <span  style="color: #FF69B4">No.1 </span>
                   </span>
                   <span id='div3' class='display'>
-                    Enjoy with Real Models at <span style="color: #8B4513"> Rubmaps</span>
+                    Full relexed at <span style="color: #8B4513"> Massage Parlers</span>
                   </span>
                 </h1>
 
@@ -44,7 +44,7 @@
                     <div class="search_categories  search-filter-wrapper">
                       <label for="search_categories">Category</label>
                       <select name='search_category' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options' required="true">
-                        <option value="">Any category</option>
+                        <option value="">All categories</option>
                         <%@cat.each do |c|%>
                           <option class="level-0" value="<%=c.id%>"><%=c.name%></option>
                         
@@ -68,7 +68,7 @@
                     </li>
                     <li>
                       <label for="job_type_freelance" class="freelance">
-                        <input type="checkbox" name="filter_job_type[]" value="freelance" id="job_type_freelance" />Rubmaps</label>
+                        <input type="checkbox" name="filter_job_type[]" value="freelance" id="job_type_freelance" />Massage</label>
                     </li>
                     <li>
                       <label for="job_type_full-time" class="full-time">
@@ -130,35 +130,35 @@
 
                 <a href="<%=subcategories_path(search_category: 2)%>" data-no-turbolink = true>
                   <span class="cat__icon">
-                  	<svg width="19" height="26" viewBox="0 0 19 26" xmlns="http://www.w3.org/2000/svg">
-                  		<g transform="translate(-15 -11)" fill="none" fill-rule="evenodd">
-                  			<circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"/></circle>
-                  			<g fill="currentColor">
-                  				<path d="M32.88 31.044H15.877c-.214 0-.413-.11-.528-.29-.116-.18-.132-.406-.04-.6l8.646-18.65c.103-.22.325-.362.57-.362h.003c.245 0 .467.146.567.37l8.355 18.65c.087.193.07.418-.046.596-.115.178-.314.286-.526.286zM16.858 29.79h15.054l-7.397-16.51-7.657 16.51z"/></path>
-                  				<path d="M24.39 36.644c-.32 0-.58-.26-.58-.582v-16.59c0-.322.26-.582.58-.582.322 0 .583.26.583.582v16.59c0 .32-.26.582-.582.582z"/></path>
-                  				<path d="M24.387 29.796c-.186 0-.37-.083-.494-.24-.213-.272-.166-.667.106-.88l3.58-2.81c.273-.214.667-.166.88.106.215.272.167.666-.105.88l-3.582 2.81c-.114.09-.25.134-.386.134zm-.18-1.634c-.16 0-.32-.06-.443-.182l-3.33-3.31c-.246-.245-.247-.643-.003-.888.245-.246.642-.247.888-.003l3.33 3.31c.246.245.247.642.003.887-.122.124-.283.185-.444.185zm.18-2.31c-.162 0-.323-.06-.445-.184-.244-.246-.243-.642.002-.887l3.078-3.06c.246-.244.643-.242.886.003.244.245.243.642-.002.886l-3.078 3.06c-.122.122-.282.183-.442.183zm-.14-2.22c-.21 0-.414-.104-.533-.296L21.81 20.25c-.183-.294-.092-.68.203-.862.294-.182.68-.09.863.204l1.905 3.085c.183.295.09.68-.203.862-.103.063-.216.093-.33.093z"/></path>
-                  			</g>
-                  		</g>
-                  	</svg>
+                    <svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                      <g transform="translate(-12 -13)" fill="none" fill-rule="evenodd">
+                        <circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"/></circle>
+                        <g fill="currentColor">
+                          <path d="M32.945 19.578l2.705 9.47-1.3.372-2.707-9.47 1.302-.372zM14.732 19.58l1.3.37-2.705 9.47-1.302-.37 2.707-9.47z"/></path>
+                          <path d="M32.97 20.44H29.59V19.09h2.03v-4.394c0-.17-.09-.34-.29-.34H16.736c-.276 0-.64.23-.678.355l.002 4.378h2.028v1.353h-3.382v-5.746c0-1.034 1.2-1.694 2.03-1.694h14.593c.92 0 1.64.744 1.64 1.694v5.747zM34.324 34.647h-20.97c-.747 0-1.354-.607-1.354-1.353v-3.382c0-.746.607-1.353 1.353-1.353h20.97c.747 0 1.353.606 1.353 1.352v3.382c0 .746-.606 1.353-1.352 1.353zm-20.97-4.735v3.382h20.97v-3.382h-20.97z"/></path>
+                          <path d="M21.47 21.794h-2.705c-.746 0-1.353-.607-1.353-1.353v-2.028c0-.746.607-1.353 1.353-1.353h2.706c.747 0 1.354.606 1.354 1.352v2.03c0 .745-.607 1.352-1.353 1.352zm-2.705-3.382v2.03h2.706v-2.03h-2.705zM28.912 21.794h-2.706c-.746 0-1.353-.607-1.353-1.353v-2.028c0-.746.607-1.353 1.353-1.353h2.706c.746 0 1.353.606 1.353 1.352v2.03c0 .745-.607 1.352-1.353 1.352zm-2.706-3.382v2.03h2.706v-2.03h-2.706z"/></path>
+                          <path d="M22.147 19.088h3.382v1.353h-3.383zM14.03 33.97h1.352V36H14.03zM32.294 33.97h1.353V36h-1.353z"/></path>
+                        </g>
+                      </g>
+                    </svg>
                   </span>
-                  <span class="cat__text">Rubmaps</span>
+                  <span class="cat__text">Massage</span>
                 </a>
 
 
                 <a href="<%=subcategories_path(search_category: 3)%>" data-no-turbolink = true>
                   <span class="cat__icon">
-                  	<svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                  		<g transform="translate(-12 -13)" fill="none" fill-rule="evenodd">
-                  			<circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"/></circle>
-                				<g fill="currentColor">
-                					<path d="M32.945 19.578l2.705 9.47-1.3.372-2.707-9.47 1.302-.372zM14.732 19.58l1.3.37-2.705 9.47-1.302-.37 2.707-9.47z"/></path>
-              						<path d="M32.97 20.44H29.59V19.09h2.03v-4.394c0-.17-.09-.34-.29-.34H16.736c-.276 0-.64.23-.678.355l.002 4.378h2.028v1.353h-3.382v-5.746c0-1.034 1.2-1.694 2.03-1.694h14.593c.92 0 1.64.744 1.64 1.694v5.747zM34.324 34.647h-20.97c-.747 0-1.354-.607-1.354-1.353v-3.382c0-.746.607-1.353 1.353-1.353h20.97c.747 0 1.353.606 1.353 1.352v3.382c0 .746-.606 1.353-1.352 1.353zm-20.97-4.735v3.382h20.97v-3.382h-20.97z"/></path>
-              						<path d="M21.47 21.794h-2.705c-.746 0-1.353-.607-1.353-1.353v-2.028c0-.746.607-1.353 1.353-1.353h2.706c.747 0 1.354.606 1.354 1.352v2.03c0 .745-.607 1.352-1.353 1.352zm-2.705-3.382v2.03h2.706v-2.03h-2.705zM28.912 21.794h-2.706c-.746 0-1.353-.607-1.353-1.353v-2.028c0-.746.607-1.353 1.353-1.353h2.706c.746 0 1.353.606 1.353 1.352v2.03c0 .745-.607 1.352-1.353 1.352zm-2.706-3.382v2.03h2.706v-2.03h-2.706z"/></path>
-              						<path d="M22.147 19.088h3.382v1.353h-3.383zM14.03 33.97h1.352V36H14.03zM32.294 33.97h1.353V36h-1.353z"/></path>
-              					</g>
-              				</g>
-              			</svg>
-              		</span>
+                    <svg width="19" height="26" viewBox="0 0 19 26" xmlns="http://www.w3.org/2000/svg">
+                      <g transform="translate(-15 -11)" fill="none" fill-rule="evenodd">
+                        <circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"/></circle>
+                        <g fill="currentColor">
+                          <path d="M32.88 31.044H15.877c-.214 0-.413-.11-.528-.29-.116-.18-.132-.406-.04-.6l8.646-18.65c.103-.22.325-.362.57-.362h.003c.245 0 .467.146.567.37l8.355 18.65c.087.193.07.418-.046.596-.115.178-.314.286-.526.286zM16.858 29.79h15.054l-7.397-16.51-7.657 16.51z"/></path>
+                          <path d="M24.39 36.644c-.32 0-.58-.26-.58-.582v-16.59c0-.322.26-.582.58-.582.322 0 .583.26.583.582v16.59c0 .32-.26.582-.582.582z"/></path>
+                          <path d="M24.387 29.796c-.186 0-.37-.083-.494-.24-.213-.272-.166-.667.106-.88l3.58-2.81c.273-.214.667-.166.88.106.215.272.167.666-.105.88l-3.582 2.81c-.114.09-.25.134-.386.134zm-.18-1.634c-.16 0-.32-.06-.443-.182l-3.33-3.31c-.246-.245-.247-.643-.003-.888.245-.246.642-.247.888-.003l3.33 3.31c.246.245.247.642.003.887-.122.124-.283.185-.444.185zm.18-2.31c-.162 0-.323-.06-.445-.184-.244-.246-.243-.642.002-.887l3.078-3.06c.246-.244.643-.242.886.003.244.245.243.642-.002.886l-3.078 3.06c-.122.122-.282.183-.442.183zm-.14-2.22c-.21 0-.414-.104-.533-.296L21.81 20.25c-.183-.294-.092-.68.203-.862.294-.182.68-.09.863.204l1.905 3.085c.183.295.09.68-.203.862-.103.063-.216.093-.33.093z"/></path>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
                   <span class="cat__text">Strip Club</span>
                 </a>
 
@@ -340,7 +340,7 @@
               <div class="front-page-section">
                 <div class="section-wrap">
                   <h3 class="widget_title  widget_title--frontpage">
-                    Best Rubmaps arround here
+                    Best Massage Parlers here
                     <span class="widget_subtitle  widget_subtitle--frontpage">
                       Explore some of the best tips from around the city from our partners and friends.         
                     </span>
@@ -400,8 +400,8 @@
                     <div class="grid__item  grid__item--widget">
                       <div class="card  card--post  card--feature  card--widget">
                         <div class="card__content">
-                          <div class="card__title">Rubmaps</div>
-                          What do you think about Rubmaps? Share your shopping experience and hear what 3 customers have said about Rubmaps. Search and filter hundreds of listings, read reviews, explore photos and find the perfect spot. 
+                          <div class="card__title">Massage Parlers</div>
+                          What do you think about Massage Parlers? Share your shopping experience and hear what 3 customers have said about Rubmaps. Search and filter hundreds of listings, read reviews, explore photos and find the perfect spot. 
                           </div>
                         <!-- .card__content -->
                       </div>

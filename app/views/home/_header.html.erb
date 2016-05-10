@@ -31,6 +31,9 @@
     <ul id="menu-main-menu" class="primary-menu">
       <li id="menu-item-11041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11041"><a href="#" class=" ">Search by</a>
         <ul class="sub-menu">
+          <li id="menu-item-11075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11075">
+             <a href="<%=subcategories_path(search_category: '')%>" data-no-turbolink = true>All categories</a>
+            </li>
           <%categories.each do |c|%>
             <li id="menu-item-11075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11075">
           	 <a href="<%=subcategories_path(search_category: c.id)%>" data-no-turbolink = true><%=c.name%></a>

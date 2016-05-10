@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
     @cat=Category.all
   	@cat1 = Category.find_by_name("escort")
-  	@cat2 = Category.find_by_name("rubmap")
+  	@cat2 = Category.find_by_name("Massage Parler")
     @cat3 = Category.find_by_name("Strip Club")
   	@escorts = @cat1.subcategories.sample(6)
   	@rubmaps = @cat2.subcategories.sample(4)

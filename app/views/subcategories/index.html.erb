@@ -178,7 +178,7 @@
   </div>
 
 
-<!-- <script type='text/javascript' src='//maps.google.com/maps/api/js?key=<%=google_api_key%>&v=3.exp&#038;libraries=places&#038;ver=3.22'></script> -->
+<script type='text/javascript' src='//maps.google.com/maps/api/js?key=<%=google_api_key%>&v=3.exp&#038;libraries=places&#038;ver=3.22'></script>
 <script type='text/javascript' src='http://tecorb.com/admin/demo/section1/escorts/wp-content/themes/listable/assets/js/plugins/leaflet.js?ver=1.0.0'></script>
 
 
@@ -227,20 +227,37 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
 
 <script type="text/javascript">
     
-  function initMap() {
-
-  var image ={ 
-    url: '/assets/pinmap5.png', // url
-    scaledSize: new google.maps.Size(50, 50), // scaled size
-    origin: new google.maps.Point(0,0), // origin
-    anchor: new google.maps.Point(0, 0) // anchor
-  }
+  function initMap() { 
 
      var locations =[]
      
-     <%if @cat.name=="escort"%>
-       <%@c=0%>
-       <%@subcat.each do |e|%>
+    <%if @cat.name=="escort" or @cat.name=="Strip Club" or @cat.name=="Massage Parler"%>
+        <%if @cat.name=="Strip Club"%>
+          var image ={ 
+              url: '/assets/mapicon2.png', // url
+              scaledSize: new google.maps.Size(30, 30), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(0, 0) // anchor
+            }
+
+        <%elsif @cat.name=="escort"%>
+          var image ={ 
+              url: '/assets/mapicon3.png', // url
+              scaledSize: new google.maps.Size(30, 30), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(0, 0) // anchor
+            }
+        <%else%>
+          var image ={ 
+              url: '/assets/mapicon1.png', // url
+              scaledSize: new google.maps.Size(30, 30), // scaled size
+              origin: new google.maps.Point(0,0), // origin
+              anchor: new google.maps.Point(0, 0) // anchor
+            }
+        <%end%>
+        var arr=[]
+        <%@c=0%>
+        <%@subcat.each do |e|%>
           temp =[];
           temp.push("<strong><%=e.title%></strong>");
           temp.push("<%=e.latitude%>");
@@ -248,68 +265,107 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
           temp.push(<%=@c%>);
           locations.push(temp);
           <%@c+=1%>
-       <%end%>
-      <%else%>
-        <%@c=0%>
-        <%@subcat.each do |s|%>
-          var address = '<%="#{s.street_address.gsub('#','')},#{s.city},#{s.state}"%>'
-          var geocoder= new google.maps.Geocoder();
-            geocoder.geocode( { 'address': address}, function(results, status) {
-              if (status == google.maps.GeocoderStatus.OK) {
-                // alert(results[0].geometry.location)
-                map.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location
-                    
-                });
-                 // infowindow.setContent(results[0].formatted_address);
-                 //    infowindow.open(map, marker);
-                 //  } else {
-                 //    // window.alert('No results found');
-                 //  }
+        <%end%>
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 3,
+          center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
 
-                
-                  // tmp=[]
-                  // tmp.push("<%=s.title%>")
-                  // tmp.push(results[0].geometry.location.lat())
-                  // tmp.push(results[0].geometry.location.lng())
-                  // tmp.push(<%=@c%>)
-                  // // alert(tmp)
-                  // locations.push(tmp)
-                  // alert(locations)
-              }
+        var infowindow = new google.maps.InfoWindow({});
+
+        var marker, i;
+
+        for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: image
           });
-            <%@c+=1%>
-          <%end%>
-          // alert(locations)
-          // locations
+
+          google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+        }
+    <%else%>
+
+      <%@c=0%>
+      <%@subcat.each do |e|%>
+        var tmp =[];
+        <%if e.category.name=="escort"%>
+          
+          tmp.push("<%=e.title%>");
+          tmp.push("<%=e.latitude%>");
+          tmp.push("<%=e.longitude%>");
+          tmp.push(<%=@c%>);
+          image ={ 
+            url: '/assets/mapicon3.png', // url
+            scaledSize: new google.maps.Size(30, 30), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+          }
+          tmp.push(image)
+          locations.push(tmp);
+
+        <%elsif e.category.name=="Strip Club"%>
+          tmp=[]
+          tmp.push("<%=e.title%>")
+          tmp.push("<%=e.latitude%>");
+          tmp.push("<%=e.longitude%>");
+          tmp.push(<%=@c%>)
+          image ={ 
+            url: '/assets/mapicon1.png', // url
+            scaledSize: new google.maps.Size(30, 30), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+          }
+          tmp.push(image)
+          locations.push(tmp)
+        <%else%>
+          tmp=[]
+          tmp.push("<%=e.title%>")
+          tmp.push("<%=e.latitude%>");
+          tmp.push("<%=e.longitude%>");
+          tmp.push(<%=@c%>)
+          image ={ 
+            url: '/assets/mapicon2.png', // url
+            scaledSize: new google.maps.Size(30, 30), // scaled size
+            origin: new google.maps.Point(0,0), // origin
+            anchor: new google.maps.Point(0, 0) // anchor
+          }
+          tmp.push(image)
+          locations.push(tmp)
+        <%end%>
+        <%@c+=1%>
       <%end%>
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 2,
-      center: new google.maps.LatLng(41.976816, -87.659916),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-
-    var infowindow = new google.maps.InfoWindow({});
-
-    var marker, i;
-
-    for (i = 0; i < locations.length; i++) {
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map,
-        icon: image
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 3,
+        center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
-      google.maps.event.addListener(marker, 'click', (function (marker, i) {
-        return function () {
-          infowindow.setContent(locations[i][0]);
-          infowindow.open(map, marker);
-        }
-      })(marker, i));
-    }
+      var infowindow = new google.maps.InfoWindow({});
+
+      var marker, i;
+
+      for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+          map: map,
+          icon: locations[i][4]
+        });
+
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+          return function () {
+            infowindow.setContent(locations[i][0]);
+            infowindow.open(map, marker);
+          }
+        })(marker, i));
+      }
+    <%end%>
   }
 
 

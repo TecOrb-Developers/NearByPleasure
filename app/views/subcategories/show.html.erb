@@ -31,7 +31,7 @@
 										  </nav>
 										  <h1 class="entry-title" itemprop="name"><%=@subcat.title%></h1>
 										  <span class="entry-subtitle" itemprop="description">Book ME I'm waiting for you</span>
-										  <div class="single-meta">
+										  <!-- <div class="single-meta"> -->
 										    <!-- <a title="good" href="#comments" class="single-rating review_rate display-only" data-pixrating="4.00" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating"> -->
 										      
 										      <!-- <meta itemprop="ratingValue" content="4.00"> -->
@@ -43,10 +43,11 @@
 										      <span class="rating-value">(<span itemprop="reviewCount">1</span>)</span>
 										      <!-- <input readonly="" value="4" name="pixrating" type="hidden"> -->
 										    <!-- </a> -->
-										    <a class="listing-contact  listing--phone" href="tel:020 7837 7139" itemprop="telephone"><%=@subcat.contact%></a>
-										    <a class="listing-contact  listing--twitter" href="https://twitter.com/paesanlondon" itemprop="url"><%=@subcat.email.present? ? @subcat.email : "@tecorb.com"%></a>
-										    <!-- <a class="listing-contact  listing--website" href="http://tecorb.com" itemprop="url" target="_blank" rel="nofollow">tecorb.com</a> -->
-										  </div>
+										    <a href="tel:020 7837 7139" style="margin-left:5em" itemprop="telephone" target="_blank"> 
+                          <i class="fa fa-phone" aria-hidden="true"></i>
+                          <%=@subcat.contact.present? ? @subcat.contact : "Not Available"%></a>
+										    <a style="margin-left:5em" href="email:<%=@subcat.email%>" itemprop="email" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <%=@subcat.email.present? ? @subcat.email : "Not Available"%></a>
+										    
 										</header>
 
 

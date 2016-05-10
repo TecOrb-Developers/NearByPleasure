@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'page2'=>"home#details"
   resources :upload_csv,:only =>[:index,:create]
   resources :subcategories
+  get 'update_lat_long'=>"upload_csv#update_lat_long"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
