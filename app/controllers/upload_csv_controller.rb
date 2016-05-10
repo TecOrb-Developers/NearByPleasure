@@ -11,7 +11,7 @@ class UploadCsvController < ApplicationController
 	      if @i==1
 			  	p "-------------------#{row.inspect}"
 				   #row[0] == "link" and row[1] == "title" and row[2] == "contact" and row[3] == "description" and row[5]=="image_urls"
-					if row[0]=="page_link" and row[1]=="profile_link" and row[2]=="title" and row[3]=="tag_line" and row[4]=="contact" and row[5]=="email" and row[6]=="latitude" and row[7]=="longitude" and row[8]=="city" and row[9]=="description" and row[10]=="images_name" and row[11]=="images_url"
+					if row[0]=="page_link" and row[1]=="profile_link" and row[2]=="title" and row[3]=="tag_line" and row[4]=="contact" and row[5]=="email" and row[6]=="latitude" and row[7]=="longitude" and row[8]=="state" and row[9]=="city" and row[10]=="description" and row[11]=="images_name" and row[12]=="images_url"
             @cat = "escort"
 					  @status = true
 				  elsif row[0]== "page_url" and row[1]== "profile_url" and row[2]== "title" and row[3]== "contact" and row[4]== "timing" and row[5]== "street_address" and row[6]== "city" and row[7]== "state" and row[8]== "pin" and row[9]== "images" and row[10]== "description" 
