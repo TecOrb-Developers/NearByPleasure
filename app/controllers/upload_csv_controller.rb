@@ -79,7 +79,7 @@ class UploadCsvController < ApplicationController
     if File.extname(file.original_filename)=='.csv'
       CSV.foreach(file.path) do |row|
         if @i>1               
-          @subcategory = Subcategory.find_by_profile_link(row[2])
+          @subcategory = Subcategory.find_by_id(row[0])
           if @subcategory
             @subcategory.update_attributes(:latitude=>row[13],:longitude=>row[14])
           end
