@@ -133,7 +133,7 @@
                                 <input type='text' id='pixrating_title' name='pixrating_title' value="" placeholder="Summarize your opinion or highlight an interesting detail" size='25'/>
                               </p>
                               <p class="comment-form-comment"><label for="comment">Your Review</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="Tell about your experience or leave a tip for others"></textarea></p>
-                              <p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+                              <p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; </code></p>
                               <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit your Review" /> <input type='hidden' name='comment_post_ID' value='118' id='comment_post_ID' />
                                 <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
                               </p>
@@ -223,6 +223,33 @@
                         </div>
                         <!-- .listing-gallery__items -->
                       </div>
+
+                      <div id="listing_sidebar_hours-2" class="widget  widget_listing_sidebar_hours">
+                        <!-- <div class="container"> -->
+                            <div class="responsive-calendar">
+                              <div class="controls">
+                                  <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+                                  <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                  <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+                              </div><hr/>
+                              <div class="day-headers">
+                                <div class="day header">Mon</div>
+                                <div class="day header">Tue</div>
+                                <div class="day header">Wed</div>
+                                <div class="day header">Thu</div>
+                                <div class="day header">Fri</div>
+                                <div class="day header">Sat</div>
+                                <div class="day header">Sun</div>
+                              </div>
+                              <div class="days" data-group="days">
+                                
+                              </div>
+                            </div>
+                        <!-- </div> -->
+                      </div>
+
+
+
                     </div>
                   </div>
                   <!-- / .column-2 -->
@@ -396,3 +423,87 @@
   <script type='text/javascript' src='http://tecorb.com/admin/demo/section1/escorts/wp-content/plugins/comments-ratings/js/reviews.js?ver=1.1.5'></script>
 </div>
 
+
+
+
+<script type="text/javascript">
+  
+ jQuery(function($){
+ // $.getScript('http://arshaw.com/js/fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js',function(){
+  
+ //  var date = new Date();
+ //  var d = date.getDate();
+ //  var m = date.getMonth();
+ //  var y = date.getFullYear();
+  
+ //  $('#calendar').fullCalendar({
+ //    header: {
+ //      left: 'prev,next today',
+ //      center: 'title',
+ //      right: 'month,agendaWeek,agendaDay'
+ //    },
+ //    editable: true,
+ //    events: [
+ //      {
+ //        title: 'All Day Event',
+ //        start: new Date(y, m, 1)
+ //      },
+ //      {
+ //        title: 'Long Event',
+ //        start: new Date(y, m, d-5),
+ //        end: new Date(y, m, d-2)
+ //      },
+ //      {
+ //        id: 999,
+ //        title: 'Repeating Event',
+ //        start: new Date(y, m, d-3, 16, 0),
+ //        allDay: false
+ //      },
+ //      {
+ //        id: 999,
+ //        title: 'Repeating Event',
+ //        start: new Date(y, m, d+4, 16, 0),
+ //        allDay: false
+ //      },
+ //      {
+ //        title: 'Meeting',
+ //        start: new Date(y, m, d, 10, 30),
+ //        allDay: false
+ //      },
+ //      {
+ //        title: 'Lunch',
+ //        start: new Date(y, m, d, 12, 0),
+ //        end: new Date(y, m, d, 14, 0),
+ //        allDay: false
+ //      },
+ //      {
+ //        title: 'Birthday Party',
+ //        start: new Date(y, m, d+1, 19, 0),
+ //        end: new Date(y, m, d+1, 22, 30),
+ //        allDay: false
+ //      },
+ //      {
+ //        title: 'Click for Google',
+ //        start: new Date(y, m, 28),
+ //        end: new Date(y, m, 29),
+ //        url: 'http://google.com/'
+ //      }
+ //    ]
+ //  });
+ // })
+ $(".responsive-calendar").responsiveCalendar({
+          time: '2016-05',
+          events: {
+             // "2016-05-21":{"number": 1,"url":"http://tecorb.com"}, 
+            "2016-05-02": {"url": "http://tecorb.com"},
+            "2016-05-25": {"url": "http://tecorb.com"}, 
+            "2016-05-21": {"url":"http://tecorb.com"}, 
+            "2016-06-08": {"url":"http://tecorb.com"},
+            "2016-06-20": {"url":"http://tecorb.com"},
+            "2016-06-25": {"url":"http://tecorb.com"}
+          }
+        });
+})
+
+
+</script>
