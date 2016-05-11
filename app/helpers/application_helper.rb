@@ -14,6 +14,7 @@ require 'json'
 	end
 
 	def lat_lng address
+		sleep 1
 		add=address.gsub(' ','+')
 		uri = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{add}&key=#{google_api_key}")
 		resp = Net::HTTP.get_response(uri)
@@ -41,5 +42,13 @@ require 'json'
 		else
 			p "=========results not present====="
 		end
+	end
+
+	def all_massage_image
+		["massage1.jpg","massage2.jpg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"]
+	end
+	def massage_image num
+		# ["massage1.jpg","massage2.jpeg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"].sample
+		"massage#{num}.jpg"
 	end
 end

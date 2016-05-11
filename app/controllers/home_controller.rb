@@ -7,6 +7,9 @@ class HomeController < ApplicationController
   	@escorts = @cat1.subcategories.sample(6)
   	@rubmaps = @cat2.subcategories.sample(4)
     @strip_clubs=@cat3.subcategories.sample(3)
+    request.remote_ip
+    @remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
+    p "**********************#{request.remote_ip}"
   end
   def new
   	@cat1 = Category.find_by_name("escort")

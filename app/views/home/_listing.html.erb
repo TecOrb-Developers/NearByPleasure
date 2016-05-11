@@ -3,7 +3,7 @@
 		<%@subcat.each do |e|%>
 			<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
 			<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
-				<aside class="card__image" style="background-image: url(<%=e.images.first.present? ? "http://#{e.images.first.name}" : "http://www.cityvibe.com/assets/endec/cHVibGljL2Zp/bGVzLzE3My8y/OC8xNzMyODI3/LmpwZz9mYXY9/MTQ2MjA2MTY5/Ny0zLTI3JmZh/dD1wdWJsaWM/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
+				<aside class="card__image" style="background-image: url(<%=e.images.first.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
 				</aside><!-- .card__image -->
 				<div class="card__content">
 					<h2 class="card__title" itemprop="name"><%=e.title%></h2>
@@ -45,11 +45,12 @@
 		<%end%>
 	<%elsif @cat.name=="Massage Parler"%>
 		<div class="grid  grid--widget  list">
-			<%@subcat.each do |r|%>
+			<%@cn=0%>
+			<%@subcat.each do |r|%> 
       <div class="grid__item  grid__item--widget">
         <article id="post-250" class="card card--post post-250 post type-post status-publish format-standard has-post-thumbnail hentry category-travelling tag-adventure tag-art tag-culture tag-food tag-packing tag-travel tag-world">
           <a href="<%=subcategory_path(r.id)%>" data-no-turbolink = true>
-            <aside class="card__image" style="background-image: url(<%=r.images.present? ? r.images.first.name : "http://cdn.rubmaps.com/uploads/locations/6442/thumb_4f73909d96941.jpg"%>)">
+            <aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>')">
             </aside>
           </a>
           <div class="card__content">
@@ -68,6 +69,8 @@
           </div>
         </article>
       </div>
+      <%@cn<5 ? @cn+=1 : @cn=0%>
+
       <%end%>
     </div>
 	<%elsif @cat.name=="Strip Club"%>
@@ -98,11 +101,21 @@
       </li>
     <%end%>
 	<%else%>
+		<%@cn=0%>
 		<%@subcat.each do |e|%>
 			<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
 			<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
-				<aside class="card__image" style="background-image: url(<%=e.images.present? ? "http://#{e.images.first.name}" : "http://www.cityvibe.com/assets/endec/cHVibGljL2Zp/bGVzLzE3My8y/OC8xNzMyODI3/LmpwZz9mYXY9/MTQ2MjA2MTY5/Ny0zLTI3JmZh/dD1wdWJsaWM/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
+				<%if e.category.name=="escort"%>
+				<aside class="card__image" style="background-image: url(<%=e.images.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
 				</aside><!-- .card__image -->
+				<%elsif e.category.name=="Massage Parler"%>
+					<aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>');">
+					</aside><!-- .card__image -->
+				<%else%>
+					<%@imgs=["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg"]%>
+					<aside class="card__image" style="background-image: url(<%=@imgs.sample%>);">
+					</aside><!-- .card__image -->
+				<%end%>
 				<div class="card__content">
 					<h2 class="card__title" itemprop="name"><%=e.title%></h2>
 					<div class="card__tagline" itemprop="description"><%=e.contact%></div>
@@ -140,6 +153,7 @@
 				</div><!-- .card__content -->
 			</article><!-- .card.card--listing -->
 			</a><!-- .grid__item -->
+			<%@cn<5 ? @cn+=1 : @cn=0%>
 		<%end%>
 	<%end%>
 </div>

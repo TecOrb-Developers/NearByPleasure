@@ -6,6 +6,7 @@ class UploadCsvController < ApplicationController
     file=params[:category][:file]
     @i=1
 		@status=false
+    @cat=""
     if File.extname(file.original_filename)=='.csv'
       CSV.foreach(file.path) do |row|
 	      if @i==1
@@ -31,7 +32,7 @@ class UploadCsvController < ApplicationController
 	      	end        
 	      	@subcat={}
 	      	if @cat=="escort"
-	       		@subcat={title: row[2],contact:  row[4],description: row[9],tag_line: row[3],profile_link: row[1],latitude: row[6],longitude: row[7],email: row[5],timing: nil,street_address: nil,city: row[8],pin: nil,state: nil,page_url: nil}
+	       		@subcat={title: row[2],contact:  row[4],description: row[10],tag_line: row[3],profile_link: row[1],latitude: row[6],longitude: row[7],email: row[5],timing: nil,street_address: nil,city: row[9],pin: nil,state: row[8],page_url: nil}
 	       	elsif @cat=="Massage Parler"              
 	       		@subcat={title: row[2],profile_link: row[1],contact: row[3],description: row[10],timing: row[4],street_address: row[5],city: row[6],pin: row[8],state: row[7],page_url: row[0]}
           elsif @cat = "Strip Club"
@@ -79,4 +80,5 @@ class UploadCsvController < ApplicationController
     end 
     
   end
+
 end

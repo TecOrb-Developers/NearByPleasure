@@ -43,7 +43,7 @@
 
                     <div class="search_categories  search-filter-wrapper">
                       <label for="search_categories">Category</label>
-                      <select name='search_category' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options' required="true">
+                      <select name='search_category' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
                         <option value="">All categories</option>
                         <%@cat.each do |c|%>
                           <option class="level-0" value="<%=c.id%>"><%=c.name%></option>
@@ -182,7 +182,7 @@
                       <%@escorts.each do |e|%>
                       <a href="<%=subcategory_path(e.id)%>" data-no-turbolink = true class="grid__item  grid__item--widget">
                         <article class="card  card--listing  card--widget  " data-latitude="51.5022081" data-longitude="-0.1599428" data-img="<%=e.images.present? ? e.images.first.name : 'http://cdn.rubmaps.com/uploads/locations/13217/thumb_51182ed67bb8c.jpg'%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/bar-boloud/">
-                          <aside class="card__image" style="background-image: url(<%="http://#{e.images.present? ? e.images.first.name : 'www.cityvibe.com/assets/endec/cHVibGljL2Zp/bGVzLzIyMy8y/Ny8yMjMyNzQw/LmpwZz9mYXY9/MTQ1OTk2ODA3/Ny0zLTI3JmZh/dD1wdWJsaWM/toronto-escorts-outcall-specials-young-h0rnyy-o-u-t-c-a-l-l-s-22-2232740.jpg';}"%>);">
+                          <aside class="card__image" style="background-image: url(<%="http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.present? ? e.images.first.name : 'toronto-escorts-outcall-specials-young-h0rnyy-o-u-t-c-a-l-l-s-22-2232740.jpg';}"%>);">
                           </aside>
                           <div class="card__content">
                             <h2 class="card__title" itemprop="name"><%=e.title%></h2>
