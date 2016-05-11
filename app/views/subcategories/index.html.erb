@@ -333,7 +333,7 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
             url: '/assets/mapicon2.png', // url
             scaledSize: new google.maps.Size(30, 30), // scaled size
             origin: new google.maps.Point(0,0), // origin
-            anchor: new google.maps.Point(0, 0) // anchor
+            anchor: new google.maps.Point(0,0) // anchor
           }
           tmp.push(image)
           locations.push(tmp)
@@ -341,7 +341,7 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
         <%@c+=1%>
       <%end%>
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
+        zoom: 10,
         center: new google.maps.LatLng(locations[0][1], locations[0][2]),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
