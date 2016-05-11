@@ -25,9 +25,9 @@ class SubcategoriesController < ApplicationController
 	  	params[:search_location].present? ? @subcat = @cat.subcategories.where(:city=>params[:search_location]).sample(40) : @subcat = @cat.subcategories.sample(40)
 		else
 			@cat= Category.new
-			@sc1 = Subcategory.where("category_id=? and city ILIKE (?)",1,params[:search_location].present? ? "#{params[:search_location]}%" : "%a%").limit(20)
-			@sc2 = Subcategory.where("category_id=? and city ILIKE (?)",2,params[:search_location].present? ? "#{params[:search_location]}%" : "%a%").limit(20)
-			@sc3 = Subcategory.where("category_id=? and city ILIKE (?)",3,params[:search_location].present? ? "#{params[:search_location]}%" : "%a%").limit(20)
+			@sc1 = Subcategory.where("category_id=? and city=?",1,params[:search_location].present? ? params[:search_location] : "Columbus").limit(20)
+			@sc2 = Subcategory.where("category_id=? and city=?",2,params[:search_location].present? ? params[:search_location] : "Columbus").limit(20)
+			@sc3 = Subcategory.where("category_id=? and city=?",3,params[:search_location].present? ? params[:search_location] : "Columbus").limit(20)
 			@subcat=@sc1+@sc2+@sc3
 		end
 	end

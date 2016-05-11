@@ -178,7 +178,6 @@
   </div>
 
 
-<script type='text/javascript' src='//maps.google.com/maps/api/js?key=<%=google_api_key%>&v=3.exp&#038;libraries=places&#038;ver=3.22'></script>
 <script type='text/javascript' src='http://tecorb.com/admin/demo/section1/escorts/wp-content/themes/listable/assets/js/plugins/leaflet.js?ver=1.0.0'></script>
 
 
@@ -342,7 +341,7 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
         <%@c+=1%>
       <%end%>
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 3,
+        zoom: 10,
         center: new google.maps.LatLng(locations[0][1], locations[0][2]),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
