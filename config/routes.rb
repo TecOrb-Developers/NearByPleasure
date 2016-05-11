@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :subcategories
   get 'update_lat_long'=>"upload_csv#update_lat_long"
   get 'update_image'=>'upload_csv#update_image'
+  post 'lat_long_csv'=>"upload_csv#lat_long_csv"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

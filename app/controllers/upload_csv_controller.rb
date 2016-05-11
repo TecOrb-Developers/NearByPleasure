@@ -2,7 +2,6 @@ class UploadCsvController < ApplicationController
 	require 'csv'
   def index
     @sub= Subcategory.where(:latitude=>nil,:longitude=>nil)
-    
   end
   def create
     file=params[:category][:file]
@@ -71,6 +70,31 @@ class UploadCsvController < ApplicationController
       redirect_to :back
     end 
   end
+
+  def lat_long_csv
+    file=params[:category][:file]
+    @i=1
+    @status=false
+    @cat=""
+    if File.extname(file.original_filename)=='.csv'
+      CSV.foreach(file.path) do |row|
+        if @i>1               
+          @subcategory = Subcategory.find_by_profile_link(row[2])
+          if @subcategory
+            @subcategory.update_attributes(:latitude=>row[13],:longitude=>row[14])
+          end
+        end
+        @i+=1
+      end
+      @status ? flash[:notice] = "file has been imported successfully" :  flash[:error]="Not a valid file"
+      redirect_to :back
+    else
+      flash[:error]="Not a csv file"
+      redirect_to :back
+    end 
+  end
+
+
   def update_lat_long
     Subcategory.where(:category_id=>2,:street_address=>nil).destroy_all
     Subcategory.where(:category_id=>3,:street_address=>nil).destroy_all
