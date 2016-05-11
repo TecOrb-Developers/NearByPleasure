@@ -6,8 +6,15 @@
 				<aside class="card__image" style="background-image: url(<%=e.images.first.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
 				</aside><!-- .card__image -->
 				<div class="card__content">
-					<h2 class="card__title" itemprop="name"><%=e.title%></h2>
-					<div class="card__tagline" itemprop="description"><%=e.contact%></div>
+					<h2 class="card__title" itemprop="name"><%=e.title%> </h2>
+					<div class="card__tagline" itemprop="description">
+					<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
+						 <span class="w3-tag w3-round w3-pink w3-right" style="">
+						  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
+						     Escort 
+						  </div>
+						</span> 
+					</div>
 					<footer class="card__footer">
 						<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
 							<meta itemprop="ratingValue" content="4.0">
@@ -30,13 +37,13 @@
 						</ul><!-- .card__tags -->
 						<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
 							<div itemprop="streetAddress">
-								<span class="address__street">Exmouth Market</span>
-								<span class="address__street-no">2</span>
+								<span class="address__street"><%=e.city%></span>
+								<span class="address__street-no"></span>
 							</div>	
-							<span class="address__city" itemprop="addressLocality">London</span>
-							<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span>
-							<span class="address__state-short" itemprop="addressRegion">Greater London</span>
-							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry">GB</span>				
+							<!-- <span class="address__city" itemprop="addressLocality">London</span>
+							<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span> -->
+							<span class="address__state-short" itemprop="addressRegion"><%=e.state%></span>
+							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"></span>				
 						</div>
 					</footer>
 				</div><!-- .card__content -->
@@ -60,6 +67,7 @@
             <div class="card__meta">
               <span class="posted-on"><a href="http://tecorb.com/admin/demo/section1/escorts/2015/10/20/etiquette-tips-for-travellers/" rel="bookmark"><time class="entry-date published updated" datetime="2015-10-20T12:25:49+00:00">
                 <%=r.city%>
+
               </time></a></span>
               <ul class="card__links">
                 <li><a href="http://tecorb.com/admin/demo/section1/escorts/category/travelling/"><%=r.state%></a>
@@ -96,6 +104,8 @@
             <%=r.city%>
           </div>
           <span class="category-text"><%=r.title%></span>
+          <br>
+            Massage Parler
         </a>
       </div>
       </li>
@@ -118,7 +128,29 @@
 				<%end%>
 				<div class="card__content">
 					<h2 class="card__title" itemprop="name"><%=e.title%></h2>
-					<div class="card__tagline" itemprop="description"><%=e.contact%></div>
+					<div class="card__tagline" itemprop="description">
+						<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
+						<%if e.category.name=="escort"%>
+							<span class="w3-tag w3-round w3-pink w3-right" style="">
+							  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
+							      Escort
+							  </div>
+							</span>
+						<%elsif e.category.name=="Massage Parler"%>
+							<span class="w3-tag w3-round w3-yellow w3-right" style="">
+							  <div class="w3-tag w3-round w3-yellow w3-border w3-border-white">
+							      Massage
+							  </div>
+							</span>
+						<%else%>
+							<span class="w3-tag w3-round w3-green w3-right" style="color: #fff !important; background-color: #00b3b3 !important;">
+							  <div class="w3-tag w3-round w3-green w3-border w3-border-white" style="color: #fff !important; background-color: #00b3b3 !important;">
+							      Strip Club
+							  </div>
+							</span>
+						<%end%>
+						
+					</div>
 					<footer class="card__footer">
 						<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
 							<meta itemprop="ratingValue" content="4.0">
@@ -141,13 +173,13 @@
 						</ul><!-- .card__tags -->
 						<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
 							<div itemprop="streetAddress">
-								<span class="address__street"><strong><%=e.category.name%></strong></span>
+								<span class="address__street"><strong><%=e.city%></strong></span>
 								<span class="address__street-no"></span>
 							</div>	
-							<span class="address__city" itemprop="addressLocality"><%=e.city%></span>
+							<span class="address__city" itemprop="addressLocality"></span>
 							<span class="address__postcode" itemprop="postalCode"></span>
 							<span class="address__state-short" itemprop="addressRegion"></span>
-							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"><%e.state%></span>				
+							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"><%=e.state%></span>				
 						</div>
 					</footer>
 				</div><!-- .card__content -->

@@ -62,7 +62,7 @@ require 'json'
 	end
 
 	def all_massage_image
-		["massage1.jpg","massage2.jpg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"]
+		["/assets/massage1.jpg","/assets/massage2.jpg","/assets/massage3.jpg","/assets/massage4.jpg","/assets/massage5.jpg","/assets/massage0.jpg"]
 	end
 	def massage_image num
 		# ["massage1.jpg","massage2.jpeg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"].sample

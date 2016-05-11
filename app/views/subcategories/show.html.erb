@@ -18,8 +18,8 @@
             </div>
             <div>
               <div class="single_job_listing"
-                data-latitude="<%=@subcat.latitude%>"
-                data-longitude="<%=@subcat.longitude%>"
+                data-latitude="<%=@subcat.latitude.present? ? @subcat.latitude : 25.789%>"
+                data-longitude="<%=@subcat.longitude.present? ? @subcat.longitude : -80.2264%>"
                 data-categories="Sex"
                 data-icon="">
                 <div class="grid">
@@ -43,10 +43,10 @@
 										      <span class="rating-value">(<span itemprop="reviewCount">1</span>)</span>
 										      <!-- <input readonly="" value="4" name="pixrating" type="hidden"> -->
 										    <!-- </a> -->
-										    <a href="tel:020 7837 7139" style="margin-left:5em" itemprop="telephone" target="_blank"> 
+										    <a href="tel:020 7837 7139" style="margin-left:3em" itemprop="telephone" target="_blank"> 
                           <i class="fa fa-phone" aria-hidden="true"></i>
                           <%=@subcat.contact.present? ? @subcat.contact : "Not Available"%></a>
-										    <a style="margin-left:5em" href="email:<%=@subcat.email%>" itemprop="email" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <%=@subcat.email.present? ? @subcat.email : "Not Available"%></a>
+										    <a style="margin-left:3em" href="email:<%=@subcat.email%>" itemprop="email" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> <%=@subcat.email.present? ? @subcat.email : "Not Available"%></a>
 										    
 										</header>
 
@@ -151,8 +151,8 @@
                       <div id="listing_sidebar_map-2" class="widget  widget_listing_sidebar_map">
                         <div itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
                           <div id="map" class="listing-map"></div>
-                          <meta itemprop="latitude" content="<%=@subcat.latitude%>"/>
-                          <meta itemprop="longitude" content="<%=@subcat.longitude%>"/>
+                          <meta itemprop="latitude" content="<%=@subcat.latitude.present? ? @subcat.latitude : 25.789%>"/>
+                          <meta itemprop="longitude" content="<%=@subcat.longitude.present? ? @subcat.longitude : -80.2264%>"/>
                         </div>
                         <div class="listing-map-content">
                           <address class="listing-address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">

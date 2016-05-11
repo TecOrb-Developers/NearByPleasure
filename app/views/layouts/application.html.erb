@@ -7,8 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   </head>
   <body>
     <%= yield %>
   </body>
+
+  <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+  <script type="text/javascript">
+    // alert("Your location is: " + geoplugin_countryName() + ", " + geoplugin_region() + ", " + geoplugin_city() + ", latitude : " + geoplugin_latitude() + ", longitude : " +geoplugin_longitude());
+    jQuery(function($){
+      $('.ip-location').text(geoplugin_city()+ ", " + geoplugin_region())
+    });
+  </script>
 </html>

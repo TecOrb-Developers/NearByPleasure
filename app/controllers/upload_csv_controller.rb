@@ -1,6 +1,8 @@
 class UploadCsvController < ApplicationController
 	require 'csv'
   def index
+    @sub= Subcategory.where(:latitude=>nil,:longitude=>nil)
+    
   end
   def create
     file=params[:category][:file]

@@ -7,5 +7,7 @@
 	<%=f.file_field :file,:required=>"true"%>
 	<%=f.submit%>
 <%end%>
-
-<%= link_to "update lat long",update_lat_long_path%>
+<p>
+ nil lat long <%=@sub.count%>
+</p>
+<%= link_to "Click here to fix",update_lat_long_path%>
