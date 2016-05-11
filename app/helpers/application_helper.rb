@@ -9,6 +9,23 @@ require 'json'
 	 key="AIzaSyCJaA4u0M0Az0aGc73Gjei7seHBKy7XxTk"
 	end
 
+	def ip_infodb_key
+		key="059eb8577353df53b23e191f510774579d48f7b84b833a34c4f06b26588a8145"
+	end
+
+	def ip_location ip 
+		ipaddress = Ip.find_by_ip(ip)	
+		if ipaddress.present?
+			ipaddress
+		else	
+			uri = URI("http://api.ipinfodb.com/v3/ip-city/?key=#{ip_infodb_key}&ip=#{ip}")
+			resp = Net::HTTP.get_response(uri)
+	  	# hash = JSON(resp.body)
+	  	p "-----#{resp.body}"
+	  	resp
+	  end
+	end
+
 	def all_cities
 		Subcategory.all.pluck(:city).uniq
 	end

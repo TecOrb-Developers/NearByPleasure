@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     request.remote_ip
     @remote_ip = request.env["HTTP_X_FORWARDED_FOR"]
     p "**********************#{request.remote_ip}"
+    # ip_location("45.58.47.179")
   end
   def new
   	@cat1 = Category.find_by_name("escort")
