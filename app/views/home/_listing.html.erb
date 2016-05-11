@@ -1,90 +1,118 @@
 <div class="grid list job_listings">
 	<%if @cat.name=="escort"%>
-		<%@subcat.each do |e|%>
-			<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
-			<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
-				<aside class="card__image" style="background-image: url(<%=e.images.first.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
-				</aside><!-- .card__image -->
-				<div class="card__content">
-					<h2 class="card__title" itemprop="name"><%=e.title%> </h2>
-					<div class="card__tagline" itemprop="description">
-					<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
-						 <span class="w3-tag w3-round w3-pink w3-right" style="">
-						  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
-						     Escort 
-						  </div>
-						</span> 
-					</div>
-					<footer class="card__footer">
-						<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-							<meta itemprop="ratingValue" content="4.0">
-							<meta itemprop="reviewCount" content="1; ?>">
-							<span class="js-average-rating">4.0</span>
+		<%if @subcat.present?%>
+			<%@subcat.each do |e|%>
+				<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
+				<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
+					<aside class="card__image" style="background-image: url(<%=e.images.first.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
+					</aside><!-- .card__image -->
+					<div class="card__content">
+						<h2 class="card__title" itemprop="name"><%=e.title%> </h2>
+						<div class="card__tagline" itemprop="description">
+						<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
+							 <span class="w3-tag w3-round w3-pink w3-right" style="">
+							  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
+							     Escort 
+							  </div>
+							</span> 
 						</div>
-						<ul class="card__tags">
-							<li>
-								<div class="card__tag">
-									<div class="pin__icon">
-										<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
-								</div>
-							</li>
-							<li>
-								<div class="card__tag">
-									<div class="pin__icon">
-										<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
-								</div>
-							</li>
-						</ul><!-- .card__tags -->
-						<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-							<div itemprop="streetAddress">
-								<span class="address__street"><%=e.city%></span>
-								<span class="address__street-no"></span>
-							</div>	
-							<!-- <span class="address__city" itemprop="addressLocality">London</span>
-							<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span> -->
-							<span class="address__state-short" itemprop="addressRegion"><%=e.state%></span>
-							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"></span>				
-						</div>
-					</footer>
-				</div><!-- .card__content -->
-			</article><!-- .card.card--listing -->
-			</a><!-- .grid__item -->
-		<%end%>
+						<footer class="card__footer">
+							<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+								<meta itemprop="ratingValue" content="4.0">
+								<meta itemprop="reviewCount" content="1; ?>">
+								<span class="js-average-rating">4.0</span>
+							</div>
+							<ul class="card__tags">
+								<li>
+									<div class="card__tag">
+										<div class="pin__icon">
+											<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+									</div>
+								</li>
+								<li>
+									<div class="card__tag">
+										<div class="pin__icon">
+											<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
+									</div>
+								</li>
+							</ul><!-- .card__tags -->
+							<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+								<div itemprop="streetAddress">
+									<span class="address__street"><%=e.city%></span>
+									<span class="address__street-no"></span>
+								</div>	
+								<!-- <span class="address__city" itemprop="addressLocality">London</span>
+								<span class="address__postcode" itemprop="postalCode">EC1R 4PX</span> -->
+								<span class="address__state-short" itemprop="addressRegion"><%=e.state%></span>
+								<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"></span>				
+							</div>
+						</footer>
+					</div><!-- .card__content -->
+				</article><!-- .card.card--listing -->
+				</a><!-- .grid__item -->
+			<%end%>
+		<%else%>
+      <div class="categories-wrap  categories-wrap--widget">
+    		<ul class="categories  categories--widget">
+		    	<li style="width: 36%; height: 55vh !important">
+			      <div class="category-cover" style="background-image: url('/assets/not-yet-available.png')">
+			        <a href="#" data-no-turbolink = true>
+			          <span class="category-text"></span><br>           
+			        </a>
+			      </div>
+		      </li>
+		    </ul>
+		  </div>
+    <%end%>
 	<%elsif @cat.name=="Massage Parler"%>
-		<div class="grid  grid--widget  list">
-			<%@cn=0%>
-			<%@subcat.each do |r|%> 
-      <div class="grid__item  grid__item--widget">
-        <article id="post-250" class="card card--post post-250 post type-post status-publish format-standard has-post-thumbnail hentry category-travelling tag-adventure tag-art tag-culture tag-food tag-packing tag-travel tag-world">
-          <a href="<%=subcategory_path(r.id)%>" data-no-turbolink = true>
-            <aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>')">
-            </aside>
-          </a>
-          <div class="card__content">
-            <h2 class="card__title">
-              <a href="http://tecorb.com/admin/demo/section1/escorts/2015/10/20/etiquette-tips-for-travellers/" rel="bookmark"><%=r.title%></a>
-            </h2>
-            <div class="card__meta">
-              <span class="posted-on"><a href="http://tecorb.com/admin/demo/section1/escorts/2015/10/20/etiquette-tips-for-travellers/" rel="bookmark"><time class="entry-date published updated" datetime="2015-10-20T12:25:49+00:00">
-                <%=r.city%>
+		  <%@cn=0%>
+			<%if @subcat.present?%>
+				<div class="grid  grid--widget  list">
+					<%@subcat.each do |r|%> 
+			      <div class="grid__item  grid__item--widget">
+			        <article id="post-250" class="card card--post post-250 post type-post status-publish format-standard has-post-thumbnail hentry category-travelling tag-adventure tag-art tag-culture tag-food tag-packing tag-travel tag-world">
+			          <a href="<%=subcategory_path(r.id)%>" data-no-turbolink = true>
+			            <aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>')">
+			            </aside>
+			          </a>
+			          <div class="card__content">
+			            <h2 class="card__title">
+			              <a href="http://tecorb.com/admin/demo/section1/escorts/2015/10/20/etiquette-tips-for-travellers/" rel="bookmark"><%=r.title%></a>
+			            </h2>
+			            <div class="card__meta">
+			              <span class="posted-on"><a href="http://tecorb.com/admin/demo/section1/escorts/2015/10/20/etiquette-tips-for-travellers/" rel="bookmark"><time class="entry-date published updated" datetime="2015-10-20T12:25:49+00:00">
+			                <%=r.city%>
 
-              </time></a></span>
-              <ul class="card__links">
-                <li><a href="http://tecorb.com/admin/demo/section1/escorts/category/travelling/"><%=r.state%></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-      <%@cn<5 ? @cn+=1 : @cn=0%>
-
+			              </time></a></span>
+			              <ul class="card__links">
+			                <li><a href="http://tecorb.com/admin/demo/section1/escorts/category/travelling/"><%=r.state%></a>
+			                </li>
+			              </ul>
+			            </div>
+			          </div>
+			        </article>
+			      </div>
+		      	<%@cn<5 ? @cn+=1 : @cn=0%>
+		      <%end%>
+	      </div>
+      <%else%>
+	      <div class="categories-wrap  categories-wrap--widget">
+	    		<ul class="categories  categories--widget">
+			    	<li style="width: 36%; height: 55vh !important">
+				      <div class="category-cover" style="background-image: url('/assets/not-yet-available.png')">
+				        <a href="#" data-no-turbolink = true>
+				          <span class="category-text"></span><br>           
+				        </a>
+				      </div>
+			      </li>
+			    </ul>
+			  </div>
       <%end%>
-    </div>
 	<%elsif @cat.name=="Strip Club"%>
 		<%@imgs=["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg"]%>
 		<div class="categories-wrap  categories-wrap--widget">
     <ul class="categories  categories--widget">
+    <% if @subcat.present? %>
 		<%@subcat.each do |r|%>
 			<li style="width: 36%;">
       <div class="category-cover" style="background-image: url(<%=@imgs.sample%>)">
@@ -110,82 +138,106 @@
       </div>
       </li>
     <%end%>
+    <%else%>
+    	<li style="width: 36%; height: 55vh !important">
+      <div class="category-cover" style="background-image: url('/assets/not-yet-available.png')">
+        <a href="#" data-no-turbolink = true>
+          <span class="category-text"></span><br>           
+        </a>
+      </div>
+      </li>
+    <%end%>
+
 	<%else%>
 		<%@cn=0%>
-		<%@subcat.each do |e|%>
-			<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
-			<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
-				<%if e.category.name=="escort"%>
-				<aside class="card__image" style="background-image: url(<%=e.images.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
-				</aside><!-- .card__image -->
-				<%elsif e.category.name=="Massage Parler"%>
-					<aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>');">
+		<%if @subcat.present?%>
+			<%@subcat.each do |e|%>
+				<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
+				<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
+					<%if e.category.name=="escort"%>
+					<aside class="card__image" style="background-image: url(<%=e.images.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
 					</aside><!-- .card__image -->
-				<%else%>
-					<%@imgs=["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg"]%>
-					<aside class="card__image" style="background-image: url(<%=@imgs.sample%>);">
-					</aside><!-- .card__image -->
-				<%end%>
-				<div class="card__content">
-					<h2 class="card__title" itemprop="name"><%=e.title%></h2>
-					<div class="card__tagline" itemprop="description">
-						<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
-						<%if e.category.name=="escort"%>
-							<span class="w3-tag w3-round w3-pink w3-right" style="">
-							  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
-							      Escort
-							  </div>
-							</span>
-						<%elsif e.category.name=="Massage Parler"%>
-							<span class="w3-tag w3-round w3-yellow w3-right" style="">
-							  <div class="w3-tag w3-round w3-yellow w3-border w3-border-white">
-							      Massage
-							  </div>
-							</span>
-						<%else%>
-							<span class="w3-tag w3-round w3-green w3-right" style="color: #fff !important; background-color: #00b3b3 !important;">
-							  <div class="w3-tag w3-round w3-green w3-border w3-border-white" style="color: #fff !important; background-color: #00b3b3 !important;">
-							      Strip Club
-							  </div>
-							</span>
-						<%end%>
-						
-					</div>
-					<footer class="card__footer">
-						<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
-							<meta itemprop="ratingValue" content="4.0">
-							<meta itemprop="reviewCount" content="1; ?>">
-							<span class="js-average-rating"><%=e.rating.present? ? e.rating : 4.0 %></span>
+					<%elsif e.category.name=="Massage Parler"%>
+						<aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>');">
+						</aside><!-- .card__image -->
+					<%else%>
+						<%@imgs=["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg"]%>
+						<aside class="card__image" style="background-image: url(<%=@imgs.sample%>);">
+						</aside><!-- .card__image -->
+					<%end%>
+					<div class="card__content">
+						<h2 class="card__title" itemprop="name"><%=e.title%></h2>
+						<div class="card__tagline" itemprop="description">
+							<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
+							<%if e.category.name=="escort"%>
+								<span class="w3-tag w3-round w3-pink w3-right" style="">
+								  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
+								      Escort
+								  </div>
+								</span>
+							<%elsif e.category.name=="Massage Parler"%>
+								<span class="w3-tag w3-round w3-yellow w3-right" style="">
+								  <div class="w3-tag w3-round w3-yellow w3-border w3-border-white">
+								      Massage
+								  </div>
+								</span>
+							<%else%>
+								<span class="w3-tag w3-round w3-green w3-right" style="color: #fff !important; background-color: #00b3b3 !important;">
+								  <div class="w3-tag w3-round w3-green w3-border w3-border-white" style="color: #fff !important; background-color: #00b3b3 !important;">
+								      Strip Club
+								  </div>
+								</span>
+							<%end%>
+							
 						</div>
-						<ul class="card__tags">
-							<li>
-								<div class="card__tag">
-									<div class="pin__icon">
-										<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
-								</div>
-							</li>
-							<li>
-								<div class="card__tag">
-									<div class="pin__icon">
-										<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
-								</div>
-							</li>
-						</ul><!-- .card__tags -->
-						<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-							<div itemprop="streetAddress">
-								<span class="address__street"><strong><%=e.city%></strong></span>
-								<span class="address__street-no"></span>
-							</div>	
-							<span class="address__city" itemprop="addressLocality"></span>
-							<span class="address__postcode" itemprop="postalCode"></span>
-							<span class="address__state-short" itemprop="addressRegion"></span>
-							<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"><%=e.state%></span>				
-						</div>
-					</footer>
-				</div><!-- .card__content -->
-			</article><!-- .card.card--listing -->
-			</a><!-- .grid__item -->
-			<%@cn<5 ? @cn+=1 : @cn=0%>
-		<%end%>
+						<footer class="card__footer">
+							<div class="rating  card__rating" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+								<meta itemprop="ratingValue" content="4.0">
+								<meta itemprop="reviewCount" content="1; ?>">
+								<span class="js-average-rating"><%=e.rating.present? ? e.rating : 4.0 %></span>
+							</div>
+							<ul class="card__tags">
+								<li>
+									<div class="card__tag">
+										<div class="pin__icon">
+											<svg width="30" height="25" viewBox="0 0 30 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-9 -12)" fill="none" fill-rule="evenodd"><circle stroke="currentColor" stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.49 22.44c-2.23 0-4.04-1.813-4.04-4.04 0-2.228 1.81-4.04 4.04-4.04 2.226 0 4.038 1.812 4.038 4.04 0 2.227-1.812 4.04-4.04 4.04zm0-6.996c-1.63 0-2.957 1.326-2.957 2.956s1.326 2.956 2.956 2.956c1.627 0 2.954-1.326 2.954-2.956s-1.327-2.956-2.956-2.956zm18.028 4.866H28.87c-.3 0-.54-.24-.54-.54 0-2.683 2.18-4.866 4.864-4.866 2.683 0 4.865 2.183 4.865 4.866 0 .3-.244.54-.543.54zm-8.068-1.08h7.487c-.263-1.83-1.84-3.24-3.743-3.24-1.902 0-3.48 1.41-3.744 3.24zm9.008 3.215H27.93c-.3 0-.542-.243-.542-.542 0-.3.242-.54.542-.54h10.528c.3 0 .542.24.542.54 0 .3-.242.542-.542.542zm-4.063-7.972c-.3 0-.54-.242-.54-.54 0-.365-.297-.66-.66-.66-.365 0-.66.295-.66.66 0 .298-.244.54-.543.54-.3 0-.542-.242-.542-.54 0-.962.782-1.744 1.744-1.744.96 0 1.743.78 1.743 1.74 0 .3-.242.54-.542.54zm-8.96 22.255H13.542c-.3 0-.542-.242-.542-.54V27.83c0-2.676 2.178-4.855 4.855-4.855h3.267c.708 0 2.373.52 2.673.747l5.164 3.94 2.984-4.068c.345-.47.9-.75 1.483-.75.394 0 .77.123 1.086.356.396.29.655.718.73 1.203.075.486-.044.97-.335 1.367l-4.094 5.578c-.292.395-.736.662-1.22.732-.52.066-.99-.063-1.377-.358l-2.243-1.71v6.214c-.022.28-.256.5-.542.5zm-11.352-1.083h10.81v-6.728c0-.205.118-.394.303-.485.184-.09.404-.07.568.055l3.11 2.375c.164.124.374.173.575.146.19-.027.372-.137.492-.3l4.093-5.578c.12-.162.17-.362.138-.56-.03-.2-.137-.375-.3-.495-.328-.24-.816-.163-1.056.162l-3.31 4.514c-.087.12-.217.196-.36.217-.147.02-.29-.017-.407-.106l-5.6-4.273c-.17-.09-1.51-.526-2.018-.526h-3.267c-2.08 0-3.772 1.694-3.772 3.773v7.813z" fill="currentColor"></path></g></svg>									</div>
+									</div>
+								</li>
+								<li>
+									<div class="card__tag">
+										<div class="pin__icon">
+											<svg width="15" height="27" viewBox="0 0 15 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-17 -10)" stroke="currentColor" fill="none" fill-rule="evenodd"><circle stroke-width="2" cx="24" cy="24" r="24"></circle><path d="M19.546 11.21l-.984 7.52c0 1.546.562 3.092 1.757 4.216l4.215 4.216 4.216-4.216c1.196-1.195 1.758-2.67 1.758-4.216l-.984-7.52h-9.978z" stroke-width="1.5"></path><path d="M24.535 27.162v7.94-7.94zM20.53 35.103h7.94-7.94zM18.562 18.73h11.946-11.946z" stroke-width="2"></path></g></svg>									</div>
+									</div>
+								</li>
+							</ul><!-- .card__tags -->
+							<div class="address  card__address" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+								<div itemprop="streetAddress">
+									<span class="address__street"><strong><%=e.city%></strong></span>
+									<span class="address__street-no"></span>
+								</div>	
+								<span class="address__city" itemprop="addressLocality"></span>
+								<span class="address__postcode" itemprop="postalCode"></span>
+								<span class="address__state-short" itemprop="addressRegion"></span>
+								<span class="address__country-short" style="font-weight: bolder" itemprop="addressCountry"><%=e.state%></span>				
+							</div>
+						</footer>
+					</div><!-- .card__content -->
+				</article><!-- .card.card--listing -->
+				</a><!-- .grid__item -->
+				<%@cn<5 ? @cn+=1 : @cn=0%>
+			<%end%>
+		<%else%>
+      <div class="categories-wrap  categories-wrap--widget">
+    		<ul class="categories  categories--widget">
+		    	<li style="width: 36%; height: 55vh !important">
+			      <div class="category-cover" style="background-image: url('/assets/not-yet-available.png')">
+			        <a href="#" data-no-turbolink = true>
+			          <span class="category-text"></span><br>           
+			        </a>
+			      </div>
+		      </li>
+		    </ul>
+		  </div>
+    <%end%>
 	<%end%>
 </div>
