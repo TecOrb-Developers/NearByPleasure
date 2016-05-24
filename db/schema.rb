@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160511104833) do
+ActiveRecord::Schema.define(version: 20160523134507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,11 +49,32 @@ ActiveRecord::Schema.define(version: 20160511104833) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "bookmarks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "bookmarks", ["subcategory_id"], name: "index_bookmarks_on_subcategory_id", using: :btree
+  add_index "bookmarks", ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "user_id"
+    t.integer  "talk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["talk_id"], name: "index_comments_on_talk_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.string   "name"
@@ -80,6 +101,39 @@ ActiveRecord::Schema.define(version: 20160511104833) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "recent_checks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "recent_checks", ["subcategory_id"], name: "index_recent_checks_on_subcategory_id", using: :btree
+  add_index "recent_checks", ["user_id"], name: "index_recent_checks_on_user_id", using: :btree
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "title"
+    t.string   "content"
+    t.string   "image"
+    t.integer  "user_id"
+    t.integer  "subcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "reviews", ["subcategory_id"], name: "index_reviews_on_subcategory_id", using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
+
+  create_table "socialauths", force: :cascade do |t|
+    t.string   "provider_id"
+    t.string   "provider_name"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "socialauths", ["user_id"], name: "index_socialauths_on_user_id", using: :btree
+
   create_table "subcategories", force: :cascade do |t|
     t.string   "title"
     t.string   "profile_link"
@@ -104,7 +158,50 @@ ActiveRecord::Schema.define(version: 20160511104833) do
 
   add_index "subcategories", ["category_id"], name: "index_subcategories_on_category_id", using: :btree
 
+  create_table "talk_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "talk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "talk_users", ["talk_id"], name: "index_talk_users_on_talk_id", using: :btree
+  add_index "talk_users", ["user_id"], name: "index_talk_users_on_user_id", using: :btree
+
+  create_table "talks", force: :cascade do |t|
+    t.string   "title"
+    t.string   "content"
+    t.integer  "admin_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.string   "email"
+    t.string   "gender"
+    t.string   "password_digest"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "contact"
+    t.string   "confirmation_token"
+    t.boolean  "is_confirm"
+    t.string   "forget_password_token"
+  end
+
+  add_foreign_key "bookmarks", "subcategories"
+  add_foreign_key "bookmarks", "users"
+  add_foreign_key "comments", "talks"
+  add_foreign_key "comments", "users"
   add_foreign_key "images", "categories"
   add_foreign_key "images", "subcategories"
+  add_foreign_key "recent_checks", "subcategories"
+  add_foreign_key "recent_checks", "users"
+  add_foreign_key "reviews", "subcategories"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "socialauths", "users"
   add_foreign_key "subcategories", "categories"
+  add_foreign_key "talk_users", "talks"
+  add_foreign_key "talk_users", "users"
 end

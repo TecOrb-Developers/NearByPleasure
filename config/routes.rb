@@ -11,6 +11,20 @@ Rails.application.routes.draw do
   get 'update_lat_long'=>"upload_csv#update_lat_long"
   get 'update_image'=>'upload_csv#update_image'
   post 'lat_long_csv'=>"upload_csv#lat_long_csv"
+
+  #===========APIS============================================
+
+  post 'signup'=>"users#signup"
+  get 'user/:user_id/token/:token/confirm'=>"users#confirm",:as=> "confirm"
+
+  post 'socialauth'=>"users#socialauth"
+
+  post 'login'=>"sessions#login"
+  post 'forgot_password'=>"sessions#forgot_password"
+  get 'forgot/:user_id/token/:token'=>"sessions#forgot_view",:as=>"forgot_view"
+  post 'update_password'=>"sessions#update_password"
+
+  #============================================================
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "jquery-ui-rails"
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -39,6 +39,7 @@ gem "font-awesome-rails"
 
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem "rails-erd"
 
 
 group :development, :test do

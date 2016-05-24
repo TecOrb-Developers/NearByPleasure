@@ -1,7 +1,11 @@
 module ApplicationHelper
-require 'net/http'
-require 'uri'
-require 'json'
+	include Preventurl
+	require 'net/http'
+	require 'uri'
+	require 'json'
+
+	
+
 	def categories
 		Category.all
 	end
@@ -68,4 +72,5 @@ require 'json'
 		# ["massage1.jpg","massage2.jpeg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"].sample
 		"massage#{num}.jpg"
 	end
+
 end
