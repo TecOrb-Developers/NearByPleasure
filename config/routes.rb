@@ -16,6 +16,16 @@ Rails.application.routes.draw do
 
   post 'signup'=>"users#signup"
   get 'user/:user_id/token/:token/confirm'=>"users#confirm",:as=> "confirm"
+  post 'add_talk'=>"talks#create_talk"
+  post 'all_talk'=>"talks#all_talk"
+  post 'my_talk'=>"talks#my_talk"
+  post 'create_comment'=>"comments#create_comment"
+  post 'remove_talk'=>"talks#remove_talk"
+  post 'all_category'=>"categories#all_category"
+  post 'create_bookmark'=>"bookmarks#create_bookmark"
+  post 'remove_bookmark'=>"bookmarks#remove_bookmark"
+  post 'create_review'=>"reviews#create_review"
+  post 'my_review'=>"reviews#my_review"
 
   post 'socialauth'=>"users#socialauth"
 

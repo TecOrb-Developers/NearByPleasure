@@ -44,7 +44,7 @@ class UploadCsvController < ApplicationController
        		if !@subcategory
        			@subcategory= @category.subcategories.create!(@subcat) if  row[2].present?
        		else
-       			# @subcategory.update_attributes(@subcat)
+       			 @subcategory.update_attributes(@subcat)
        		end
        		if @cat == "escort"
        			row[11].present? ? @images=row[11].split(',') : @images=[]
