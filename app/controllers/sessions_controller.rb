@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 		if params[:email].present? and params[:password].present?
 			@user=User.find_by_email(params[:email])
 			if @user && @user.authenticate(params[:password])
-				render :json => {:message => "Successfull logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				render :json => { :response_code => 500,:response_message => "Unauthorized access!!" }
 			end

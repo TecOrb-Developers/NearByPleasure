@@ -37,10 +37,10 @@ class UsersController < ApplicationController
 			@soc = @user.socialauths.where("provider_name=? and provider_id=?",params[:provider_name],params[:provider_id]).first
 			@user.update_attributes(:is_confirm=>true)
 			if @soc.present?
-				render :json => {:message => "Successfull logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				@user.socialauths.create(:provider_id=>params[:provider_id],:provider_name=>params[:provider_name])
-				render :json => {:message => "Successfull logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			end
 		else
 			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
