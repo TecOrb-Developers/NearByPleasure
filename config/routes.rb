@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get 'forgot/:user_id/token/:token'=>"sessions#forgot_view",:as=>"forgot_view"
   post 'update_password'=>"sessions#update_password"
 
+  post 'all_subcategories'=>"subcategories#subcategories"
+
   #============================================================
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
