@@ -1,4 +1,5 @@
 class SubcategoriesController < ApplicationController
+	
 	def show
 		@subcat=Subcategory.find_by_id(params[:id])
   	# @subcat.images.present? ? @images = @subcat.images.pluck(:name) :  @images = ["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg","/assets/club1.jpg"]
