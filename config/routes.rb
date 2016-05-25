@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   post 'create_bookmark'=>"bookmarks#create_bookmark"
   post 'remove_bookmark'=>"bookmarks#remove_bookmark"
   post 'create_review'=>"reviews#create_review"
+  post 'my_review'=>"reviews#my_review"
 
   post 'socialauth'=>"users#socialauth"
 
