@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   post 'create_review'=>"reviews#create_review"
   post 'my_reviews'=>"reviews#my_reviews"
   post 'all_reviews'=>"reviews#all_reviews"
-
+  post 'search_title'=>'titles#search_title'
+  post 'recent_service'=>"recent_checks#recent_service"
   post 'socialauth'=>"users#socialauth"
 
   post 'login'=>"sessions#login"

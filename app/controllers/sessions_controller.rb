@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 				@token="#{['A','b','C','d','@','-','A'].sample(2).join('')}#{Time.now.to_i}#{['z','s','w','m',1,2,3].sample(4).join('')}"
         @user.update_attributes(:forget_password_token=>@token)
         UserMailer.forgot_password(@user).deliver_now
-				render :json => {:response_code => 200,:message => "Password recovery email sent to your email.",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:response_code => 200,:message => "Password recovery email sent to your email." }
 			else
 				render :json => { :response_code => 500,:response_message => "User does not exists." }
 			end
