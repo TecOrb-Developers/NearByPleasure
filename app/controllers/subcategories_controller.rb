@@ -66,4 +66,31 @@ class SubcategoriesController < ApplicationController
 			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
 		end
 	end
+
+	def find_subcategory
+		if params[:subcategory_id].present?
+			@subcategory = Subcategory.find_by_id(params[:subcategory_id])
+			if @subcategory	
+				@imgs = []
+					if @subcategory.category.name=="escort"
+						@subcategory.images.each do |i|
+							@imgs << "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{i.name}"  
+						end
+					elsif @subcategory.category.name=="Massage Parler"
+						for i in 0...5
+							@imgs << "http://45.58.47.179/image/massageimgs/massage#{i}.jpg" 
+						end
+					else
+						for i in 0...5
+							@imgs << "http://45.58.47.179/image/stripclubimgs/club#{@cn}.jpg"
+						end
+					end
+				render :json => { :response_code => 200, :response_message => "Sub category details",:subcategory=>@subcategory.as_json(except: [:created_at,:updated_at,:profile_link,:page_url]).merge(:images=>@imgs)}
+			else
+				render :json => { :response_code => 500, :response_message => "Sub category does not exists"}
+			end
+		else
+			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
+		end
+	end
 end

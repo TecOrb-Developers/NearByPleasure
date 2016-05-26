@@ -22,10 +22,12 @@ Rails.application.routes.draw do
   post 'create_comment'=>"comments#create_comment"
   post 'remove_talk'=>"talks#remove_talk"
   post 'all_category'=>"categories#all_category"
+  post 'find_category'=>"categories#find_category"
   post 'create_bookmark'=>"bookmarks#create_bookmark"
   post 'remove_bookmark'=>"bookmarks#remove_bookmark"
   post 'create_review'=>"reviews#create_review"
-  post 'my_review'=>"reviews#my_review"
+  post 'my_reviews'=>"reviews#my_reviews"
+  post 'all_reviews'=>"reviews#all_reviews"
 
   post 'socialauth'=>"users#socialauth"
 
@@ -35,7 +37,11 @@ Rails.application.routes.draw do
   post 'update_password'=>"sessions#update_password"
 
   post 'all_subcategories'=>"subcategories#subcategories"
+  post 'find_subcategory'=>"subcategories#find_subcategory"
 
+  post 'join_talk'=>"talks#join_talk"
+  post 'leave_talk'=>"talks#leave_talk"
+  post 'my_bookmarks'=>"bookmarks#my_bookmarks"
   #============================================================
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

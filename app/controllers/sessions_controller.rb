@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 		if params[:email].present? and params[:password].present?
 			@user=User.find_by_email(params[:email])
 			if @user && @user.authenticate(params[:password])
-				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:response_code => 200,:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				render :json => { :response_code => 500,:response_message => "Unauthorized access!!" }
 			end
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 				@token="#{['A','b','C','d','@','-','A'].sample(2).join('')}#{Time.now.to_i}#{['z','s','w','m',1,2,3].sample(4).join('')}"
         @user.update_attributes(:forget_password_token=>@token)
         UserMailer.forgot_password(@user).deliver_now
-				render :json => {:message => "Password recovery email sent to your email.",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:response_code => 200,:message => "Password recovery email sent to your email.",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				render :json => { :response_code => 500,:response_message => "User does not exists." }
 			end
@@ -41,7 +41,7 @@ class SessionsController < ApplicationController
 			@user = User.find_by_id(params[:user_id])
 			if @user and (params[:password].strip == params[:password_confirm].strip)
 				@user.update_attributes(:password=>params[:password])
-				render :json => {:message => "Password has been updated successfully.",:user=>@user.as_json(except: [:id,:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				render :json => {:response_code => 200,:message => "Password has been updated successfully.",:user=>@user.as_json(except: [:id,:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				render :json => { :response_code => 500,:response_message => "Unauthorized access!!" }
 			end
