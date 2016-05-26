@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	# mount_uploader :image, ImageUploader
 	has_secure_password
 	has_many :socialauths,:dependent=> :destroy
 	has_many :bookmarks,:dependent=> :destroy

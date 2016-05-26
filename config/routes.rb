@@ -28,8 +28,12 @@ Rails.application.routes.draw do
   post 'create_review'=>"reviews#create_review"
   post 'my_reviews'=>"reviews#my_reviews"
   post 'all_reviews'=>"reviews#all_reviews"
+  post 'user_reviews'=>"reviews#user_reviews"
   post 'search_title'=>'titles#search_title'
   post 'recent_service'=>"recent_checks#recent_service"
+
+  post 'all_recent'=>"recent_checks#all_recent"
+
   post 'socialauth'=>"users#socialauth"
 
   post 'login'=>"sessions#login"
@@ -43,6 +47,8 @@ Rails.application.routes.draw do
   post 'join_talk'=>"talks#join_talk"
   post 'leave_talk'=>"talks#leave_talk"
   post 'my_bookmarks'=>"bookmarks#my_bookmarks"
+
+  post 'profile'=>"users#profile"
   #============================================================
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

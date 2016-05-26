@@ -47,4 +47,14 @@ class ReviewsController < ApplicationController
 			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
 		end
 	end
+
+	def user_reviews
+		@user = User.find_by_id(params[:user_id])
+		if @user
+			@reviews=@user.reviews.paginate(:page => params[:page], :per_page => params[:per_page])
+			render :json => { :response_code => 200, :response_message => "All Review!!",:review=>@reviews.as_json(except: [:created_at,:updated_at,:image]) }
+		else
+			render :json => { :response_code => 500, :response_message => "User does not exist"}
+		end
+	end
 end

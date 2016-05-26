@@ -35,19 +35,31 @@ class UsersController < ApplicationController
 	def socialauth
 		if params[:provider_id].present? and params[:provider_name].present? and params[:email].present?
 			@user = User.find_by_email(params[:email])
+			# if params[:profile_pic].present?
+				# @img=ActiveSupport::Base64.encode64(open("http://image.com/img.jpg") { |io| io.read })
+				# p "======#{@img.inspect}"
+			# end
 			if !@user
 				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:image=>params[:profile_pic],:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
+			else
+				@user.update_attributes(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:image=>params[:profile_pic],:is_confirm=>true)
 			end
 			@soc = @user.socialauths.where("provider_name=? and provider_id=?",params[:provider_name],params[:provider_id]).first
-			@user.update_attributes(:is_confirm=>true)
-			if @soc.present?
-				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
-			else
+			if !@soc.present?
 				@user.socialauths.create(:provider_id=>params[:provider_id],:provider_name=>params[:provider_name])
-				render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			end
+			render :json => {:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]).merge(:provider_id=>params[:provider_id],:provider_name=>params[:provider_name]) }
 		else
 			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
+		end
+	end
+
+	def profile
+		@user = User.find_by_id(params[:user_id])
+		if @user
+			render :json => {:response_code => 200,:message => "Profile fetched",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+		else
+			render :json => { :response_code => 500,:response_message => "User does not exists." }
 		end
 	end
 end
