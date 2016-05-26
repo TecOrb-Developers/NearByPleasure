@@ -1,0 +1,2 @@
+module RecentChecksHelper
+end

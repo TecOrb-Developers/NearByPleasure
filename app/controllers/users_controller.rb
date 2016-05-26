@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 		if params[:provider_id].present? and params[:provider_name].present? and params[:email].present?
 			@user = User.find_by_email(params[:email])
 			if !@user
-				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
+				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:image=>params[:profile_pic],:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
 			end
 			@soc = @user.socialauths.where("provider_name=? and provider_id=?",params[:provider_name],params[:provider_id]).first
 			@user.update_attributes(:is_confirm=>true)

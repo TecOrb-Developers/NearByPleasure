@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post 'create_review'=>"reviews#create_review"
   post 'my_review'=>"reviews#my_review"
   post 'search_title'=>'titles#search_title'
+  post 'recent_service'=>"recent_checks#recent_service"
 
   post 'socialauth'=>"users#socialauth"
 
