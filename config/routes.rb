@@ -51,6 +51,7 @@ Rails.application.routes.draw do
   post 'my_bookmarks'=>"bookmarks#my_bookmarks"
 
   post 'profile'=>"users#profile"
+  post 'update_profile'=>"users#update_profile"
   #============================================================
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	require 'base64'
+	require 'open-uri'
 	def signup
 		if params[:email].present? and params[:password].present? and params[:fname].present?
 			if params[:password]==params[:confirm_password]
@@ -35,12 +37,15 @@ class UsersController < ApplicationController
 	def socialauth
 		if params[:provider_id].present? and params[:provider_name].present? and params[:email].present?
 			@user = User.find_by_email(params[:email])
-			# if params[:profile_pic].present?
-				# @img=ActiveSupport::Base64.encode64(open("http://image.com/img.jpg") { |io| io.read })
-				# p "======#{@img.inspect}"
-			# end
+			@img=nil
+			if params[:profile_pic].present?
+				img = open("#{params[:profile_pic]}")
+				@im=Base64.encode64(img.read)
+				m=Cloudinary::Uploader.upload("data:image/png;base64,#{@img}")
+				@img=m["url"]
+			end
 			if !@user
-				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:image=>params[:profile_pic],:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
+				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:image=>@img,:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
 			else
 				@user.update_attributes(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:image=>params[:profile_pic],:is_confirm=>true)
 			end
@@ -58,6 +63,21 @@ class UsersController < ApplicationController
 		@user = User.find_by_id(params[:user_id])
 		if @user
 			render :json => {:response_code => 200,:message => "Profile fetched",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+		else
+			render :json => { :response_code => 500,:response_message => "User does not exists." }
+		end
+	end
+
+	def update_profile
+		@user = User.find_by_id(params[:user_id])
+		if @user
+			@img=nil
+			if params[:profile_pic_in_base_sixty_four].present?
+				m=Cloudinary::Uploader.upload("data:image/png;base64,#{params[:profile_pic_in_base_sixty_four]}")
+				@img=m["url"]
+			end
+			@user.update_attributes(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:image=>@img)
+			render :json => {:response_code => 200,:message => "Profile updated",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 		else
 			render :json => { :response_code => 500,:response_message => "User does not exists." }
 		end
