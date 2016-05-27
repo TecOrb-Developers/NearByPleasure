@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 			if params[:profile_pic].present?
 				img = open("#{params[:profile_pic]}")
 				@im=Base64.encode64(img.read)
-				m=Cloudinary::Uploader.upload("data:image/png;base64,#{@img}")
+				m=Cloudinary::Uploader.upload("data:image/png;base64,#{@im}")
 				@img=m["url"]
 			end
 			if !@user
