@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   post 'recent_service'=>"recent_checks#recent_service"
 
   post 'all_recent'=>"recent_checks#all_recent"
+  post 'search_bookmark'=>'bookmarks#search_bookmark'
+ 
 
   post 'socialauth'=>"users#socialauth"
 

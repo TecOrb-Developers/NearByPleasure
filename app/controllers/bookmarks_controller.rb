@@ -39,4 +39,17 @@ class BookmarksController < ApplicationController
 	  end
 	end
 
+	def search_bookmark
+		@user = User.find_by_id(params[:user_id])
+		if @user
+			@books=@user.bookmarks.pluck(:subcategory_id)
+			p "=======#{@books}"
+			@subcats = Subcategory.where("(id in (?)) and (city ILIKE (?))",@books,"#{params[:city].split(',')[0]}%").pluck(:id)
+			p "=======#{@subcats}"
+			@bookmarks = @user.bookmarks.where("subcategory_id in (?)",@subcats).paginate(:page => params[:page], :per_page => params[:per_page])
+			render :json => { :response_code => 200, :response_message => "Successfully fetched" ,:bookmarks=>@bookmarks.as_json(except: [:created_at,:updated_at]) } 
+		else
+			render :json => { :response_code => 500, :response_message => "User does not exists"}
+		end
+	end
 end
