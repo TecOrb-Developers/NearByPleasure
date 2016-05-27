@@ -38,4 +38,5 @@ class BookmarksController < ApplicationController
 	  	render :json => { :response_code => 500, :response_message => "Bookmark does not exist"}
 	  end
 	end
+
 end
