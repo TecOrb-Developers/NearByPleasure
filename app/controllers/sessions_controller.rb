@@ -32,8 +32,10 @@ class SessionsController < ApplicationController
 		@user=User.find_by_id_and_forget_password_token(params[:user_id],params[:token])
 		if !@user
 			render :json => { :response_code => 500,:response_message => "Unauthorized Access." }
+		else
+			render :layout =>"blank_application"
 		end
-		render :layout =>"blank_application"
+
 	end
 
 	def update_password
