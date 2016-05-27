@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 			if !@user
 				@user = User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:image=>@img,:password=>"#{params[:provider_id]}.#{params[:provider_name]}@tecorb",:is_confirm=>true) 
 			else
-				@user.update_attributes(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:image=>params[:profile_pic],:is_confirm=>true)
+				@user.update_attributes(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:image=>@img,:is_confirm=>true)
 			end
 			@soc = @user.socialauths.where("provider_name=? and provider_id=?",params[:provider_name],params[:provider_id]).first
 			if !@soc.present?
