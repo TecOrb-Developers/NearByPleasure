@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   post 'search_title'=>'titles#search_title'
   post 'recent_service'=>"recent_checks#recent_service"
   post 'all_recent'=>"recent_checks#all_recent"
-  post 'create_recent'=>"recent_checks#create_recent"
+ 
 
   post 'socialauth'=>"users#socialauth"
 
