@@ -20,4 +20,17 @@ class BookmarksController < ApplicationController
 	  	render :json => { :response_code => 500, :response_message => "This Bookmark not exist"}
 	  end
 	end
+
+	def search_bookmark
+		@user = User.find_by_id(params[:user_id])
+		if @user
+			@books=@user.bookmarks.all.pluck(:subcategory_id)
+			@subcats = Subcategory.where("(id in (?)) and city=?",@books,params[:city]).pluck(:id)
+			@bookmarks = @user.bookmarks.where("id in (?)",@subcats)
+			render :json => { :response_code => 200, :response_message => "Successfully fetched" ,:bookmarks=>@bookmarks.as_json(except: [:created_at,:updated_at]) } 
+		else
+			render :json => { :response_code => 500, :response_message => "User does not exists"}
+		end
+	end
+	
 end
