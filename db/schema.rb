@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526135056) do
+ActiveRecord::Schema.define(version: 20160530093628) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,7 +153,7 @@ ActiveRecord::Schema.define(version: 20160526135056) do
     t.string   "email"
     t.string   "tag_line"
     t.string   "rating"
-    t.string   "reviews"
+    t.string   "review"
   end
 
   add_index "subcategories", ["category_id"], name: "index_subcategories_on_category_id", using: :btree

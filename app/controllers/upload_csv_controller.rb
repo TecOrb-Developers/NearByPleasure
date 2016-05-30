@@ -37,12 +37,13 @@ class UploadCsvController < ApplicationController
 	       	elsif @cat=="Massage Parler"              
 	       		@subcat={title: row[2],profile_link: row[1],contact: row[3],description: row[10],timing: row[4],street_address: row[5],city: row[6],pin: row[8],state: row[7],page_url: row[0]}
           elsif @cat = "Strip Club"
-            @subcat={title: row[2],profile_link: row[1],contact: row[3],description: row[10],street_address: row[6],city: row[7],pin: row[9],state: row[8],page_url: row[0],reviews: row[5].present? ? row[5].split(' ')[0] : nil,rating: row[4].present? ? row[4].split(' ')[1] : nil,timing: nil}
+            @subcat={title: row[2],profile_link: row[1],contact: row[3],description: row[10],street_address: row[6],city: row[7],pin: row[9],state: row[8],page_url: row[0] ,rating: row[4].present? ? row[4].split(' ')[1] : nil,review: row[5].present? ? row[5].split(' ')[0] : nil}
 	       	end
 	         (@cat=="Massage Parler" or @cat=="Strip Club") ? @subcategory=@category.subcategories.find_by_profile_link(row[1]) : @subcategory=@category.subcategories.find_by_title(row[2].strip)
-       		p "-------------------#{@subcat}"
+       		p "----#{row[2]}---#{}------------#{@subcat}"
        		if !@subcategory
-       			@subcategory= @category.subcategories.create!(@subcat) if  row[2].present?
+       			@subcategory= @category.subcategories.create(@subcat) if  row[2].present?
+            p "======#{@subcategory.inspect}"
        		else
        			 @subcategory.update_attributes(@subcat)
        		end
