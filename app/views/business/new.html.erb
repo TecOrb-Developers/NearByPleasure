@@ -1,0 +1,52 @@
+  <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margin-top-6" role="dialog"> 
+    <div class="panel panel-info" >
+      <div class="panel-heading">
+        <div class="panel-title">User Signup</div>
+      </div> 
+      <div style="padding-top:30px" class="panel-body" >
+        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <%=form_for :user_login,url: user_signin_path,:html=>{:class=>"form-horizontal"} do |f|%> 
+          <%= f.hidden_field :type,:value=>params[:value]%>  
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%=f.text_field :fname,:class=>"form-control",:id=>"fname",:placeholder=>" Please enter your First Name"%>                                        
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%=f.text_field :lname,:class=>"form-control",:id=>"lname",:placeholder=>" Please enter your Last Name"%>                                        
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <%=f.email_field :email,:class=>"form-control",:id=>"email-id",:placeholder=>" Please enter your Email-id"%>                                        
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <%=f.text_field :contact,:class=>"form-control",:id=>"contact",:placeholder=>" Please enter your Contact"%>                                        
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <%= label :gender, 'gender' %>&nbsp;&nbsp;
+            <%= f.radio_button :gender,"male",:checked=>"true"%> &nbsp;&nbsp;
+             <%= label :male, 'male' %>&nbsp;&nbsp;
+            <%= f.radio_button :gender,"female"%> &nbsp;&nbsp;
+             <%= label :female, 'female' %>&nbsp;&nbsp;
+          </div>          
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :password,:class=>"form-control",:id=>"password",
+            :placeholder=>"Please enter your password"%>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :repeat_password,:class=>"form-control",:id=>"re-password",
+            :placeholder=>"Please Re-enter your password"%>
+          </div>
+          <div style="margin-top:10px" class="form-group">
+            <div class="col-sm-12 controls">
+              <%=f.button "Sign-up for new business" ,:class=>"btn btn-primary form-control",:id=>"user-signup"%>
+              <a href="#"></a>
+            </div>
+          </div>
+        <%end%>     
+      </div>                     
+    </div>
+  </div>

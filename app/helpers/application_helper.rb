@@ -73,4 +73,8 @@ module ApplicationHelper
 		"massage#{num}.jpg"
 	end
 
+	def current_business_user
+		@current_business_user ||= User.find(session[:business_id]) if (session[:business_id])
+	end
+
 end
