@@ -42,7 +42,7 @@ class SessionsController < ApplicationController
 		if params[:password].present? and params[:password_confirm].present?
 			@user = User.find_by_id(params[:user_id])
 			if @user and (params[:password].strip == params[:password_confirm].strip)
-				@user.update_attributes(:password=>params[:password])
+				@user.update_attributes(:password=>params[:password],:forget_password_token=>'')
 				render :json => {:response_code => 200,:message => "Password has been updated successfully.",:user=>@user.as_json(except: [:id,:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 			else
 				render :json => { :response_code => 500,:response_message => "Unauthorized access!!" }

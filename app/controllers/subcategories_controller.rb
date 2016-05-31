@@ -37,7 +37,7 @@ class SubcategoriesController < ApplicationController
 		if params[:category_id].present? and params[:location].present? 
 			begin
 				@cat = Category.find_by_id(params[:category_id]) 
-		  	# @subcat = @cat.subcategories.within(50, :origin => params[:location])
+		  	# @subcat = @cat.subcategories.within(20, :origin => params[:location])
 		  	@subcat = @cat.subcategories.where(:city=>params[:location].split(',')[0]).paginate(:page => params[:page], :per_page => params[:per_page])
 				@result=[]
 				@subcat.each do |s|
