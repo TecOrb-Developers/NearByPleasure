@@ -19,6 +19,7 @@ class BusinessController < ApplicationController
 		 	  @user=User.create(:lname=>params[:user_login][:lname],:fname=>params[:user_login][:fname],:contact=>params[:user_login][:contact],:email=>params[:user_login][:email],:gender=>params[:user_login][:gender],:password=>params[:user_login][:password],:is_business=>"true")
 		 	  flash[:notice]="user successfully login"
 		 	  if params[:type]!="paid"
+		 	  	session[:business_id]=@user.id
 		 	    redirect_to welcome_path(encrypt(@user.id))
 		 	  else
 		 	  	render 'new'
@@ -29,6 +30,7 @@ class BusinessController < ApplicationController
 		  end
 		else 
 		 	@user.update_attributes(:lname=>params[:user_login][:lname],:fname=>params[:user_login][:fname],:contact=>params[:user_login][:contact],:email=>params[:user_login][:email],:gender=>params[:user_login][:gender],:password=>params[:user_login][:password],:is_business=>"true")
+		 	session[:business_id]=@user.id
 		 	redirect_to welcome_path(encrypt(@user.id))
 		end
 	end
