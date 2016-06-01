@@ -40,6 +40,11 @@ Rails.application.routes.draw do
   post 'user_login'=>"business#user_login",:as=>"user_login"
   get 'business/:user_id/paid_user'=>"business#paid_user",:as=>"paid_user"
   get 'business/:user_id/logout'=>"business#logout",:as=>"logout"
+  post "add_business"=>"business#add_business",:as=>"add_business"
+  get "add_business_form"=>"business#add_business_form",:as=>"add_business_form"
+  get "business/:id/my_business"=>"business#my_business",:as=>"my_business"
+  get "business/:id/profile"=>"business#profile",:as=>"profile"
+  get "business/:id/setting"=>"business#setting",:as=>"setting"
  
 
   post 'socialauth'=>"users#socialauth"

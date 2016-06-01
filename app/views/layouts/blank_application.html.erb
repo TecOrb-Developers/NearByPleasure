@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Find near by escorts</title>
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="/assets/custom.css">
+    <link rel="stylesheet" type="text/css" href="/assets/simple-sidebar.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   </head>
   <body>
@@ -45,7 +45,51 @@
         </div>
       </div><!--/.container-fluid -->
     </nav>
-    <%= yield %>
+    <% if current_business_user%>
+      <div id="wrapper" style="margin-top:4%"> 
+        <!-- <div class="row">  -->
+          <!-- <div class="col-lg-2"> -->
+          <div id="sidebar-wrapper">
+            <ul class=" nav nav-pills nav-stacked sidebar-nav">
+              <li class="active">
+                  <a href="#">Home </a>
+              </li>
+              <li>
+                  <a href="<%=add_business_form_path%>">Add Business</a>
+              </li>
+              <li>
+                  <a href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business</a>
+              </li>
+              <li>
+                  <a href="#tab-3">Guide</a>
+              </li>
+              <li>
+                  <a href="#tab-4">Support</a>
+              </li>
+              <li>
+                  <a href="<%=setting_path(encrypt(current_business_user.id))%>">Setting</a>
+              </li>
+              <li>
+                  <a href="<%=profile_path(encrypt(current_business_user.id))%>">Profiles</a>
+              </li>
+            </ul>
+          </div> 
+          <!-- </div>  -->
+          <!-- <div class="col-lg-10"> -->
+            <%= yield %>
+          <!-- </div>  -->
+        </div>
+      </div>
+    <%end%>
   </body>
 
 </html>
+
+
+<script type="text/javascript">
+
+  $('ul.nav.nav-pills li a').click(function() 
+  {           
+    $(this).parent().addClass('active').siblings().removeClass('active');           
+   });
+</script>

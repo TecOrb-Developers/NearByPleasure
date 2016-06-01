@@ -35,6 +35,7 @@ class BusinessController < ApplicationController
 
  def welcome
  	@user=User.find_by_id(decrypt(params[:user_id]))
+ 	@categories=Category.all
  	render :layout =>"blank_application"
  end
 
@@ -56,4 +57,33 @@ class BusinessController < ApplicationController
 		redirect_to payment_path
 	end
 
+	def add_business_form
+		@categories=Category.all
+		render :layout =>"blank_application"
+	end
+
+	def add_business
+		@subcat=current_business_user.subcategories.create(:title=>params[:user_login][:title],:description=>params[:user_login][:description],:email=>params[:user_login][:email],:contact=>params[:user_login][:contact],:street_address=>params[:user_login][:street_address],:city=>params[:user_login][:city],:pin=>params[:user_login][:pin],:state=>params[:user_login][:state],:tag_line=>params[:user_login][:tag_line],:category_id=>params[:category],:rating=>params[:user_login][:rating])
+		flash[:notice]="user successfully login"
+		redirect_to business_path(encrypt(@subcat.id))
+	end
+  def show
+  	@subcat=Subcategory.find_by_id(decrypt(params[:id]))
+  	render :layout =>"blank_application"
+  end
+
+  def my_business
+  	@user=User.find_by_id(decrypt(params[:id]))
+  	@subcats=@user.subcategories.all
+  	render :layout =>"blank_application"
+  end
+
+  def profile
+  	@user=User.find_by_id(decrypt(params[:id]))
+  	render :layout =>"blank_application"
+  end
+  def setting
+  	@user=User.find_by_id(decrypt(params[:id]))
+  	render :layout =>"blank_application"
+  end
 end

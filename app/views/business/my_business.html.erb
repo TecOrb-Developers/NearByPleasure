@@ -1,0 +1,32 @@
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>description</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>street_address</th>
+        <th>state</th>
+        <th>pin</th>
+        <th>city</th>
+        <th>tag_line</th>
+        <th>rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@subcats.each do |s|%>
+        <tr>
+          <td><%=s.title%></td>
+          <td><%=s.description%></td>
+          <td><%=s.email%></td>
+          <td><%=s.contact%></td>
+          <td><%=s.street_address%></td>
+          <td><%=s.state%></td>
+          <td><%=s.pin%></td>
+          <td><%=s.city%></td>
+          <td><%=s.tag_line%></td>
+          <td><%=s.rating%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>

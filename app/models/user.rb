@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 	has_many :comments,:dependent=>:destroy
 	has_many :talk_users,:dependent=>:destroy
 	has_many :talks,:through=>:talk_users
+	has_many :subcategories,:dependent=> :destroy
 end
