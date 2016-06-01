@@ -1,0 +1,40 @@
+ <div class="panel-body margin-top-2 bg-white">
+         <%=form_for :"reset",url:  root_path(@current_user),:html=>{:class=>"form-horizontal"} do |f| %>
+              <div class="row">
+                <div class="col-lg-12">
+
+                  <div class="form-group">
+                   <%=f.label :current_password,:class=>"control-label col-sm-2 book-font"%>
+                   <div class="col-sm-10">
+                    <label class="errors op">*Please enter your current password</label>
+                     <%=f.password_field :current_password,:class=>"form-control",:placeholder=>"Enter current password",:id=>"old_pass"%>
+                   </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">  
+                  <div class="form-group">
+                    <%=f.label :new_password,:class=>"control-label col-sm-2 book-font"%>
+                    <div class="col-sm-10">
+                      <label class="errors np">*Please enter your new password</label>
+                      <%=f.password_field :new_password,:class=>"form-control",:placeholder=>"Enter new Password",:id=>"new_pass"%>
+                    </div> 
+                  </div>
+                </div>  
+                <div class="col-lg-12">  
+                  <div class="form-group">
+                    <%=f.label :repeat_password,:class=>"control-label col-sm-2 book-font"%>
+                    <div class="col-sm-10">
+                      <label class="errors rp">*Please re-enter your new password</label>
+                      <label class="errors does-nt">*Password doesn't match</label>
+                      <%=f.password_field :new_repeat_password,:class=>"form-control",:placeholder=>"Re-enter Password",:id=>"new_repass"%>
+                    </div> 
+                  </div>
+                </div> 
+                <div class="row">
+                  <div class="col-lg-12" style="text-align: right"> 
+                   <%=f.button "submit",:class=>"btn btn-success",:id=>"submit_repass"%> 
+                  </div> 
+                </div>  
+              </div>     
+           <%end%>
+      </div>

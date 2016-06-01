@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530132432) do
+ActiveRecord::Schema.define(version: 20160601101516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -154,9 +154,11 @@ ActiveRecord::Schema.define(version: 20160530132432) do
     t.string   "tag_line"
     t.string   "rating"
     t.string   "review"
+    t.integer  "user_id"
   end
 
   add_index "subcategories", ["category_id"], name: "index_subcategories_on_category_id", using: :btree
+  add_index "subcategories", ["user_id"], name: "index_subcategories_on_user_id", using: :btree
 
   create_table "talk_users", force: :cascade do |t|
     t.integer  "user_id"
@@ -204,6 +206,7 @@ ActiveRecord::Schema.define(version: 20160530132432) do
   add_foreign_key "reviews", "users"
   add_foreign_key "socialauths", "users"
   add_foreign_key "subcategories", "categories"
+  add_foreign_key "subcategories", "users"
   add_foreign_key "talk_users", "talks"
   add_foreign_key "talk_users", "users"
 end
