@@ -35,7 +35,7 @@ Rails.application.routes.draw do
   post 'all_recent'=>"recent_checks#all_recent"
   post 'search_bookmark'=>'bookmarks#search_bookmark'
   get 'payment_mode'=>'business#payment_mode',:as=>"payment"
-  post 'user_signin'=>"business#user_signin",:as=>"user_signin"
+  post 'user_signup'=>"business#user_signup",:as=>"user_signup"
   get 'business/:user_id/welcome'=>"business#welcome", as: :welcome
   post 'user_login'=>"business#user_login",:as=>"user_login"
   get 'business/:user_id/paid_user'=>"business#paid_user",:as=>"paid_user"

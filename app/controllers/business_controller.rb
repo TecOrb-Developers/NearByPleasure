@@ -12,13 +12,14 @@ class BusinessController < ApplicationController
 		render :layout =>"blank_application"
 	end
 
-	def user_signin
-		@user=User.find_by_email(params[:user_login][:email])
+	def user_signup
+		@user=User.find_by_email(params[:user_signup][:email])
 		if !@user
-		 	if params[:user_login][:password]==params[:user_login][:repeat_password]
-		 	  @user=User.create(:lname=>params[:user_login][:lname],:fname=>params[:user_login][:fname],:contact=>params[:user_login][:contact],:email=>params[:user_login][:email],:gender=>params[:user_login][:gender],:password=>params[:user_login][:password],:is_business=>"true")
+		 	if params[:user_signup][:password]==params[:user_signup][:repeat_password]
+		 	  @user=User.create(:lname=>params[:user_signup][:lname],:fname=>params[:user_signup][:fname],:contact=>params[:user_signup][:contact],:email=>params[:user_signup][:email],:gender=>params[:user_signup][:gender],:password=>params[:user_signup][:password],:is_business=>"true")
 		 	  flash[:notice]="user successfully login"
 		 	  if params[:type]!="paid"
+		 	  	session[:business_id]=@user.id
 		 	    redirect_to welcome_path(encrypt(@user.id))
 		 	  else
 		 	  	render 'new'
@@ -28,7 +29,8 @@ class BusinessController < ApplicationController
 		   	render  'new'
 		  end
 		else 
-		 	@user.update_attributes(:lname=>params[:user_login][:lname],:fname=>params[:user_login][:fname],:contact=>params[:user_login][:contact],:email=>params[:user_login][:email],:gender=>params[:user_login][:gender],:password=>params[:user_login][:password],:is_business=>"true")
+		 	@user.update_attributes(:lname=>params[:user_signup][:lname],:fname=>params[:user_signup][:fname],:contact=>params[:user_signup][:contact],:email=>params[:user_signup][:email],:gender=>params[:user_signup][:gender],:password=>params[:user_signup][:password],:is_business=>"true")
+		 	session[:business_id]=@user.id
 		 	redirect_to welcome_path(encrypt(@user.id))
 		end
 	end
@@ -40,17 +42,17 @@ class BusinessController < ApplicationController
  end
 
 
- def create
-	@user=User.find_by_email(params[:user_login][:email])
-	if @user && @user.authenticate(params[:user_login][:password])
-		session[:business_id]=@user.id
-		flash[:notice]="welcome"
-		redirect_to  welcome_path(encrypt(@user.id))
-	else
-		flash[:notice]="password not correct"
-		redirect_to  welcome_path(encrypt(@user.id))
-	end
- end
+   def create
+		 @user=User.find_by_email(params[:user_login][:email])
+		 if @user && @user.authenticate(params[:user_login][:password])
+			 session[:business_id]=@user.id
+			 flash[:notice]="welcome"
+			 redirect_to  welcome_path(encrypt(@user.id))
+		 else
+			 flash[:notice]="password not correct"
+			 redirect_to  welcome_path(encrypt(@user.id))
+		 end
+   end
 
   def logout
 		session[:business_id]=nil
