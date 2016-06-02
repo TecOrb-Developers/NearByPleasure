@@ -88,4 +88,26 @@ class BusinessController < ApplicationController
   	@user=User.find_by_id(decrypt(params[:id]))
   	render :layout =>"blank_application"
   end
+
+  def change_password
+    @user = User.find_by_id(params[:id])
+    if @user  && @user.authenticate(params[:reset_password][:current_password])
+      if (params[:reset_password][:new_password])==(params[:reset_password][:new_repeat_password])
+        @user.update_attributes(:password=>params[:reset_password][:new_password])
+        flash[:success] = "Password successfully changed!"
+        redirect_to  :back
+      else
+        flash[:error]="password not match"
+        redirect_to :back
+      end
+    else
+      flash[:error] = "Your old password was incorrect. Please try again."
+      redirect_to :back
+    end
+  end
+
+  def edit
+  	@user=User.find_by_id(params[:id])
+  	render :layout =>"blank_application"
+  end
 end

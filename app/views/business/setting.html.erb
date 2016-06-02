@@ -1,40 +1,32 @@
- <div class="panel-body margin-top-2 bg-white">
-         <%=form_for :"reset",url:  root_path(@current_user),:html=>{:class=>"form-horizontal"} do |f| %>
-              <div class="row">
-                <div class="col-lg-12">
-
-                  <div class="form-group">
-                   <%=f.label :current_password,:class=>"control-label col-sm-2 book-font"%>
-                   <div class="col-sm-10">
-                    <label class="errors op">*Please enter your current password</label>
-                     <%=f.password_field :current_password,:class=>"form-control",:placeholder=>"Enter current password",:id=>"old_pass"%>
-                   </div>
-                  </div>
-                </div>
-                <div class="col-lg-12">  
-                  <div class="form-group">
-                    <%=f.label :new_password,:class=>"control-label col-sm-2 book-font"%>
-                    <div class="col-sm-10">
-                      <label class="errors np">*Please enter your new password</label>
-                      <%=f.password_field :new_password,:class=>"form-control",:placeholder=>"Enter new Password",:id=>"new_pass"%>
-                    </div> 
-                  </div>
-                </div>  
-                <div class="col-lg-12">  
-                  <div class="form-group">
-                    <%=f.label :repeat_password,:class=>"control-label col-sm-2 book-font"%>
-                    <div class="col-sm-10">
-                      <label class="errors rp">*Please re-enter your new password</label>
-                      <label class="errors does-nt">*Password doesn't match</label>
-                      <%=f.password_field :new_repeat_password,:class=>"form-control",:placeholder=>"Re-enter Password",:id=>"new_repass"%>
-                    </div> 
-                  </div>
-                </div> 
-                <div class="row">
-                  <div class="col-lg-12" style="text-align: right"> 
-                   <%=f.button "submit",:class=>"btn btn-success",:id=>"submit_repass"%> 
-                  </div> 
-                </div>  
-              </div>     
-           <%end%>
-      </div>
+   <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 margin-top-6" role="dialog"> 
+    <div class="panel panel-info" >
+      <div class="panel-heading">
+        <div class="panel-title">Change Password</div>
+      </div> 
+      <div style="padding-top:30px" class="panel-body" >
+        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <%=form_for :reset_password,url: change_password_path(current_business_user),:html=>{:class=>"form-horizontal"} do |f|%>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <%=f.password_field :current_password,:class=>"form-control",:id=>"current_password",:placeholder=>" Please enter your current_password",:required=>"true"%>                                        
+          </div>        
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :new_password,:class=>"form-control",:id=>"new_password",
+            :placeholder=>"Please enter your new password",:required=>"true"%>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :new_repeat_password,:class=>"form-control",:id=>"new_re-password",
+            :placeholder=>"Please Re-enter your new  password",:required=>"true"%>
+          </div>
+          <div style="margin-top:10px" class="form-group">
+            <div class="col-sm-12 controls">
+              <%=f.button "Change Password" ,:class=>"btn btn-primary form-control",:id=>"change_password"%>
+              <a href="#"></a>
+            </div>
+          </div>
+        <%end%>     
+      </div>                     
+    </div>
+  </div>

@@ -45,6 +45,7 @@ Rails.application.routes.draw do
   get "business/:id/my_business"=>"business#my_business",:as=>"my_business"
   get "business/:id/profile"=>"business#profile",:as=>"profile"
   get "business/:id/setting"=>"business#setting",:as=>"setting"
+  post "business/:id/change_password"=>"business#change_password",:as=>"change_password"
  
 
   post 'socialauth'=>"users#socialauth"
