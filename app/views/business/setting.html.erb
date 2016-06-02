@@ -6,15 +6,15 @@
       <div style="padding-top:30px" class="panel-body" >
         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
         <%=form_for :reset_password,url: change_password_path(current_business_user),:html=>{:class=>"form-horizontal"} do |f|%>
-          <div class="input-group">
-            <label class="errors pass">*Please enter the password</label>
+         <div class="input-group">
+            <label class="errors pass">*Please enter your password</label>
           </div>   
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
             <%=f.password_field :current_password,:class=>"form-control",:id=>"current_password",:placeholder=>" Please enter your current_password",:required=>"true"%>               
           </div>
-          <div class="input-group">
-            <label class="errors np">*Please enter new password</label>
+           <div class="input-group">
+            <label class="errors new-pass">*Please enter your new password</label>
           </div>           
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -22,8 +22,10 @@
             :placeholder=>"Please enter your new password",:required=>"true"%>
           </div>
           <div class="input-group">
-            <label class="errors rp">*Please enter new password</label>
-            <label class="errors does-nt">*Password doesn't match</label>
+            <label class="errors re-pass">*Please Re-enter your password</label>
+          </div> 
+          <div class="input-group">
+            <label class="errors does-nt">*Password not match re-enter correct password</label>
           </div>
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
@@ -44,8 +46,9 @@
 
 
 <script type="text/javascript">
-  $('.errors').hide();
 
+ $('.errors').hide();
+ 
  $('#change_password').click(function(){
     $('.errors').hide();
 
@@ -56,19 +59,26 @@
     }
     else if($('#new_password').val().trim()=="")
     {
-      $('.np').show();
+      $('.new-pass').show();
       return false;
     }
-    else if($('#new_re_password').val().trim()=="")
+    else if($('#new_password').val().trim()=="")
     {
-      $('.rp').show();
+      $('.re-pass').show();
       return false;
     }
     else if($('#new_password').val().trim()!=$('#new_re_password').val().trim())
     {
+      
       $('.does-nt').show();
       $('#new_password').val("");
       $('#new_re_password').val("");
       return false;
     }
-</script>    
+    else
+    {
+      return true;
+    }
+
+  });
+</script>
