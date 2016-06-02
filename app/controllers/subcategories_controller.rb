@@ -93,4 +93,10 @@ class SubcategoriesController < ApplicationController
 			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
 		end
 	end
+
+	def update
+  	@subcat=Subcategory.find_by_id(params[:id])
+  	@subcat.update_attributes(:title=>params[:subcategory][:title],:description=>params[:subcategory][:description],:email=>params[:subcategory][:email],:contact=>params[:subcategory][:contact],:street_address=>params[:subcategory][:street_address],:city=>params[:subcategory][:city],:pin=>params[:subcategory][:pin],:state=>params[:subcategory][:state],:tag_line=>params[:subcategory][:tag_line],:category_id=>params[:category],:rating=>params[:subcategory][:rating])
+  	redirect_to my_business_path(encrypt(current_business_user.id))
+  end
 end

@@ -33,6 +33,7 @@ class BusinessController < ApplicationController
 		 	session[:business_id]=@user.id
 		 	redirect_to welcome_path(encrypt(@user.id))
 		end
+		render :layout =>"blank_application"
 	end
 
  def welcome
@@ -65,7 +66,7 @@ class BusinessController < ApplicationController
 	end
 
 	def add_business
-		@subcat=current_business_user.subcategories.create(:title=>params[:user_login][:title],:description=>params[:user_login][:description],:email=>params[:user_login][:email],:contact=>params[:user_login][:contact],:street_address=>params[:user_login][:street_address],:city=>params[:user_login][:city],:pin=>params[:user_login][:pin],:state=>params[:user_login][:state],:tag_line=>params[:user_login][:tag_line],:category_id=>params[:category],:rating=>params[:user_login][:rating])
+		@subcat=current_business_user.subcategories.create(:title=>params[:add_business][:title],:description=>params[:add_business][:description],:email=>params[:add_business][:email],:contact=>params[:add_business][:contact],:street_address=>params[:add_business][:street_address],:city=>params[:add_business][:city],:pin=>params[:add_business][:pin],:state=>params[:add_business][:state],:tag_line=>params[:add_business][:tag_line],:category_id=>params[:category],:rating=>params[:add_business][:rating])
 		flash[:notice]="user successfully login"
 		redirect_to business_path(encrypt(@subcat.id))
 	end
@@ -110,4 +111,11 @@ class BusinessController < ApplicationController
   	@user=User.find_by_id(params[:id])
   	render :layout =>"blank_application"
   end
+  
+  def my_business_edit
+  	@business=Subcategory.find_by_id(params[:id])
+  	@categories=Category.all
+  	render :layout =>"blank_application"
+  end
+  
 end

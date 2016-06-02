@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
     <!-- jQuery library -->
+
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -53,18 +54,19 @@
       
         <!-- <div class="row">  -->
           <!-- <div class="col-lg-2"> -->
+          <%#= p ".....................#{params.inspect}................#{params[:controller]}------------#{params[:action]}"%>
           <% if current_business_user%>
            <div id="wrapper" style="margin-top:4%">
             <div id="sidebar-wrapper">
               <ul class=" nav nav-pills nav-stacked sidebar-nav">
-                <li class="active">
-                    <a href="#">Home </a>
+                <li <%if params[:action]=="welcome"%> class="active" <%end%>>
+                    <a class="home" href="<%=welcome_path(encrypt(current_business_user.id))%>">Home </a>
                 </li>
-                <li>
+                <li <%if params[:action]=="add_business_form"%>class="active"<%end%>>
                     <a href="<%=add_business_form_path%>">Add Business</a>
                 </li>
-                <li>
-                    <a href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business</a>
+                <li <%if params[:action]=="my_business"%>class="active"<%end%>>
+                    <a class="my_business" href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business</a>
                 </li>
                 <li>
                     <a href="#">Guide</a>
@@ -72,10 +74,10 @@
                 <li>
                     <a href="#">Support</a>
                 </li>
-                <li>
+                <li <%if params[:action]=="setting"%>class="active"<%end%>>
                     <a href="<%=setting_path(encrypt(current_business_user.id))%>">Setting</a>
                 </li>
-                <li>
+                <li <%if params[:action]=="profile"%>class="active"<%end%>>
                     <a href="<%=profile_path(encrypt(current_business_user.id))%>">Profiles</a>
                 </li>
               </ul>
@@ -91,12 +93,3 @@
   </body>
 
 </html>
-
-
-<script type="text/javascript">
-
-  $('ul.nav.nav-pills li a').click(function() 
-  {           
-    $(this).parent().addClass('active').siblings().removeClass('active');           
-   });
-</script>

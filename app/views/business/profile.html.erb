@@ -1,13 +1,22 @@
- <div class="panel panel-info">
+<div class="mainbox col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-1 margin-top-6" role="dialog"> 
+  <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Profile</h3>
     </div>
-    <div class="panel-body">
+    <div style="padding-top:30px" class="panel-body">
       <div class="row">
-        <div class="col-md-3 col-lg-3 " align="center"> 
-          <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> 
+        <div class="col-md-4" align="center"> 
+          <%if @user.image.present?%>
+            <img alt="user profile" src="<%@user.image%>" >
+          <%else%>
+            <% if @user.gender =="female" %>
+              <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> 
+            <%else%>
+             <img src="http://www.itdwebdesign.com/images/team/you.jpg" class="irc_mi iQvt2KU5gmBA-pQOPx8XEepE" alt="" height="200" width="100%">
+            <%end%>
+         <%end%>
         </div>
-        <div class=" col-md-8 col-lg-8">
+        <div class=" col-md-8">
           <div class="table-responsive"> 
             <table class="table table-condensed table-striped">
               <tbody>
@@ -30,10 +39,6 @@
                 <tr> 
                   <th>gender</th>
                   <td><%=@user.gender%></td>
-                </tr> 
-                <tr> 
-                  <th>image</th>
-                  <td><%=@user.image%></td>
                 </tr>   
               </tbody>
             </table>
@@ -42,4 +47,5 @@
         </div>
      </div>
    </div>
- </div>
+  </div>
+</div>  

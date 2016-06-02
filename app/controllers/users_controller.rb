@@ -82,4 +82,11 @@ class UsersController < ApplicationController
 			render :json => { :response_code => 500,:response_message => "User does not exists." }
 		end
 	end
+
+
+	def update
+		@user=User.find_by_id(params[:id])
+		@user.update_attributes(:fname=>params[:user][:fname],:lname=>params[:user][:lname],:contact=>params[:user][:contact])
+		redirect_to profile_path(encrypt(@user.id))
+	end
 end
