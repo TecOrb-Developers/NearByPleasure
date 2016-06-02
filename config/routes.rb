@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'page2'=>"home#details"
   resources :upload_csv,:only =>[:index,:create]
   resources :subcategories
-  resources :business
+  resources :business 
+  resources :users
+  resources :subcategories
   get 'update_lat_long'=>"upload_csv#update_lat_long"
   get 'update_image'=>'upload_csv#update_image'
   post 'lat_long_csv'=>"upload_csv#lat_long_csv"
@@ -46,6 +48,7 @@ Rails.application.routes.draw do
   get "business/:id/profile"=>"business#profile",:as=>"profile"
   get "business/:id/setting"=>"business#setting",:as=>"setting"
   post "business/:id/change_password"=>"business#change_password",:as=>"change_password"
+  get "business/:id/my_business_edit"=>"business#my_business_edit",:as=>"business_edit"
  
 
   post 'socialauth'=>"users#socialauth"

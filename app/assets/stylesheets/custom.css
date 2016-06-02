@@ -97,3 +97,7 @@ body {overflow-x: hidden;}
   border-color: #ff0066 !important;
   background-color: #ff0066 !important;
 }
+.errors
+{
+  color:red;
+}

@@ -11,6 +11,7 @@
         <th>city</th>
         <th>tag_line</th>
         <th>rating</th>
+        <th>Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
           <td><%=s.city%></td>
           <td><%=s.tag_line%></td>
           <td><%=s.rating%></td>
+          <td><%=link_to "edit",business_edit_path(s.id)%></td>
         </tr>
       <%end%>
     </tbody>

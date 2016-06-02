@@ -6,18 +6,28 @@
       <div style="padding-top:30px" class="panel-body" >
         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
         <%=form_for :reset_password,url: change_password_path(current_business_user),:html=>{:class=>"form-horizontal"} do |f|%>
+          <div class="input-group">
+            <label class="errors pass">*Please enter the password</label>
+          </div>   
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <%=f.password_field :current_password,:class=>"form-control",:id=>"current_password",:placeholder=>" Please enter your current_password",:required=>"true"%>                                        
-          </div>        
+            <%=f.password_field :current_password,:class=>"form-control",:id=>"current_password",:placeholder=>" Please enter your current_password",:required=>"true"%>               
+          </div>
+          <div class="input-group">
+            <label class="errors np">*Please enter new password</label>
+          </div>           
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
             <%=f.password_field :new_password,:class=>"form-control",:id=>"new_password",
             :placeholder=>"Please enter your new password",:required=>"true"%>
           </div>
+          <div class="input-group">
+            <label class="errors rp">*Please enter new password</label>
+            <label class="errors does-nt">*Password doesn't match</label>
+          </div>
           <div style="margin-bottom: 25px" class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <%=f.password_field :new_repeat_password,:class=>"form-control",:id=>"new_re-password",
+            <%=f.password_field :new_repeat_password,:class=>"form-control",:id=>"new_re_password",
             :placeholder=>"Please Re-enter your new  password",:required=>"true"%>
           </div>
           <div style="margin-top:10px" class="form-group">
@@ -30,3 +40,35 @@
       </div>                     
     </div>
   </div>
+
+
+
+<script type="text/javascript">
+  $('.errors').hide();
+
+ $('#change_password').click(function(){
+    $('.errors').hide();
+
+    if($('#current_password').val().trim()=="")
+    {
+      $('.pass').show();
+      return false;
+    }
+    else if($('#new_password').val().trim()=="")
+    {
+      $('.np').show();
+      return false;
+    }
+    else if($('#new_re_password').val().trim()=="")
+    {
+      $('.rp').show();
+      return false;
+    }
+    else if($('#new_password').val().trim()!=$('#new_re_password').val().trim())
+    {
+      $('.does-nt').show();
+      $('#new_password').val("");
+      $('#new_re_password').val("");
+      return false;
+    }
+</script>    
