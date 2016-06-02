@@ -1,34 +1,44 @@
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>description</th>
-        <th>email</th>
-        <th>contact</th>
-        <th>street_address</th>
-        <th>state</th>
-        <th>pin</th>
-        <th>city</th>
-        <th>tag_line</th>
-        <th>rating</th>
-        <th>Edit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%@subcats.each do |s|%>
-        <tr>
-          <td><%=s.title%></td>
-          <td><%=s.description%></td>
-          <td><%=s.email%></td>
-          <td><%=s.contact%></td>
-          <td><%=s.street_address%></td>
-          <td><%=s.state%></td>
-          <td><%=s.pin%></td>
-          <td><%=s.city%></td>
-          <td><%=s.tag_line%></td>
-          <td><%=s.rating%></td>
-          <td><%=link_to "edit",business_edit_path(s.id)%></td>
-        </tr>
-      <%end%>
-    </tbody>
-  </table>
+<div class="mainbox col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-0 margin-top-1" role="dialog"> 
+  <div class="panel panel-info">
+    <div class="panel-body">
+      <div class="row">
+        <div class="table-responsive"> 
+          <table class="table  table-striped">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>description</th>
+                <th>email</th>
+                <th>contact</th>
+                <th>street_address</th>
+                <th>state</th>
+                <th>pin</th>
+                <th>city</th>
+                <th>tag_line</th>
+                <th>rating</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%@subcats.each do |s|%>
+                <tr>
+                  <td><%=s.title%></td>
+                  <td><%=s.description%></td>
+                  <td><%=s.email%></td>
+                  <td><%=s.contact%></td>
+                  <td><%=s.street_address%></td>
+                  <td><%=s.state%></td>
+                  <td><%=s.pin%></td>
+                  <td><%=s.city%></td>
+                  <td><%=s.tag_line%></td>
+                  <td><%=s.rating%></td>
+                  <td><%=link_to "edit",business_edit_path(s.id)%></td>
+                </tr>
+              <%end%>
+            </tbody>
+          </table>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>          

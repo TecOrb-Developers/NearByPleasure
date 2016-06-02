@@ -29,6 +29,7 @@ gem "jquery-ui-rails"
 gem 'bcrypt', '~> 3.1.7'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_admin_theme'
+gem "chartkick"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
