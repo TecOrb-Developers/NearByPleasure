@@ -51,7 +51,7 @@ class BusinessController < ApplicationController
 			 redirect_to  welcome_path(encrypt(@user.id))
 		 else
 			 flash[:notice]="password not correct"
-			 redirect_to  welcome_path(encrypt(@user.id))
+			 redirect_to  :back
 		 end
    end
 

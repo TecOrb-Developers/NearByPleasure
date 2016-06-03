@@ -50,46 +50,73 @@
         </div>
       </div><!--/.container-fluid -->
     </nav>
-    
-      
-        <!-- <div class="row">  -->
-          <!-- <div class="col-lg-2"> -->
-          <%#= p ".....................#{params.inspect}................#{params[:controller]}------------#{params[:action]}"%>
-          <% if current_business_user%>
-           <div id="wrapper" style="margin-top:4%">
-            <div id="sidebar-wrapper">
-              <ul class=" nav nav-pills nav-stacked sidebar-nav">
-                <li <%if params[:action]=="welcome"%> class="active" <%end%>>
-                    <a class="home" href="<%=welcome_path(encrypt(current_business_user.id))%>">Home </a>
-                </li>
-                <li <%if params[:action]=="add_business_form"%>class="active"<%end%>>
-                    <a href="<%=add_business_form_path%>">Add Business</a>
-                </li>
-                <li <%if params[:action]=="my_business"%>class="active"<%end%>>
-                    <a class="my_business" href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business</a>
+    <% if current_business_user%>
+        <nav class="navbar navbar-inverse sidebar margin-top-8" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li <%if params[:action]=="welcome"%> class="active" <%end%>><a href="<%=welcome_path(encrypt(current_business_user.id))%>">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+                <li <%if params[:action]=="add_business_form"%>class="active"<%end%>><a href="<%=add_business_form_path%>">Add Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a></li>
+                <li <%if params[:action]=="my_business"%>class="active"<%end%>><a href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a></li>
+                <li>
+                  <a href="#">Guide<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
                 </li>
                 <li>
-                    <a href="#">Guide</a>
-                </li>
-                <li>
-                    <a href="#">Support</a>
+                  <a href="#">Support<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
                 </li>
                 <li <%if params[:action]=="setting"%>class="active"<%end%>>
-                    <a href="<%=setting_path(encrypt(current_business_user.id))%>">Setting</a>
+                  <a href="<%=setting_path(encrypt(current_business_user.id))%>">Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
                 </li>
-                <li <%if params[:action]=="profile"%>class="active"<%end%>>
-                    <a href="<%=profile_path(encrypt(current_business_user.id))%>">Profiles</a>
-                </li>
+                 <li <%if params[:action]=="profile"%>class="active"<%end%>><a href="<%=profile_path(encrypt(current_business_user.id))%>">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
               </ul>
-            </div> 
-          <!-- </div>  -->
-          <%end%>
-          <!-- <div class="col-lg-10"> -->
-            <%= yield %>
-          <!-- </div>  -->
+            </div>
+          </div>
+        </nav>
+        <div class="main">
+        <!-- Content Here -->
         </div>
-      </div>
-    
+    <%end%>
+    <div class="col-lg-10 margin-top-8"> 
+      <%= yield %>
+    </div>   
   </body>
 
 </html>
+
+
+<script type="text/javascript">
+function htmlbodyHeightUpdate(){
+    var height3 = $( window ).height()
+    var height1 = $('.nav').height()+50
+    height2 = $('.main').height()
+    if(height2 > height3){
+      $('html').height(Math.max(height1,height3,height2)+10);
+      $('body').height(Math.max(height1,height3,height2)+10);
+    }
+    else
+    {
+      $('html').height(Math.max(height1,height3,height2));
+      $('body').height(Math.max(height1,height3,height2));
+    }
+    
+  }
+  $(document).ready(function () {
+    htmlbodyHeightUpdate()
+    $( window ).resize(function() {
+      htmlbodyHeightUpdate()
+    });
+    $( window ).scroll(function() {
+      height2 = $('.main').height()
+        htmlbodyHeightUpdate()
+    });
+  });
+</script>

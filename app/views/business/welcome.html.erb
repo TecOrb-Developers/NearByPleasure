@@ -1,14 +1,9 @@
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-
-        <!--h1>Simple Sidebar</h1>
-        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-     <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a--> 
      <%=area_chart User.group(:created_at).maximum(:id) %>
      <%=column_chart User.group(:created_at).maximum(:id) %>
-     <%= pie_chart User.group(:fname).count %>
 
-   
+
+
 <script type="text/javascript">
 
 	
