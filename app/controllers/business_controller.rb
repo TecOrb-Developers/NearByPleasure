@@ -9,7 +9,11 @@ class BusinessController < ApplicationController
 	end
 
 	def payment_mode
-		render :layout =>"blank_application"
+		if !current_business_user
+			render :layout =>"blank_application"
+		else
+			redirect_to welcome_path(encrypt(current_business_user.id))
+		end
 	end
 
 	def user_signup
