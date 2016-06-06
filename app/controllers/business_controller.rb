@@ -33,7 +33,6 @@ class BusinessController < ApplicationController
 		 	session[:business_id]=@user.id
 		 	redirect_to welcome_path(encrypt(@user.id))
 		end
-		render :layout =>"blank_application"
 	end
 
  def welcome
