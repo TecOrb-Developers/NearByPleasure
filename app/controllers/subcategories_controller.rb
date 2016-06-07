@@ -3,7 +3,7 @@ class SubcategoriesController < ApplicationController
 	def show
 		@subcat=Subcategory.find_by_id(params[:id])
   	# @subcat.images.present? ? @images = @subcat.images.pluck(:name) :  @images = ["/assets/club1.jpg","/assets/club2.jpg","/assets/club3.jpg","/assets/club1.jpg"]
-		if @subcat.category.name=="escort"
+		if @subcat.category.name=="Escort"
 			@imgs = @subcat.images.pluck(:name)
 			@images=[]
 			if @imgs.present?
@@ -42,11 +42,11 @@ class SubcategoriesController < ApplicationController
 				@result=[]
 				@subcat.each do |s|
 					@imgs = []
-					if @cat.name=="escort"
+					if @cat.name=="Escort"
 						s.images.each do |i|
 							@imgs << "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{i.name}"  
 						end
-					elsif @cat.name=="Massage Parler"
+					elsif @cat.name=="Massage parlour"
 						for i in 0...5
 							@imgs << "http://45.58.47.179/image/massageimgs/massage#{i}.jpg" 
 						end
@@ -72,11 +72,11 @@ class SubcategoriesController < ApplicationController
 			@subcategory = Subcategory.find_by_id(params[:subcategory_id])
 			if @subcategory	
 				@imgs = []
-					if @subcategory.category.name=="escort"
+					if @subcategory.category.name=="Escort"
 						@subcategory.images.each do |i|
 							@imgs << "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{i.name}"  
 						end
-					elsif @subcategory.category.name=="Massage Parler"
+					elsif @subcategory.category.name=="Massage parlour"
 						for i in 0...5
 							@imgs << "http://45.58.47.179/image/massageimgs/massage#{i}.jpg" 
 						end
