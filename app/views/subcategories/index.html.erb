@@ -230,8 +230,9 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
 
      var locations =[]
      var mapStyle = [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}];
-     
-    <%if @cat.name=="escort" or @cat.name=="Strip Club" or @cat.name=="Massage Parler"%>
+
+    <%if @cat.name=="Escort" or @cat.name=="Strip Club" or @cat.name=="Massage parlour"%>
+
         <%if @cat.name=="Strip Club"%>
           var image ={ 
               url: '/assets/mapicon2.png', // url
@@ -240,7 +241,7 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
               anchor: new google.maps.Point(0, 0) // anchor
             }
 
-        <%elsif @cat.name=="escort"%>
+        <%elsif @cat.name=="Escort"%>
           var image ={ 
               url: '/assets/mapicon3.png', // url
               scaledSize: new google.maps.Size(30, 30), // scaled size
@@ -302,7 +303,8 @@ var listable_params = {"login_url":"http:\/\/tecorb.com\/admin\/demo\/section1\/
       <%@c=0%>
       <%@subcat.each do |e|%>
         var tmp =[];
-        <%if e.category.name=="escort"%>
+
+        <%if e.category.name=="Escort"%>
           
           tmp.push("<%=e.title%>");
           tmp.push("<%=e.latitude%>");

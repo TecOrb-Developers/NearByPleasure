@@ -50,8 +50,9 @@
         </div>
       </div><!--/.container-fluid -->
     </nav>
-    <% if logged_in?%>
-        <!--nav class="navbar navbar-inverse sidebar margin-top-8" role="navigation">
+
+    <% if current_business_user%>
+        <nav class="navbar navbar-inverse sidebar margin-top-8" role="navigation">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
@@ -67,6 +68,7 @@
                 <li <%#if params[:action]=="welcome"%> class="active" <%#end%>><a href="<%=welcome_path(encrypt(current_business_user.id))%>">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
                 <li <%#if params[:action]=="add_business_form"%>class="active"<%#end%>><a href="<%=add_business_form_path%>">Add Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a></li>
                 <li <%#if params[:action]=="my_business"%>class="active"<%#end%>><a href="<%=my_business_path(encrypt(current_business_user.id))%>">My Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-briefcase"></span></a></li>
+
                 <li>
                   <a href="#">Guide<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
                 </li>
@@ -93,7 +95,7 @@
 </html>
 
 
-<!--script type="text/javascript">
+<script type="text/javascript">
 function htmlbodyHeightUpdate(){
     var height3 = $( window ).height()
     var height1 = $('.nav').height()+50
@@ -119,4 +121,4 @@ function htmlbodyHeightUpdate(){
         htmlbodyHeightUpdate()
     });
   });
-</script-->
+</script>

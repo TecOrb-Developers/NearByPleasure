@@ -77,6 +77,7 @@ module ApplicationHelper
 		# ["massage1.jpg","massage2.jpeg","massage3.jpg","massage4.jpg","massage5.jpg","massage0.jpg"].sample
 		"massage#{num}.jpg"
 	end
+
 	def require_logged_in
 		unless logged_in?
 			flash[:notice]="you need to require log in"
@@ -89,6 +90,10 @@ module ApplicationHelper
 	end
 
     def current_business_user
+		@current_business_user ||= User.find(session[:business_id]) if (session[:business_id])
+	end
+
+	def current_business_user
 		@current_business_user ||= User.find(session[:business_id]) if (session[:business_id])
 	end
 end

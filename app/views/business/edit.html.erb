@@ -32,9 +32,12 @@
             <span class="input-group-addon"><i class="fa fa-phone"></i></span>
             <%=f.text_field :contact,:class=>"form-control",:id=>"contact",:placeholder=>" Please enter your Contact",:required=>"true"%>    
           </div> 
+          <div class="input-group">
+            <label class="errors about">*Please enter about yourself</label>
+          </div>
           <div style="margin-bottom: 25px" class="input-group">
-            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-            <%=f.text_area :about,:class=>"form-control",:id=>"about",:placeholder=>" Please enter about yourself",:required=>"true"%>    
+            <span class="input-group-addon"><i class="fa fa-adn"></i></span>
+            <%=f.text_area :about,:class=>"form-control",:id=>"about",:placeholder=>" Please enter about yourself",:required=>"true"%> 
           </div>         
           <div style="margin-top:10px" class="form-group">
             <div class="col-sm-12 controls">
@@ -65,6 +68,12 @@
     {
 
       $('.last').show();
+      return false;
+    }
+    else if($('#about').val().trim()=="")
+    {
+
+      $('.about').show();
       return false;
     }
     else if($('#contact').val().trim()=="")

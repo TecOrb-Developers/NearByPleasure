@@ -1,5 +1,5 @@
 <div class="grid list job_listings">
-	<%if @cat.name=="escort"%>
+	<%if @cat.name=="Escort"%>
 		<%if @subcat.present?%>
 			<%@subcat.each do |e|%>
 				<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
@@ -64,7 +64,7 @@
 		    </ul>
 		  </div>
     <%end%>
-	<%elsif @cat.name=="Massage Parler"%>
+	<%elsif @cat.name=="Massage parlour"%>
 		  <%@cn=0%>
 			<%if @subcat.present?%>
 				<div class="grid  grid--widget  list">
@@ -133,7 +133,7 @@
           </div>
           <span class="category-text"><%=r.title%></span>
           <br>
-            Massage Parler
+            Massage parlour
         </a>
       </div>
       </li>
@@ -154,10 +154,10 @@
 			<%@subcat.each do |e|%>
 				<a class="grid__item" href="<%=subcategory_path(e.id)%>" data-no-turbolink = true target="_blank">
 				<article class="card  card--listing" itemscope="" itemtype="http://schema.org/LocalBusiness" data-latitude="51.5250853" data-longitude="-0.1103357" data-img="<%#=e.images.first.name%>" data-permalink="http://tecorb.com/admin/demo/section1/escorts/listings/paesan/" data-categories="Restaurant, Winery" data-icon="http://tecorb.com/admin/demo/section1/escorts/wp-content/uploads/2015/10/icon-waiter.svg">
-					<%if e.category.name=="escort"%>
+					<%if e.category.name=="Escort"%>
 					<aside class="card__image" style="background-image: url(<%=e.images.present? ? "http://tecorb.com/admin/Max/cityvibe/cityvibe/#{e.images.first.name}" : "http://tecorb.com/admin/Max/cityvibe/cityvibe/westhollywood-escorts-naomi-cruz-1732827.jpg"%>);">
 					</aside><!-- .card__image -->
-					<%elsif e.category.name=="Massage Parler"%>
+					<%elsif e.category.name=="Massage parlour"%>
 						<aside class="card__image" style="background-image: url('/assets/<%=massage_image(@cn)%>');">
 						</aside><!-- .card__image -->
 					<%else%>
@@ -169,13 +169,13 @@
 						<h2 class="card__title" itemprop="name"><%=e.title%></h2>
 						<div class="card__tagline" itemprop="description">
 							<i class="fa fa-phone" aria-hidden="true"></i> <%=e.contact.present? ? e.contact : "Not Available"%> 
-							<%if e.category.name=="escort"%>
+							<%if e.category.name=="Escort"%>
 								<span class="w3-tag w3-round w3-pink w3-right" style="">
 								  <div class="w3-tag w3-round w3-pink w3-border w3-border-white">
 								      Escort
 								  </div>
 								</span>
-							<%elsif e.category.name=="Massage Parler"%>
+							<%elsif e.category.name=="Massage parlour"%>
 								<span class="w3-tag w3-round w3-yellow w3-right" style="">
 								  <div class="w3-tag w3-round w3-yellow w3-border w3-border-white">
 								      Massage

@@ -1,4 +1,5 @@
 class BusinessController < ApplicationController
+
 	before_action :require_logged_in, only:[:welcome,:add_business_form,:add_business,:show,:my_business,:setting,:profile,:edit,:my_business_edit]
 
 	def index
@@ -10,7 +11,11 @@ class BusinessController < ApplicationController
 	end
 
 	def payment_mode
-		render :layout =>"blank_application"
+		if !current_business_user
+			render :layout =>"blank_application"
+		else
+			redirect_to dashboards_dashboard_1_path#welcome_path(encrypt(current_business_user.id))
+		end
 	end
 
 	def user_signup
@@ -34,26 +39,28 @@ class BusinessController < ApplicationController
 		 	session[:business_id]=@user.id
 		 	redirect_to welcome_path(encrypt(@user.id))
 		end
+
 		# //render :layout =>"blank_application"
+
 	end
 
  def welcome
  	@user=User.find_by_id(decrypt(params[:user_id]))
  	@categories=Category.all
- 	render :layout =>"application"
+ 	# render :layout =>"application"
  end
 
-   def create
-		 @user=User.find_by_email(params[:user_login][:email])
-		 if @user && @user.authenticate(params[:user_login][:password])
-			 session[:business_id]=@user.id
-			 flash[:notice]="welcome"
-			 redirect_to  welcome_path(encrypt(@user.id))
-		 else
-			 flash[:notice]="password not correct"
-			 redirect_to  :back
-		 end
-   end
+ def create
+	 @user=User.find_by_email(params[:user_login][:email])
+	 if @user && @user.authenticate(params[:user_login][:password])
+		 session[:business_id]=@user.id
+		 flash[:notice]="welcome"
+		 redirect_to  welcome_path(encrypt(@user.id))
+	 else
+		 flash[:notice]="password not correct"
+		 redirect_to  :back
+	 end
+ end
 
   def logout
 		session[:business_id]=nil
@@ -63,6 +70,7 @@ class BusinessController < ApplicationController
 	def add_business_form
 		@categories=Category.all
 		render :layout =>"application"
+
 	end
 
 	def add_business
@@ -70,6 +78,7 @@ class BusinessController < ApplicationController
 		flash[:notice]="user successfully login"
 		redirect_to business_path(encrypt(@subcat.id))
 	end
+
   def show
   	@subcat=Subcategory.find_by_id(decrypt(params[:id]))
   	render :layout =>"application"
@@ -119,6 +128,7 @@ class BusinessController < ApplicationController
   end
   
   def forget_password
-  	@user=User.find_by_id(decrypt(params[:id]))
+  	@user=User.find_by_id(current_business_user)
+  	render :layout =>"blank_application"
   end
 end

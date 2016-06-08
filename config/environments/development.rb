@@ -1,4 +1,8 @@
-Myapp::Application.configure do
+# <<<<<<< HEAD
+# Myapp::Application.configure do
+# =======
+Rails.application.configure do
+# >>>>>>> f95d11eb480e01b21cde49eaf6ad5d48073ff7c2
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -26,4 +30,32 @@ Myapp::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
+  # yet still be able to expire them through the digest params.
+  config.assets.digest = true
+
+  # Adds additional error checking when serving assets at runtime.
+  # Checks for improperly declared sprockets dependencies.
+  # Raises helpful error messages.
+  config.assets.raise_runtime_errors = true
+
+  # Raises error for missing translations
+  # config.action_view.raise_on_missing_translations = true
+    config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+   # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://45.58.47.179', port: 9999 }
+
+   
+ActionMailer::Base.smtp_settings = {
+  :user_name => 'fun.all.here@gmail.com',
+  :password => 'escort@tecorb',
+  :domain => 'gmail.com',
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :authentication => :plain 
+}
+
 end

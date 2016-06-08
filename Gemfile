@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 gem 'bootstrap-sass', '~> 3.3.5'
-gem 'font-awesome-rails', '4.3.0.0'
+# gem 'font-awesome-rails', '4.3.0.0'
 
 
 # Use sqlite3 as the database for Active Record
@@ -37,11 +37,44 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'geokit-rails'
 
-# Use unicorn as the app server
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+
+gem "jquery-ui-rails"
+
+gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_theme'
+gem "chartkick"
+gem 'sweet-alert'
+gem 'quiet_assets', group: :development
+# Use Unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+# gem 'capistrano-rails', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem "font-awesome-rails"
+
+
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem "rails-erd"
+
+gem 'will_paginate', '~> 3.0.6'
+
+gem 'carrierwave'
+gem 'cloudinary'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'web-console', '~> 2.0'
+
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+

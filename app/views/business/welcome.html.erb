@@ -1,3 +1,4 @@
+
   <%#= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
      <%#=area_chart User.group(:created_at).maximum(:id) %>
      <%#=column_chart User.group(:created_at).maximum(:id) %>
@@ -6,17 +7,7 @@
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">
     <h2>Home</h2>
-      <!--ol class="breadcrumb">
-        <li>
-          <a href="<%#= url_for :controller => 'dashboards', :action => 'dashboard_1' %>">Home</a>
-        </li>
-        <li>
-          <a>Graphs</a>
-        </li>
-        <li class="active">
-          <strong>Chart</strong>
-        </li>
-      </ol-->
+      
   </div>
   <div class="col-lg-2">
 
@@ -256,3 +247,4 @@ $(function() {
 </script>
 
 <% end %>
+

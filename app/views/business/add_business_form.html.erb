@@ -1,3 +1,4 @@
+
  <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">
     <h2> Add Business</h2>
@@ -32,7 +33,7 @@
 		              </select>
 			          </div> 
 		         </div> 
-             <div class="row">
+              <div class="row">
 			          <div class="input-group">
 				          <label class="errors email">*Please enter the Email</label>
 				        </div>
@@ -110,7 +111,7 @@
 			        </div>  
 		          <div style="margin-top:10px" class="form-group">
 		            <div class="col-sm-12 controls">
-		              <%=f.button "Add new business" ,:class=>"btn btn-primary form-control",:id=>"user-signup"%>
+		              <%=f.button "Add new business" ,:class=>"btn btn-primary form-control",:id=>"add_business"%>
 		              <a href="#"></a>
 		            </div>
 		          </div>
@@ -126,7 +127,7 @@
 
 	<script type="text/javascript">
  $('.errors').hide();
- $('#edit_business').click(function(){
+ $('#add_business').click(function(){
     $('.errors').hide();
     if($('#title').val().trim()=="")
     {
