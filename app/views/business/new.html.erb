@@ -1,0 +1,140 @@
+  <div class="mainbox col-md-8 col-md-offset-3 col-sm-8 col-sm-offset-2" role="dialog"> 
+    <div class="panel panel-info" >
+      <div class="panel-heading">
+        <div class="panel-title" style="color:white">User Signup</div>
+      </div> 
+      <div style="padding-top:30px" class="panel-body" >
+        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+        <%=form_for :user_signup,url: user_signup_path,:html=>{:class=>"form-horizontal"} do |f|%> 
+          <%= f.hidden_field :type,:value=>params[:value]%> 
+          <div class="input-group">
+            <label class="errors first">*Please enter your firstname</label>
+          </div> 
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%=f.text_field :fname,:class=>"form-control",:id=>"fname",:placeholder=>" Please enter your First Name"%>                                        
+          </div>
+          <div class="input-group">
+            <label class="errors last">*Please enter your lastname</label>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <%=f.text_field :lname,:class=>"form-control",:id=>"lname",:placeholder=>" Please enter your Last Name",:required=>"true"%>                                        
+          </div>
+          <div class="input-group">
+            <label class="errors email">*Please enter your email</label>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <%=f.email_field :email,:class=>"form-control",:id=>"email-id",:placeholder=>" Please enter your Email-id",:required=>"true"%>                                        
+          </div>
+          <div class="input-group">
+            <label class="errors cont">*Please enter your contact</label>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <%=f.text_field :contact,:class=>"form-control",:id=>"contact",:placeholder=>" Please enter your Contact",:required=>"true"%>                                        
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <%= label :gender, 'gender' %>&nbsp;&nbsp;
+            <%= f.radio_button :gender,"male",:checked=>"true"%> &nbsp;&nbsp;
+             <%= label :male, 'male' %>&nbsp;&nbsp;
+            <%= f.radio_button :gender,"female"%> &nbsp;&nbsp;
+             <%= label :female, 'female' %>&nbsp;&nbsp;
+          </div>
+          <div class="input-group">
+            <label class="errors cont">*Please Enter about yourself</label>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+            <%=f.text_area :about,:class=>"form-control",:id=>"about",:placeholder=>" Please enter about yourself",:required=>"true"%>                                        
+          </div>
+          <div class="input-group">
+            <label class="errors pass">*Please enter your password</label>
+          </div>          
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :password,:class=>"form-control",:id=>"password",
+            :placeholder=>"Please enter your password",:required=>"true"%>
+          </div>
+          <div class="input-group">
+            <label class="errors re-pass">*Please Re-enter your password</label>
+          </div> 
+          <div class="input-group">
+            <label class="errors does-nt">*Password not match re-enter correct password</label>
+          </div>
+          <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <%=f.password_field :repeat_password,:class=>"form-control",:id=>"re-password",
+            :placeholder=>"Please Re-enter your password",:required=>"true"%>
+          </div>
+          <div style="margin-top:10px" class="form-group">
+            <div class="col-sm-12 controls">
+              <%=f.button "Sign-up for new business" ,:class=>"btn btn-primary form-control",:id=>"user-signup"%>
+              <a href="#"></a>
+            </div>
+          </div>
+        <%end%>     
+      </div>                     
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+
+ $('.errors').hide();
+ 
+ $('#user-signup').click(function(){
+    $('.errors').hide();
+    if($('#fname').val().trim()=="")
+    {
+      $('.first').show();
+      return false;
+    }
+    else if($('#lname').val().trim()=="")
+    {
+
+      $('.last').show();
+      return false;
+    }
+    else if($('#email-id').val().trim()=="")
+    {
+
+      $('.email').show();
+      return false;
+    }
+    else if($('#contact').val().trim()=="")
+    {
+      $('.cont').show();
+      return false;
+    }
+    else if($('#about').val().trim()=="")
+    {
+      $('.cont').show();
+      return false;
+    }
+    else if($('#password').val().trim()=="")
+    {
+      $('.pass').show();
+      return false;
+    }
+    else if($('#re-password').val().trim()=="")
+    {
+      $('.re-pass').show();
+      return false;
+    }
+    else if($('#password').val().trim()!=$('#re-password').val().trim())
+    {
+      
+      $('.does-nt').show();
+      $('#password').val("");
+      $('#re-password').val("");
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+
+  });
+</script>

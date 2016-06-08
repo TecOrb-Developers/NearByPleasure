@@ -1,0 +1,55 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <span>
+            <img alt="image" class="img-circle" src="<%= image_url 'profile_small.jpg' %>"/>
+          </span>
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <span class="clear">
+              <span class="block m-t-xs">
+                <strong class="font-bold"><%=current_business_user.fname%> <%=current_business_user.lname%></strong>
+              </span> 
+              <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+            </span>
+          </a>
+          <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <li><a href="">Profile</a>
+            </li>
+            <li><a href="">Contacts</a>
+            </li>
+            <li><a href="">Mailbox</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="">Logout</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-element">
+          IN+
+        </div>
+      </li>
+      <li <%if params[:action]=="welcome"%> class="active" <%end%>>
+        <a href="<%=welcome_path(encrypt(current_business_user.id))%>"><i class="fa fa-bar-chart-o"></i>Home<span style="font-size:10px;" class="nav-label"></span></a>
+      </li>
+      <li <%if params[:action]=="add_business_form"%>class="active"<%end%>>
+        <a href="<%=add_business_form_path%>"><i class="fa fa-building"></i>Add Business<span style="font-size: 10px;" class="nav-label"></span></a>
+      </li>
+
+      <li <%if params[:action]=="my_business"%>class="active"<%end%>><a href="<%=my_business_path(encrypt(current_business_user.id))%>"><i class="fa fa-building"></i>My Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
+      <li>
+        <a href="#"><i class="fa fa-ticket"></i>Support<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-ticket"></i>Guide<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+      </li>
+      <li <%if params[:action]=="setting"%>class="active"<%end%>>
+        <a href="<%=setting_path(encrypt(current_business_user.id))%>"><i class="fa fa-cog"></i>Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+      </li>
+      <li <%if params[:action]=="profile"%>class="active"<%end%>>
+        <a href="<%=profile_path(encrypt(current_business_user.id))%>"><i class="fa fa-user"></i>Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>

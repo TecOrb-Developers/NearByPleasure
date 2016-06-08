@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>Welcome <%= @user.fname %> !</h2>
+    <p>Thanks for signup on Escort application.Hope you will get all of your desires which you aspect from us.</p>
+    <p>Full relexed at Massage Parlers,find Strip clubs for enjoy and find the best escorts in the world, anywhere you are and more all over the USA at any day and any time....</p> 
+    <p>Your satisfaction make us the No.1</p>
+    <h3>Please confirm your application account from the following link</h3>
+    
+    <strong>Confirmation Link <a href="<%=confirm_url(@user.id,@user.confirmation_token)%>">Click Here To confirm your account</a></strong>
+    <p>If you are not signup on the application and feel unauthorized use of your email, please let us know and contact us as soon as possible.We will restrict and deactivate the fake account using your email address.</p>
+    <P>We are happy to help you.</P>
+    <br><br><br>
+    Thanks.<br>
+    Escort App
+
+  </body>
+</html>

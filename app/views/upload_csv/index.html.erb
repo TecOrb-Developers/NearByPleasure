@@ -1,0 +1,26 @@
+<h1>Upload Csvs</h1>
+<div <%if flash[:error]%>style="color:red;"<%else%> style="color: green"<%end%>>
+	<b><i><%= flash[:error] || flash[:notice] %></i></b>
+</div>
+<!-- <p>Escorts CSV</p> -->
+<%= form_for :category,url: upload_csv_index_path do |f|%>
+	<%=f.file_field :file,:required=>"true"%>
+	<%=f.submit%>
+<%end%>
+<p>
+ nil lat long <%=@sub.count%>
+</p>
+<%= link_to "Click here to fix",update_lat_long_path%>
+
+<h2>lat long csv subcategories</h2>
+
+<p>
+
+<%= form_for :category,url: lat_long_csv_path do |f|%>
+	<%=f.file_field :file,:required=>"true"%>
+	<%=f.submit%>
+<%end%>
+
+
+
+</p>

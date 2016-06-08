@@ -1,0 +1,188 @@
+ <div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2> Add Business</h2>
+    </div>
+</div>
+
+ <div class="tab-content container-fluid">
+    <div id="tab-1" class="tab-pane fade in active">
+		  <div class="mainbox col-md-10 col-md-offset-1 margin-top-2 margin-bottom-3" role="dialog"> 
+		    <div class="panel panel-info" >
+		      <div class="panel-heading">
+		        <div class="panel-title" style="color:white">Add Business</div>
+		      </div> 
+		      <div style="padding-top:30px" class="panel-body" >
+		        <div style="display:none" id="login-alert" class="alert alert-danger"></div>
+		        <%=form_for :add_business,url: add_business_path,:html=>{:class=>"form-horizontal"} do |f|%> 
+		          <%= f.hidden_field :type,:value=>params[:value]%>  
+		          <div class="row">
+				        <div class="input-group">
+				          <label class="errors title">*Please enter title</label>
+				        </div>     
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--i class="fa fa-paragraph errspan"></i-->
+			            <%=f.text_field :title,:class=>"form-control",:id=>"title",:placeholder=>" Please enter the title",:required=>"true"%>                                        
+			          </div>
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+		              <select class="form-control" name="category" id="category" required="true">
+		                <option value=""> - Select Category - </option>
+			                <%@categories.each do |c|%>
+			                 <option value="<%=c.id%>"><%=c.name%></option>
+			                <%end%>
+		              </select>
+			          </div> 
+		         </div> 
+             <div class="row">
+			          <div class="input-group">
+				          <label class="errors email">*Please enter the Email</label>
+				        </div>
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--span class="input-group-addon"><i class="fa fa-envelope"></i></span-->
+			            <%=f.email_field :email,:class=>"form-control",:id=>"email-id",:placeholder=>" Please enter your Email-id",:required =>"true"%>                                        
+			          </div>
+			          <div class="input-group">
+				          <label class="errors cont">*Please enter your contact</label>
+				        </div>
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--span class="input-group-addon"><i class="fa fa-phone"></i></span-->
+			            <%=f.text_field :contact,:class=>"form-control",:id=>"contact",:placeholder=>" Please enter your Contact",:required=>"true"%>                                        
+			          </div>
+			        </div>  
+			        <div class="row"> 
+			          <div class="input-group">
+				          <label class="errors addres">*Please enter the street address</label>
+				        </div>
+			          <div style="margin-bottom: 15px" class="col-sm-12">
+			            <!--span class="input-group-addon"><i class="fa fa-road"></i></span-->
+			            <%=f.text_field :street_address,:class=>"form-control",:id=>"street_address",:placeholder=>" Please enter your street_address",:required=>"true"%>                    
+			          </div> 
+			        </div>  
+		          <div class="row">
+			          <div class="input-group">
+				          <label class="errors city">*Please enter the city</label>
+				        </div> 
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--span><i class="fa fa-building-o"></i-->
+			            <%=f.text_field :city,:class=>"form-control",:id=>"city",:placeholder=>" Please enter your city",:required=>"true"%>                                    
+			          </div> 
+			          <div class="input-group">
+				          <label class="errors pin">*Please enter the pin</label>
+				        </div> 
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span-->
+			            <%=f.text_field :pin,:class=>"form-control",:id=>"pin",:placeholder=>" Please enter your pin",:required=>"true"%>                                        
+			          </div>
+			        </div>
+			        <div class="row">  
+			          <div class="input-group">
+				          <label class="errors state">*Please enter the state</label>
+				        </div>  
+			          <div style="margin-bottom: 15px" class="col-sm-6">
+			            <!--span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span-->
+			            <%=f.text_field :state,:class=>"form-control",:id=>"state",:placeholder=>" Please enter your state",:required=>"true"%>                                        
+			          </div> 
+			          <div class="input-group">
+			          	<label class="errors rate">*Please enter the rating</label>
+			          </div>       
+		            <div style="margin-bottom: 15px" class="col-sm-6">
+		              <!--span class="input-group-addon"><i class="fa fa-star"></i></span-->
+		              <%=f.text_field :rating,:class=>"form-control",:id=>"rating",
+		                :placeholder=>"Please enter the rating",:required=>"true"%>
+		            </div>
+		          </div>
+		          <div class="row">  
+			          <div class="input-group">
+				          <label class="errors tag">*Please enter the tag-line</label>
+				        </div> 
+			           <div style="margin-bottom: 15px" class="col-sm-12">
+			            <!--span class="input-group-addon"><i class="fa fa-tag"></i></span-->
+			            <%=f.text_field :tag_line,:class=>"form-control",:id=>"tag_line",:placeholder=>" Please enter your tag",:required=>"true"%>                                        
+			          </div> 
+			        </div>  
+		          <div class="row">
+			          <div class="input-group">
+				          <label class="errors desc">*Please enter the description</label>
+				        </div>
+			          <div style="margin-bottom: 15px" class="col-sm-12">
+			            <!--span class="input-group-addon"><i class="fa fa-text-width"></i></span-->
+			            <%=f.text_area :description,:class=>"form-control",:id=>"description",:placeholder=>" Please enter the description",:required =>"true"%>                          
+			          </div>
+			        </div>  
+		          <div style="margin-top:10px" class="form-group">
+		            <div class="col-sm-12 controls">
+		              <%=f.button "Add new business" ,:class=>"btn btn-primary form-control",:id=>"user-signup"%>
+		              <a href="#"></a>
+		            </div>
+		          </div>
+		        <%end%>     
+		      </div>                     
+		    </div>
+		  </div>
+		</div>
+	</div>	  
+
+
+
+
+	<script type="text/javascript">
+ $('.errors').hide();
+ $('#edit_business').click(function(){
+    $('.errors').hide();
+    if($('#title').val().trim()=="")
+    {
+      $('.title').show();
+      return false;
+    }
+    else if($('#description').val().trim()=="")
+    {
+
+      $('.desc').show();
+      return false;
+    }
+    else if($('#email-id').val().trim()=="")
+    {
+      $('.email').show();
+      return false;
+    }
+    else if($('#contact').val().trim()=="")
+    {
+      $('.cont').show();
+      return false;
+    }
+     else if($('#street_address').val().trim()=="")
+    {
+      $('.addres').show();
+      return false;
+    }
+     else if($('#city').val().trim()=="")
+    {
+      $('.city').show();
+      return false;
+    }
+     else if($('#pin').val().trim()=="")
+    {
+      $('.pin').show();
+      return false;
+    }
+     else if($('#state').val().trim()=="")
+    {
+      $('.state').show();
+      return false;
+    }
+    else if($('#tag_line').val().trim()=="")
+    {
+      $('.tag').show();
+      return false;
+    }
+    else if($('#rating').val().trim()=="")
+    {
+      $('.rate').show();
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+
+  });
+</script>
