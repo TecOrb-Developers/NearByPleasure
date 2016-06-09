@@ -121,4 +121,11 @@ function htmlbodyHeightUpdate(){
         htmlbodyHeightUpdate()
     });
   });
+  <%if flash[:notice].present?%>
+    swal(
+      'Unauthorized access!',
+      'Your email or password does not match with us!',
+      'error'
+    )
+  <%end%>
 </script>

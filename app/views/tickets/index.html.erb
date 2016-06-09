@@ -1,0 +1,69 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>My Tickets(<%=@tickets.count%>)</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="col-lg-12 animated fadeInRight">
+      <div class="mail-box-header">
+        <form method="get" action="#" class="pull-right mail-search">
+          <div class="input-group">
+            <input type="text" class="form-control input-sm" name="search" placeholder="Ticket search (Ticket no)">
+            <div class="input-group-btn">
+              <button type="submit" class="btn btn-sm btn-primary">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="mail-tools tooltip-demo m-t-md">
+          <%= link_to "Generate new ticket",new_user_ticket_path(encrypt(current_business_user.id)),:class=>"btn btn-primary compose-mail" %>
+        </div>
+      </div>
+      <div class="mail-box">
+        <table class="table table-hover table-mail">
+          <thead>
+            <tr>
+              <th>Ticket-Id</th>
+              <th>Title</th>
+              <th>Content</th>
+              <th class="">Time</th>
+              <th>Actions</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%@tickets.each do |t| %>
+              <tr class="<%= t.status ? 'flase' : 'true'%>">
+                <td><%=t.id%></td>
+                <td><%=t.title%></td>
+                <td><%=t.content%></td>
+                <td><%="#{time_ago_in_words(t.created_at)} ago "%></td>
+                <td>
+                  <%= link_to "View",user_ticket_path(current_business_user,t.id),:class=>"btn btn-warning"%>
+                </td>
+                <td>
+                  <%= link_to "Edit",edit_user_ticket_path(current_business_user,t.id),:class=>"btn btn-primary"%>
+                </td>
+              </tr>
+            <%end%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%# content_for :javascript do %>
+ <!-- <script type="text/javascript">
+    $(function() {
+      $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+      });
+    });
+  </script>-->
+<%# end %>
+
