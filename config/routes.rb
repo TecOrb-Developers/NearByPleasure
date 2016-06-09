@@ -258,7 +258,11 @@ Rails.application.routes.draw do
   resources :upload_csv,:only =>[:index,:create]
   resources :subcategories
   resources :business 
-  resources :users
+  resources :users do
+    resources :tickets do 
+      resources :ticket_comments
+    end
+  end
   resources :subcategories
   get 'update_lat_long'=>"upload_csv#update_lat_long"
   get 'update_image'=>'upload_csv#update_image'
@@ -299,7 +303,11 @@ Rails.application.routes.draw do
   get "business/:id/setting"=>"business#setting",:as=>"setting"
   post "business/:id/change_password"=>"business#change_password",:as=>"change_password"
   get "business/:id/my_business_edit"=>"business#my_business_edit",:as=>"business_edit"
-  get "forget_password"=>"business#forget_password",:as=>"business_forget_password"
+  get "forget_password"=>"password#forget_password",:as=>"business_forget_password"
+  post "forgot_business_password"=>"password#forgot_business_password",:as=>"business_forgot_password"
+  get 'business/:user_id/token/:token'=>"password#business_forgot_view",:as=>"business_forgot_view"
+  post 'change_password'=>"password#change_password" ,:as=>"password_change"
+  get 'change_business_password/:user_id/token/:token'=>"password#change_business_password" ,:as=>"change_business_password"
  
 
   post 'socialauth'=>"users#socialauth"

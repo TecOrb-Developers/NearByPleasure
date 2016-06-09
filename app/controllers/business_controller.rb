@@ -14,7 +14,7 @@ class BusinessController < ApplicationController
 		if !current_business_user
 			render :layout =>"blank_application"
 		else
-			redirect_to dashboards_dashboard_1_path#welcome_path(encrypt(current_business_user.id))
+			redirect_to welcome_path(encrypt(current_business_user.id))
 		end
 	end
 
@@ -127,8 +127,4 @@ class BusinessController < ApplicationController
   	render :layout =>"application"
   end
   
-  def forget_password
-  	@user=User.find_by_id(current_business_user)
-  	render :layout =>"blank_application"
-  end
 end

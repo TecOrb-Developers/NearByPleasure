@@ -15,7 +15,7 @@
 		      </div> 
 		      <div style="padding-top:30px" class="panel-body" >
 		        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-		        <%=form_for @business,url: add_business_path,:html=>{:class=>"form-horizontal"} do |f|%> 
+		        <%=form_for @business,:html=>{:class=>"form-horizontal"} do |f|%> 
 		          <%= f.hidden_field :type,:value=>params[:value]%>  
 		          <div class="row">
 				        <div class="input-group">
