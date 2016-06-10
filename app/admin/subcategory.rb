@@ -1,5 +1,5 @@
 ActiveAdmin.register Subcategory , :as => "Business" do
-permit_params :title,:description,:email,:contact,:street_address,:city,:pin,:state,:tag_line,:category_id,:rating
+permit_params :title,:description,:email,:contact,:street_address,:city,:pin,:state,:tag_line,:category_id,:rating,:timing,:page_url,:review,:user_id
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
