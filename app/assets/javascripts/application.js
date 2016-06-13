@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require chartkick
 //= require sweet-alert
+

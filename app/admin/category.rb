@@ -1,4 +1,6 @@
 ActiveAdmin.register Category do
+ 
+ config.breadcrumb = false
 
  permit_params :name, :image
    filter :name

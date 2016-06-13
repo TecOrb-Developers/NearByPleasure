@@ -39,7 +39,7 @@
 
       <li <%if params[:action]=="my_business"%>class="active"<%end%>><a href="<%=my_business_path(encrypt(current_business_user.id))%>"><i class="fa fa-building"></i>My Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
       <li>
-        <a><i class="fa fa-ticket"></i>Support<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span><span class="fa arrow"></span></a>
+        <a href="mailbox.html"><i class="fa fa-header"></i> <span class="nav-label">Support </span><span class="text text-warning pull-right"><%=all_ticket%></span></a>
           <ul class="nav nav-second-level collapse">
             <li <%if params[:action]=="new"%>class="active"<%end%>>
               <a href="<%=new_user_ticket_path(encrypt(current_business_user.id))%>"><i class="fa fa-ticket"> </i>Add Ticket<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span>

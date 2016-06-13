@@ -1,6 +1,6 @@
 ActiveAdmin.register AdminUser do
+  config.breadcrumb = false
   permit_params :email, :password, :password_confirmation
-
   index do
     selectable_column
     id_column

@@ -28,9 +28,10 @@
               <th>Ticket-Id</th>
               <th>Title</th>
               <th>Content</th>
+               <th>Status</th>
               <th class="">Time</th>
               <th>Actions</th>
-              <th>Edit</th>
+              <!--th>Close</th-->
             </tr>
           </thead>
           <tbody>
@@ -39,12 +40,18 @@
                 <td><%=t.id%></td>
                 <td><%=t.title%></td>
                 <td><%=t.content%></td>
+                <td>
+                  <%if t.status == true%>
+                    <div class="label label-primary">*Answered</div>
+                  <%else%>
+                    <div class="label label-danger">*Unanswered</div>
+                  <%end%></td>
                 <td><%="#{time_ago_in_words(t.created_at)} ago "%></td>
                 <td>
                   <%= link_to "View",user_ticket_path(current_business_user,t.id),:class=>"btn btn-warning"%>
                 </td>
                 <td>
-                  <%= link_to "Edit",edit_user_ticket_path(current_business_user,t.id),:class=>"btn btn-primary"%>
+                  <%#= link_to "Close",close_ticket_path(t.id),:class=>"btn btn-primary"%>
                 </td>
               </tr>
             <%end%>

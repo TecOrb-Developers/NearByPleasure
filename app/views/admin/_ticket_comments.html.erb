@@ -1,0 +1,28 @@
+<div class="wrapper wrapper-content">
+  <div class="row">   
+    <div class="col-lg-12 animated fadeInRight">
+      <div class="col-lg-2 margin-top-3">
+        <% if @ticket.status %>
+          <div class="label label-primary">*Answered</div>
+        <%else%>
+          <div class="label label-danger">*Unanswered</div>
+        <%end%>
+      </div> 
+      <div class="mail-box-header">
+        <div class="pull-right tooltip-demo">
+          <%#= link_to "Close",user_tickets_path(encrypt(current_business_user.id)),:class=>"btn btn-primary btn-md" %>
+          <%#= link_to "All Tickets",user_tickets_path(encrypt(current_business_user.id)),:class=>"btn btn-warning btn-sm" %>
+        </div>
+        <h1></h1> 
+      </div>
+      <div class="mail-box">
+        <%=render :partial => 'show'%>
+        <%=render :partial => 'ticket_comments/new'%>
+        <div class="row">
+          <div class="col-lg-12"><br><br></div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

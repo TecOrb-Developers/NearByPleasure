@@ -1,0 +1,36 @@
+<div class="form-group mail-body">
+  <%#=p "=================#{current_business_user.id}"%>
+ <%=form_for :comment,url: user_ticket_ticket_comments_path(current_business_user.id,@ticket.id),:html=>{:class=>"form-horizontal"} do |f|%>
+    <div class="input-group">
+      <label class="errors comment">*Please enter the comment</label>
+    </div>
+    <div class="form-group">
+      <%= f.label :comment, 'Enter your comment:' %>
+      <%= f.text_area :comment, rows: 3, :class =>'form-control',:id=>"comment", required: true %>
+      <small class="label label-warning">Cannot be blank</small>
+    </div>
+    <%= f.submit 'Post', class: 'btn btn-primary btn-sm pull-right',:id=>"new_comment_submit" %><br><br>
+  <% end %>
+</div>
+
+
+
+<script type="text/javascript">
+
+ $('.errors').hide();
+ 
+ $('#new_comment_submit').click(function(){
+    $('.errors').hide();
+
+    if($('#comment').val().trim()=="")
+    {
+      $('.comment').show();
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+
+  });
+</script>
