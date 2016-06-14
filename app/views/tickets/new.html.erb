@@ -26,6 +26,14 @@
             <%=f.text_area :content,:class=>"form-control",:id=>"content",
             :placeholder=>"Please enter your content",:required=>"true"%>
           </div>
+          <div style="margin-bottom: 25px" class="col-lg-12 input-group">
+            <select class="form-control" name="subcategory" id="subcategory" required="true">
+              <option value=""> - Select subategory - </option>
+                <%@subcategories.each do |c|%>
+                 <option value="<%=c.id%>"><%=c.title%></option>
+                <%end%>
+            </select>
+          </div> 
           <div style="margin-top:10px" class="form-group">
             <div class="col-sm-12 controls">
               <%=f.button "Generate Ticket" ,:class=>"btn btn-primary form-control",:id=>"user_ticket"%>

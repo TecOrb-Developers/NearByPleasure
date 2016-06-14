@@ -6,7 +6,7 @@
     <div class="form-group">
       <%= f.label :comment, 'Enter your comment:' %>
       <%= f.text_area :comment, rows: 3, :class =>'form-control',:id=>"comment", required: true %>
-      <small class="label label-warning">Cannot be blank</small>
+      <small class="btn btn-warning btn-sm">Cannot be blank</small>
     </div>
     <%= f.submit 'Post', class: 'btn btn-primary btn-sm pull-right',:id=>"new_comment_submit" %><br><br>
   <% end %>

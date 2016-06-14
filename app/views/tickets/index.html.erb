@@ -42,9 +42,9 @@
                 <td><%=t.content%></td>
                 <td>
                   <%if t.status == true%>
-                    <div class="label label-primary">*Answered</div>
+                    <div class="btn btn-success btn-sm">*Answered</div>
                   <%else%>
-                    <div class="label label-danger">*Unanswered</div>
+                    <div class="btn btn-danger btn-sm">*Unanswered</div>
                   <%end%></td>
                 <td><%="#{time_ago_in_words(t.created_at)} ago "%></td>
                 <td>

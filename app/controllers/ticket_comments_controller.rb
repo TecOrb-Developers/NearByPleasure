@@ -19,7 +19,7 @@ class TicketCommentsController < ApplicationController
 		@user=User.find_by_id(params[:user_id])
 		@ticket=Ticket.find_by_id(params[:ticket_id])
 		@admin=TicketComment.find_by_admin_id(nil)
-       @comments=@ticket.ticket_comments
+    @comments=@ticket.ticket_comments
 	end
 
 	def create_admin_comment
