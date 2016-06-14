@@ -1,0 +1,86 @@
+<style type="text/css">
+/*** custom checkboxes ***/
+
+
+label input[type="radio"] ~ i.fa.fa-circle-o{
+    color: #c8c8c8;    display: inline;
+}
+label input[type="radio"] ~ i.fa.fa-check-circle-o{
+    display: none;
+}
+label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+    display: none;
+}
+label input[type="radio"]:checked ~ i.fa.fa-check-circle-o{
+    color: #7AA3CC;    display: inline;
+}
+label:hover input[type="radio"] ~ i.fa {
+color: #7AA3CC;
+}
+
+label input[type="checkbox"] ~ i.fa.fa-square-o{
+    color: #c8c8c8;    display: inline;
+}
+label input[type="checkbox"] ~ i.fa.fa-check-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o{
+    color: #7AA3CC;    display: inline;
+}
+label:hover input[type="checkbox"] ~ i.fa {
+color: #7AA3CC;
+}
+
+</style>
+
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+  <div>
+    <h3>Welcome ! Have fun</h3>
+    <p>Create account to see it in action.</p>
+    <%=form_for :login,url: signup_path do |f|%>
+      <div class="form-group">
+        <font color="red"><%=flash[:notice] || flash[:error]%></font>
+      </div>
+      <div class="form-group">
+        <input type="text" name="fname" class="form-control" placeholder="First name" required="">
+      </div>
+      <div class="form-group">
+        <input type="text" name="lname" class="form-control" placeholder="Last name" required="">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="Email" required="">
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+      </div>
+      <div class="form-group">
+        <input type="password" name="confirm_password" class="form-control" placeholder="Password Confirmation" required="">
+      </div>
+      <div class="form-group">
+       
+        <label class="active">
+          <input type="radio" name='gender' checked="" value="male" class="hide">
+          <i class="fa fa-circle-o fa-2x"></i>
+          <i class="fa fa-check-circle-o fa-2x"></i>
+          <span>Male</span>
+        </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label>
+          <input type="radio" name='gender' value="female" class="hide">
+          <i class="fa fa-circle-o fa-2x"></i>
+          <i class="fa fa-check-circle-o fa-2x"></i>
+          <span> Female</span>
+        </label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+    <%end%>
+
+      <p class="text-muted text-center"><small>Already have an account?</small>
+      </p>
+      <a class="btn btn-sm btn-white btn-block" href="<%=user_login_path%>">Login</a>
+    <p class="m-t"> <small>Welcome! Search for Escorts by features in your area  &copy; 2016</small> </p>
+  </div>
+</div>

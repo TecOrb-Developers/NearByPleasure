@@ -3,17 +3,19 @@ module ApplicationHelper
 	require 'net/http'
 	require 'uri'
 	require 'json'
-    def is_active_controller(controller_name)
-        params[:controller] == controller_name ? "active" : nil
-    end
 
-    def is_active_action(action_name)
-        params[:action] == action_name ? "active" : nil
-    end
+  def is_active_controller(controller_name)
+    params[:controller] == controller_name ? "active" : nil
+  end
+
+  def is_active_action(action_name)
+      params[:action] == action_name ? "active" : nil
+  end
     
 	def categories
 		Category.all
 	end
+
 	def google_api_key
 	 key="AIzaSyCJaA4u0M0Az0aGc73Gjei7seHBKy7XxTk"
 	end
@@ -89,11 +91,11 @@ module ApplicationHelper
 		current_business_user
 	end
 
-    def current_business_user
+  def current_business_user
 		@current_business_user ||= User.find(session[:business_id]) if (session[:business_id])
 	end
 
-	def current_business_user
-		@current_business_user ||= User.find(session[:business_id]) if (session[:business_id])
+	def current_user
+		@current_user ||= User.find(session[:user_id]) if (session[:user_id])
 	end
 end

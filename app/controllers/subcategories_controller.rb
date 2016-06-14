@@ -20,6 +20,7 @@ class SubcategoriesController < ApplicationController
 		end
 		render :layout=>"home_application"	
 	end
+	
 	def index
 		if params[:search_category].present? 
 			@cat = Category.find_by_id(params[:search_category]) 

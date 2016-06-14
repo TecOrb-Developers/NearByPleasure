@@ -1,14 +1,31 @@
 class SessionsController < ApplicationController
+	def index
+    render :layout=>"empty"	
+	end
+
 	def login
 		if params[:email].present? and params[:password].present?
 			@user=User.find_by_email(params[:email])
 			if @user && @user.authenticate(params[:password])
-				render :json => {:response_code => 200,:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+				flash[:notice]="Successfull login"
+				session[:user_id]=@user.id
+				respond_to do |format|
+				  format.html { redirect_to root_path  }
+				  format.json { render :json => {:response_code=> 200,:message => "Successfully logged in",:user=>@user.as_json(except: [:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }	}					
+				end
 			else
-				render :json => { :response_code => 500,:response_message => "Unauthorized access!!" }
+				flash[:notice]="Unauthorized access!!"
+				respond_to do |format|
+				  format.html { redirect_to user_login_path  }
+					format.json { render json: { :response_code => 500,:response_message => "Unauthorized access!!" } }
+				end
 			end
 		else
-			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
+			flash[:notice]="Please provide all required parameters"
+			respond_to do |format|
+			  format.html { redirect_to user_login_path  }
+				format.json { render json: { :response_code => 500,:response_message => "Please provide all required parameters" } }
+		  end
 		end
 	end
 
@@ -35,7 +52,6 @@ class SessionsController < ApplicationController
 		else
 			render :layout =>"blank_application"
 		end
-
 	end
 
 	def update_password
@@ -50,5 +66,9 @@ class SessionsController < ApplicationController
 		else
 				render :json => { :response_code => 500,:response_message => "Password does not matched!!" }
 		end
+	end
+	def user_logout
+		session[:user_id]=nil
+		redirect_to :back
 	end
 end

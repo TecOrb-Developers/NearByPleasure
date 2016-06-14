@@ -14,4 +14,3 @@
 //= require inspinia.js
 //= require turbolinks
 //= require chartkick
-//= require sweet-alert

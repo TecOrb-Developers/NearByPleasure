@@ -4,6 +4,11 @@
  *= require animate/animate.css
  *= require home_style
  *= require font-awesome
+ *= require listing/dashicons.min.css
+ *= require listing/chosen.css
+ *= require listing/frontend.css
+ *= require home_style.css
+
 */
 .fc {
 	direction: ltr;

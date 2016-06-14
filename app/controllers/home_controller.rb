@@ -25,5 +25,9 @@ class HomeController < ApplicationController
   	@images = @escort.images.pluck(:name)
     render :layout=>"home_application"
   end
+  def add_listing
+    render :layout=>"home_application"
+    
+  end
 end
 

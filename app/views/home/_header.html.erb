@@ -31,7 +31,8 @@
     <ul id="menu-main-menu" class="primary-menu">
       <li id="menu-item-11042" class="cta menu-item menu-item-type-post_type menu-item-object-page menu-item-11042">
         <!-- class="ip-location" -->
-        <a href="<%=payment_path%>" >Add Listing</a>
+        <a href="<%=listing_path%>" data-no-turbolink = true>Add Listing</a>
+        <%#=payment_path%>
 
       </li>
       <li id="menu-item-11041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-11041"><a href="#" class=" ">Search by</a>
@@ -63,35 +64,37 @@
      <!--  <li id="menu-item-11056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11056">
       	<a href="#" class=" ">Blog</a>
       </li> -->
-      
-      <li id="menu-item-11093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11093">
-      	<a href="#" class="  iframe-login-link">Log In</a>
-      </li>
-      <li id="menu-item-11092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11092 menu-item-current-username ">
-        <a href="#" class="iframe-login-link">
-        	<img alt='' src='http://1.gravatar.com/avatar/?s=32&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo avatar-default user-avatar' height='32' width='32' /><span class="user-display-name">Welcome!</span>
-        </a>
-        <ul class="sub-menu">
-          <li id="menu-item-11091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11091">
-          	<a href="<%=payment_path%>" class=" ">Dashboard</a>
-          </li>
-          <li id="menu-item-11090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11090">
-          	<a href="#" class=" ">Your Listings</a>
-          </li>
-          <li id="menu-item-11087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11087">
-          	<a href="#" class=" ">Add Listing</a>
-          </li>
-          <li id="menu-item-11088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11088">
-          	<a href="#" class=" ">Bookmarks</a>
-          </li>
-          <li id="menu-item-11089" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11089">
-          	<a href="#" class=" ">Edit Profile</a>
-          </li>
-          <li id="menu-item-11094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11094">
-          	<a href="#" class="  logout-link">Log Out</a>
-          </li>
-        </ul>
-      </li>
+      <%if !current_user%>
+        <li id="menu-item-11093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11093">
+        	<a href="<%=user_login_path%>" class="">Log In</a> <!-- iframe-login-link -->
+        </li>
+      <%else%>
+        <li id="menu-item-11092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11092 menu-item-current-username ">
+          <a href="#" class="">
+          	<img alt='' src='http://1.gravatar.com/avatar/?s=32&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/?s=64&amp;d=mm&amp;r=g 2x' class='avatar avatar-32 photo avatar-default user-avatar' height='32' width='32' /><span class="user-display-name">Welcome!</span>
+          </a>
+          <ul class="sub-menu">
+            <li id="menu-item-11091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11091">
+            	<a href="#" class=" ">Dashboard</a>
+            </li>
+            <li id="menu-item-11090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11090">
+            	<a href="#" class="">Your favourites</a>
+            </li>
+            <li id="menu-item-11087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11087">
+            	<a href="#" class=" ">Add Listing</a>
+            </li>
+            <!-- <li id="menu-item-11088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11088">
+            	<a href="#" class=" ">Bookmarks</a>
+            </li> -->
+            <li id="menu-item-11089" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11089">
+            	<a href="#" class=" ">Edit Profile</a>
+            </li>
+            <li id="menu-item-11094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11094">
+            	<a href="<%=user_logout_path%>" class="logout-link">Log Out</a>
+            </li>
+          </ul>
+        </li>
+      <%end%>
     </ul>
   </nav>
 </header>
