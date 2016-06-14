@@ -249,7 +249,7 @@ ActiveAdmin.setup do |config|
   # Pagination is enabled by default for all resources.
   # You can control the default per page count for all resources here.
   #
-  # config.default_per_page = 30
+   config.default_per_page = 10
   #
   # You can control the max per page count too.
   #
@@ -269,4 +269,8 @@ ActiveAdmin.setup do |config|
   # of those filters by default here.
   #
   # config.include_default_association_filters = true
+  ActiveAdmin.setup do |config|
+    #Assign an empty component as the footer
+    config.view_factory.footer = ActiveAdmin::Component
+  end
 end

@@ -31,33 +31,33 @@
         </div>
       </li>
       <li <%if params[:action]=="welcome"%> class="active" <%end%>>
-        <a href="<%=welcome_path(encrypt(current_business_user.id))%>"><i class="fa fa-bar-chart-o"></i>Home<span style="font-size:10px;" class="nav-label"></span></a>
+        <a href="<%=welcome_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-bar-chart-o"></i>Home<span style="font-size:10px;" class="nav-label"></span></a>
       </li>
       <li <%if params[:action]=="add_business_form"%>class="active"<%end%>>
-        <a href="<%=add_business_form_path%>"><i class="fa fa-building"></i>Add Business<span style="font-size: 10px;" class="nav-label"></span></a> 
+        <a href="<%=add_business_form_path%>" data-no-turbolink = true><i class="fa fa-building"></i>Add Business<span style="font-size: 10px;" class="nav-label"></span></a> 
       </li>
 
       <li <%if params[:action]=="my_business"%>class="active"<%end%>><a href="<%=my_business_path(encrypt(current_business_user.id))%>"><i class="fa fa-building"></i>My Business<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a></li>
-      <li>
-        <a><i class="fa fa-ticket"></i>Support<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span><span class="fa arrow"></span></a>
-          <ul class="nav nav-second-level collapse">
+      <li class="<%= is_active_controller('tickets') %>">
+        <a><i class="fa fa-header"></i> <span class="">Support </span><span class="text text-warning pull-right"><%=all_ticket%></span></a> 
+          <ul class="nav nav-second-level collapse <%= is_active_controller('tickets') %>">
             <li <%if params[:action]=="new"%>class="active"<%end%>>
-              <a href="<%=new_user_ticket_path(encrypt(current_business_user.id))%>"><i class="fa fa-ticket"> </i>Add Ticket<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span>
+              <a href="<%=new_user_ticket_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-ticket"></i>Add Ticket<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span>
               </a>
             </li>
             <li <%if params[:action]=="index"%>class="active"<%end%>>
-              <a href="<%=user_tickets_path(encrypt(current_business_user.id))%>"><i class="fa fa-ticket"></i>My Ticket</a>
+              <a href="<%=user_tickets_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-ticket"></i>My Ticket</a>
             </li>
           </ul>
       </li>
       <li>
-        <a href="#"><i class="fa fa-ticket"></i>Guide<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+        <a href="#" data-no-turbolink = true><i class="fa fa-ticket"></i>Guide<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
       </li>
       <li <%if params[:action]=="setting"%>class="active"<%end%>>
-        <a href="<%=setting_path(encrypt(current_business_user.id))%>"><i class="fa fa-cog"></i>Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+        <a href="<%=setting_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-cog"></i>Settings<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
       </li>
       <li <%if params[:action]=="profile"%>class="active"<%end%>>
-        <a href="<%=profile_path(encrypt(current_business_user.id))%>"><i class="fa fa-user"></i>Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+        <a href="<%=profile_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-user"></i>Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
       </li>
     </ul>
   </div>

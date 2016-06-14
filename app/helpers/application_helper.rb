@@ -98,4 +98,13 @@ module ApplicationHelper
 	def current_user
 		@current_user ||= User.find(session[:user_id]) if (session[:user_id])
 	end
+
+	def all_ticket
+	  @all=Ticket.all.count
+	  #@all=Ticket.where(:status=>false).count
+	 @value=Ticket.where(:status=>true).count
+	 @result="#{@value}/#{@all}"
+	end
+
+	
 end

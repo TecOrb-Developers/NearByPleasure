@@ -181,6 +181,8 @@ Rails.application.routes.draw do
   get 'business/:user_id/token/:token'=>"password#business_forgot_view",:as=>"business_forgot_view"
   post 'change_password'=>"password#change_password" ,:as=>"password_change"
   get 'change_business_password/:user_id/token/:token'=>"password#change_business_password" ,:as=>"change_business_password"
+  post 'ticket_comments/:ticket_id/comment'=>"ticket_comments#create_admin_comment",:as=>"create_admin_comment"
+  get 'tickets/:ticket_id/delete'=>"tickets#close_ticket",:as=>"close_ticket"
  
 
   post 'socialauth'=>"users#socialauth"

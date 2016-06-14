@@ -40,7 +40,7 @@
 }
 
 .you {
-    float: left;   
+    float: left !important;   
     margin: 5px 45px 5px 20px;         
 }
 
@@ -51,7 +51,7 @@
 
 .me {
     float: right;    
-    margin: 5px 20px 5px 45px;         
+    margin: 5px 20px 5px 550px;         
 }
 
 .me::before {
@@ -59,4 +59,6 @@
     right: -9px;    
 }
 
-
+.label {
+    background-color: white !important;
+    } 

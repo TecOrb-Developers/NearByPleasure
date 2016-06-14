@@ -5,6 +5,7 @@ class Subcategory < ActiveRecord::Base
 	has_many :recent_checks,:dependent => :destroy
 	has_many :bookmarks,:dependent=> :destroy
 	has_many :reviews, :dependent=>:destroy
+	has_many :tickets, :dependent=>:destroy
 
 	acts_as_mappable :default_units => :miles,
                    :lat_column_name => :latitude,

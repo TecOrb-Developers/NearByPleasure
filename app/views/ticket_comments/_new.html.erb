@@ -1,0 +1,67 @@
+<!--div class="wrapper wrapper-content">
+  <div class="row">   
+    <div class="col-lg-12 animated fadeInRight">
+      <div class="col-lg-2 margin-top-3">
+        <%# if @ticket.status == true %>
+          <div class="btn btn-success btn-sm">*Answered</div>
+        <%#else%>
+          <div class="btn btn-danger btn-sm">*Unanswered</div>
+        <%#end%>
+      </div> 
+      <div class="mail-box-header">
+        <div class="pull-right tooltip-demo">
+          <%#= link_to "Close",user_tickets_path(encrypt(current_business_user.id)),:class=>"btn btn-primary btn-md" %>
+          <%#= link_to "All Tickets",user_tickets_path(encrypt(current_business_user.id)),:class=>"btn btn-warning btn-sm" %>
+        </div>
+        <h1></h1> 
+      </div-->
+      <div class="mail-body">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-2">
+              <label><h4>Title:</h4></label>
+            </div>
+            <div class="col-lg-8 alert alert-danger">
+             <h4><%=@ticket.title%></h4>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-2">
+              <label><h4>Content:</h4></label>
+            </div>
+            <div class="col-lg-8 alert alert-warning">
+              <h4><%=@ticket.content%></h4>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-lg-2">
+              <label><h4>Subcategory:</h4></label>
+            </div>
+            <div class="col-lg-8 alert alert-warning">
+              <h4><%=@subcategory.present? ? @subcategory.title : "Not Available"%></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group mail-body">
+       <%=form_for :comment,url: create_admin_comment_path(@ticket.id),:html=>{:class=>"form-horizontal"} do |f|%>
+          <div class="input-group">
+            <label class="errors comment">*Please enter the comment</label>
+          </div>
+          <div class="form-group">
+            <%= f.label :comment, 'Enter your comment:' %>
+            <%= f.text_area :comment, rows: 3, :class =>'form-control',:id=>"comment", required: true %>
+            <small class="btn btn-warning btn-sm">Cannot be blank</small>
+          </div>
+          <%= f.submit 'Post', class: 'btn btn-primary btn-sm pull-right',:id=>"new_comment_submit" %><br><br>
+        <% end %>
+      </div>
+    <!--/div>
+  </div>
+</div-->

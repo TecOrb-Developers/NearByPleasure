@@ -12,6 +12,7 @@ permit_params :title,:description,:email,:contact,:street_address,:city,:pin,:st
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+ config.breadcrumb = false
 index do
     selectable_column
     id_column

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609114236) do
+ActiveRecord::Schema.define(version: 20160614082423) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -185,6 +185,7 @@ ActiveRecord::Schema.define(version: 20160609114236) do
     t.integer  "ticket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "admin_id"
   end
 
   add_index "ticket_comments", ["ticket_id"], name: "index_ticket_comments_on_ticket_id", using: :btree
@@ -195,10 +196,12 @@ ActiveRecord::Schema.define(version: 20160609114236) do
     t.text     "content"
     t.boolean  "status"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "subcategory_id"
   end
 
+  add_index "tickets", ["subcategory_id"], name: "index_tickets_on_subcategory_id", using: :btree
   add_index "tickets", ["user_id"], name: "index_tickets_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
@@ -235,5 +238,6 @@ ActiveRecord::Schema.define(version: 20160609114236) do
   add_foreign_key "talk_users", "users"
   add_foreign_key "ticket_comments", "tickets"
   add_foreign_key "ticket_comments", "users"
+  add_foreign_key "tickets", "subcategories"
   add_foreign_key "tickets", "users"
 end

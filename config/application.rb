@@ -29,8 +29,14 @@ module Escorts
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+<<<<<<< HEAD
     config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css','home.css','business.css','subcategories.css','business_application.css','tickets.css','ticket_comments.css','sessions.css','users.css']
     config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'home.js','business.js','subcategories.js','tickets.js','ticket_comments.js','sessions.js','users.js']
+=======
+    config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css','home.css','business.css','subcategories.css','business_application.css','tickets.css','ticket_comments.css']
+    config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'home.js','business.js','subcategories.js','tickets.js','ticket_comments.js']
+    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
+>>>>>>> 6c02f062fdc1ea2628d4a792fd4dee584853e2e2
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
