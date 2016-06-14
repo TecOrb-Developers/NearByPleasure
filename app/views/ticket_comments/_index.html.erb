@@ -1,3 +1,37 @@
+<div class="mail-body">
+  <div class="form-group">
+    <div class="row">
+      <div class="col-lg-2">
+        <label><h4>Title:</h4></label>
+      </div>
+      <div class="col-lg-8 alert alert-danger">
+       <h4><%=@ticket.title%></h4>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-lg-2">
+        <label><h4>Content:</h4></label>
+      </div>
+      <div class="col-lg-8 alert alert-warning">
+        <h4><%=@ticket.content%></h4>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="form-group">
+    <div class="row">
+      <div class="col-lg-2">
+        <label><h4>Subcategory:</h4></label>
+      </div>
+      <div class="col-lg-8 alert alert-warning">
+        <h4><%=@subcategory.title%></h4>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="form-group mail-body">
   <%#=p "=================#{current_business_user.id}"%>
  <%=form_for :comment,url: user_ticket_ticket_comments_path(current_business_user.id,@ticket.id),:html=>{:class=>"form-horizontal"} do |f|%>
