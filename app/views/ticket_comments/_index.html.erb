@@ -27,7 +27,7 @@
         <label><h4>Subcategory:</h4></label>
       </div>
       <div class="col-lg-8 alert alert-warning">
-        <h4><%=@subcategory.title%></h4>
+        <h4><%=@subcategory.present? ? @subcategory.title : "Not Available"%></h4>
       </div>
     </div>
   </div>
