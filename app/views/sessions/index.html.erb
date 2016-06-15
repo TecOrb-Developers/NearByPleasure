@@ -1,0 +1,61 @@
+<div class="loginColumns animated fadeInDown">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="font-bold">Welcome to SNR</h2>
+
+      <p>
+        Welcome! Search for Escorts by features in your area.
+      </p>
+
+      <p>
+         Find the best escorts in the world, anywhere you are, all over the US and Canada at any day and any time.Looking for something specific? Simply select the filters you want. 
+      </p>
+
+      <p>
+         Pick your Preference No more wasting time scrolling through a list like in the old days. 
+      </p>
+
+      <p>
+        <small>You can search by age, ethnicity, hair color, eye color, and much much more here!</small>
+      </p>
+
+    </div>
+    <div class="col-md-6">
+      <div class="ibox-content">
+        <div class="form-group">
+          <font color="red"><%=flash[:notice] || flash[:error]%></font>
+        </div>
+        <%=form_for :login,url: login_path do |f|%>
+          <div class="form-group">
+            <input type="email" name="email" class="form-control" placeholder="Email" required="">
+          </div>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password" required="">
+          </div>
+          <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+          <a href="#">
+            <small>Forgot password?</small>
+          </a>
+
+          <p class="text-muted text-center">
+            <small>Do not have an account?</small>
+          </p>
+          <a class="btn btn-sm btn-white btn-block" href="<%=user_register_path%>">Create an account</a>
+        <%end%>
+        <p class="m-t">
+          <small>Search for Escorts by features in your area. &copy; 2016</small>
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+      Copyright TecOrb Technologies
+    </div>
+    <div class="col-md-6 text-right">
+      <small>© 20116-2017</small>
+    </div>
+  </div>
+</div>

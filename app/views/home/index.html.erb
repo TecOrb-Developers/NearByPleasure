@@ -31,9 +31,9 @@
 
                 <form class="search-form   job_search_form  js-search-form" action="<%=subcategories_path%>" method="get" role="search">
                   <div class="search_jobs  search_jobs--frontpage">
-                    <div class="search-field-wrapper  search-filter-wrapper">
-                      <label for="search_keywords">Keywords</label>
-                      <input class="search-field  js-search-suggestions-field" type="text" name="search_keywords" id="search_keywords" placeholder="What are you looking for?" autocomplete="off" value="" />
+                    <div class="search_location  search-filter-wrapper">
+                      <label for="search_location">Keywords</label>
+                      <input type="text" name="keywords" id="search_location" placeholder="Keywords" />
                     </div>
 
                     <div class="search_location  search-filter-wrapper">
@@ -41,24 +41,32 @@
                       <input type="text" name="search_location" id="search_location" placeholder="Location" />
                     </div>
 
-                    <div class="search_categories  search-filter-wrapper">
-                      <label for="search_categories">Category</label>
-                      <select name='search_category' id='search_categories' class='job-manager-category-dropdown ' data-placeholder='Choose a category&hellip;' data-no_results_text='No results match' data-multiple_text='Select Some Options'>
-                        <option value="">All categories</option>
+                    <div class="search-field-wrapper  search-filter-wrapper  has--menu">
+                      <label for="search_keywords">Keywords</label>
+                      <input class="search-field  js-search-suggestions-field" name="search_cat" id="search_keywords" placeholder="Select any of Category" autocomplete="off" value="" type="text">
+                      <ul id="menu-search" class="search-suggestions-menu">
                         <%@cat.each do |c|%>
-                          <option class="level-0" value="<%=c.id%>"><%=c.name%></option>
+                          
+                          <li class="menu-item menu-item-type-taxonomy menu-item-object-job_listing_region cat-item" id="<%=c.name%>;<%=c.id%>">
+                            <a href="#"><span><%=c.name%></span><span class="menu-item-description">Region</span>
+                            </a>
+                          </li>
+
+                        <%end%> 
                         
-                        <%end%>
-                        
-                      </select>
+                      </ul>
+                      <input type="hidden" name="search_category" id="search_category" value="">
                     </div>
 
 
-
-                    <button class="search-submit" name="submit" id="searchsubmit">
+                     <div class="search-filter-wrapper">
+                       <button class="search-submit" name="submit" id="searchsubmit">
                       
-                      <span>Search</span>
-                    </button>
+                        <span>Search</span>
+                      </button>
+
+                    </div>
+
                   </div>
 
                   <ul class="job_types">
@@ -588,7 +596,8 @@
   <script type='text/javascript' src='http://tecorb.com/admin/demo/section1/escorts/wp-content/themes/listable/assets/js/main.js?ver=1.6.0'>
   </script>
 
-
+  <!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 
 
@@ -614,23 +623,23 @@
         }
 
 
-  $('#search_location').on( "autocompleteclose", function( event, ui ) {
-    
-  });
-
-   $(function() {
-      var availableTags = [];
-        <%all_cities.each do |c|%>
-          availableTags.push("<%= raw c%>")
-        <%end%>
-      $( "#search_location" ).autocomplete({
-        source: availableTags
+      $('#search_location').on( "autocompleteclose", function( event, ui ) {
+        
       });
-    });
+      $('.cat-item').click(function(){
+        $('#search_keywords').val(this.id.split(';')[0])
+        $('#search_category').val(this.id.split(';')[1])
+      });
 
-    });
+       $(function() {
+          var availableTags = [];
+            <%all_cities.each do |c|%>
+              availableTags.push("<%= raw c%>")
+            <%end%>
+          $( "#search_location" ).autocomplete({
+            source: availableTags
+          });
+        });
+
+      });
   </script>
-
-  <script type="text/javascript">
-  
-</script>

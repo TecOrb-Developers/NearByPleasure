@@ -1,14 +1,5 @@
 require File.expand_path('../boot', __FILE__)
 
-# <<<<<<< HEAD
-# require 'rails/all'
-
-# # Require the gems listed in Gemfile, including any gems
-# # you've limited to :test, :development, or :production.
-# Bundler.require(:default, Rails.env)
-
-# module Myapp
-# =======
     require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
@@ -29,9 +20,8 @@ module Escorts
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css','home.css','business.css','subcategories.css','business_application.css','tickets.css','ticket_comments.css','demos.css']
-    config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'home.js','business.js','subcategories.js','tickets.js','ticket_comments.js','demos.js']
-    config.assets.precompile += %w(rails_admin/rails_admin.css rails_admin/rails_admin.js)
+    config.assets.precompile += [ 'appviews.css', 'cssanimations.css', 'dashboards.css', 'forms.css', 'gallery.css', 'graphs.css', 'mailbox.css', 'miscellaneous.css', 'pages.css', 'tables.css', 'uielements.css', 'widgets.css','home.css','business.css','subcategories.css','business_application.css','tickets.css','ticket_comments.css','sessions.css','users.css','demos.css']
+    config.assets.precompile += [ 'appviews.js', 'cssanimations.js', 'dashboards.js', 'forms.js', 'gallery.js', 'graphs.js', 'mailbox.js', 'miscellaneous.js', 'pages.js', 'tables.js', 'uielements.js', 'widgets.js', 'home.js','business.js','subcategories.js','tickets.js','ticket_comments.js','sessions.js','users.js','demos.js']
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

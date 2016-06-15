@@ -45,7 +45,6 @@ gem "jquery-ui-rails"
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_admin_theme'
 gem "chartkick"
-gem 'sweet-alert'
 gem 'quiet_assets', group: :development
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -54,6 +53,7 @@ gem 'quiet_assets', group: :development
 # gem 'capistrano-rails', group: :development
 
 gem "font-awesome-rails"
+gem 'owlcarousel-rails'
 
 
 gem 'devise'

@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
 	require 'base64'
 	require 'open-uri'
+
+	def new
+		render :layout=>"empty"
+	end
+
 	def signup
 		if params[:email].present? and params[:password].present? and params[:fname].present?
 			if params[:password]==params[:confirm_password]
@@ -9,18 +14,40 @@ class UsersController < ApplicationController
 		  	  @user=User.create(:fname=>params[:fname],:lname=>params[:lname],:contact=>params[:contact],:gender=>params[:gender],:email=>params[:email],:password=>params[:password],:confirmation_token=>@token, :is_confirm=>false)
 	        if @user
 	          UserMailer.confirmation(@user).deliver_now
-						render :json => { :response_code => 200, :response_message => "Successfully signup!!",:user=>@user.as_json(except: [:created_at,:password_digest,:updated_at,:confirmation_token,:forget_password_token]) }
+	          flash[:notice]="Successfull signup"
+	          session[:user_id]=@user.id
+	          respond_to do |format|
+						  format.html { redirect_to root_path  }
+						  format.json { render :json => { :response_code => 200, :response_message => "Successfully signup!!",:user=>@user.as_json(except: [:created_at,:password_digest,:updated_at,:confirmation_token,:forget_password_token]) } }					
+						end
 	        else
-					  render :json => { :response_code => 500, :response_message => "Something went wrong!!" }
+	        	flash[:notice]="Something went wrong!!"
+	        	respond_to do |format|
+						  format.html { redirect_to user_register_path  }
+						  format.json { render :json => { :response_code => 500, :response_message => "Something went wrong!!" } }					
+						end					  
 	        end
 				else
-					render :json => { :response_code => 500, :response_message => "Email already exists." }
+					flash[:notice]="Email already exists."
+					respond_to do |format|
+					  format.html { redirect_to user_register_path  }					
+					  format.json { render :json => { :response_code => 500, :response_message => "Email already exists." } }					
+					end	
 				end
 			else
-				render :json => { :response_code => 500, :response_message => "Password does not matched." }
+				flash[:notice]="Password does not matched."
+				respond_to do |format|
+				  format.html { redirect_to user_register_path  }					
+				  format.json { render :json => { :response_code => 500, :response_message => "Password does not matched." } }					
+				end					
 			end
 		else
-			render :json => { :response_code => 500,:response_message => "Please provide all required parameters" }
+			flash[:notice]="Please provide all required parameters"
+			respond_to do |format|
+			  format.html { redirect_to user_register_path  }					
+			  format.json { render :json => { :response_code => 500,:response_message => "Please provide all required parameters" } }					
+			end	
+			
 		end
 	end
 
@@ -28,7 +55,7 @@ class UsersController < ApplicationController
 		@user=User.find_by_id_and_confirmation_token(params[:user_id],params[:token])
 		if @user
 			@user.update_attributes(:is_confirm=>true)
-			render :json => {:message => "Your account successfully confirmed.",:you=>@user.as_json(except: [:id,:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
+			render :json => {:message => "Your account successfully confirmed. Now you can login.",:you=>@user.as_json(except: [:id,:created_at,:updated_at,:confirmation_token,:password_digest,:forget_password_token]) }
 		else
 			render :json => { :response_code => 500,:response_message => "Unauthorized Access." }
 		end

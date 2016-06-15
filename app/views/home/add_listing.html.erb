@@ -1,0 +1,727 @@
+
+  <link rel="stylesheet" id="wp-job-manager-frontend-css" href="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/css/frontend.css" type="text/css" media="all">
+  <link rel="stylesheet" id="listable-style-css" href="https://pixelgrade.com/demos/listable-stock/wp-content/themes/listable/style.css?ver=1.7.1" type="text/css" media="all">
+
+  
+
+<body class="page page-id-10 page-template-default wp-custom-logo page-add-listing listable" data-mapbox-token="pk.eyJ1IjoiZ2Vvcmdlb2xhcnUiLCJhIjoiY2lneTNtZ2VtMDBlNmtya3IzdHY0ZTl2biJ9.ZQPEMiJW_XQjJHUFRlioug" data-mapbox-style="mapbox.streets-basic">
+  <div id="page" class="hfeed site">
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <%= render "header"%>
+    <!-- #masthead -->
+    <div id="content" class="site-content">
+      <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+          <article id="post-10" class="post-10 page type-page status-publish has-post-thumbnail hentry">
+            <header class="page-header has-featured-image">
+              <div class="page-header-background" style="background-image: url('/assets/dessous-banner.jpg')"></div>
+             <!--  https://pixelgrade.com/demos/listable-stock/wp-content/uploads/2015/09/featured-add-listing.jpg -->
+              <h1 class="page-title">Add Your Listing</h1>
+              <span class="entry-subtitle">Get more exposure.</span>
+            </header>
+            <div class="entry-content" id="entry-content-anchor">
+              <form action="#" method="post" id="submit-job-form" class="job-manager-form" enctype="multipart/form-data">
+                <fieldset>
+                  <label>Have an account?</label>
+                  <div class="field account-sign-in lwa">
+                    <a class="button lwa-links-modal lwa-login-link" href="https://pixelgrade.com/demos/listable-stock/wp-login.php?redirect_to=https%3A%2F%2Fpixelgrade.com%2Fdemos%2Flistable-stock%2Fadd-listing%2F&amp;modal_login=true#login">Sign in</a>
+                    If you don’t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email.
+                  </div>
+                  <input class="input-text" name="create_account_email" id="account_email" placeholder="you@yourdomain.com" value="" type="email">
+                </fieldset>
+                <!-- Job Information Fields -->
+                <fieldset class="fieldset-job_title">
+                  <label for="job_title">
+                  Listing Name				</label>
+                  <div class="field required-field">
+                    <input class="input-text" name="job_title" id="job_title" placeholder="Your listing name" value="" maxlength="" required="" type="text">
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-company_tagline">
+                  <label for="company_tagline">
+                  Tagline <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <input class="input-text" name="company_tagline" id="company_tagline" placeholder="e.g Speciality Coffee Shop" value="" maxlength="64" type="text">
+                    <small class="field-description"><span class="description_tooltip left">Keep it short and descriptive as it will appear on search results instead of the link description</span></small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-job_description">
+                  <label for="job_description">
+                  Description				</label>
+                  <div class="field required-field">
+                    <div id="wp-job_description-wrap" class="wp-core-ui wp-editor-wrap tmce-active">
+                      <link rel="stylesheet" id="editor-buttons-css" href="https://pixelgrade.com/demos/listable-stock/wp-includes/css/editor.min.css" type="text/css" media="all">
+                      <div id="wp-job_description-editor-container" class="wp-editor-container">
+                        <div style="visibility: hidden; border-width: 1px;" id="mceu_8" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application">
+                          <div id="mceu_8-body" class="mce-container-body mce-stack-layout">
+                            <div id="mceu_9" class="mce-toolbar-grp mce-container mce-panel mce-stack-layout-item mce-first" hidefocus="1" tabindex="-1" role="group">
+                              <div id="mceu_9-body" class="mce-container-body mce-stack-layout">
+                                <div id="mceu_10" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar">
+                                  <div id="mceu_10-body" class="mce-container-body mce-flow-layout">
+                                    <div role="group" id="mceu_11" class="mce-container mce-flow-layout-item mce-first mce-btn-group">
+                                      <div id="mceu_11-body">
+                                        <div aria-label="Bold" role="button" id="mceu_0" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_0"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div>
+                                        <div aria-label="Italic" role="button" id="mceu_1" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_1"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div>
+                                      </div>
+                                    </div>
+                                    <div role="group" id="mceu_12" class="mce-container mce-flow-layout-item mce-btn-group">
+                                      <div id="mceu_12-body">
+                                        <div aria-label="Bullet list" role="button" id="mceu_2" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_2"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button></div>
+                                        <div aria-label="Numbered list" role="button" id="mceu_3" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_3"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-numlist"></i></button></div>
+                                      </div>
+                                    </div>
+                                    <div role="group" id="mceu_13" class="mce-container mce-flow-layout-item mce-btn-group">
+                                      <div id="mceu_13-body">
+                                        <div aria-label="Insert/edit link" role="button" id="mceu_4" class="mce-widget mce-btn mce-first" tabindex="-1" aria-labelledby="mceu_4"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div>
+                                        <div aria-label="Remove link" role="button" id="mceu_5" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_5"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-unlink"></i></button></div>
+                                      </div>
+                                    </div>
+                                    <div role="group" id="mceu_14" class="mce-container mce-flow-layout-item mce-last mce-btn-group">
+                                      <div id="mceu_14-body">
+                                        <div aria-disabled="true" aria-label="Undo" role="button" id="mceu_6" class="mce-widget mce-btn mce-first mce-disabled" tabindex="-1" aria-labelledby="mceu_6"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-undo"></i></button></div>
+                                        <div aria-disabled="true" aria-label="Redo" role="button" id="mceu_7" class="mce-widget mce-btn mce-last mce-disabled" tabindex="-1" aria-labelledby="mceu_7"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-redo"></i></button></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div style="border-width: 1px 0px 0px;" id="mceu_15" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group"><iframe src="javascript:&quot;&quot;" style="width: 100%; height: 189px; display: block;" title="Rich Text Area. Press Alt-Shift-H for help" allowtransparency="true" id="job_description_ifr" frameborder="0"></iframe></div>
+                            <div style="border-width: 1px 0px 0px;" id="mceu_16" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group">
+                              <div id="mceu_16-body" class="mce-container-body mce-flow-layout">
+                                <div id="mceu_17" class="mce-path mce-flow-layout-item mce-first">
+                                  <div role="button" class="mce-path-item mce-last" data-index="0" tabindex="-1" id="mceu_17-0" aria-level="0">p</div>
+                                </div>
+                                <div id="mceu_18" class="mce-flow-layout-item mce-last mce-resizehandle"><i class="mce-ico mce-i-resize"></i></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <textarea aria-hidden="true" style="display: none;" class="wp-editor-area" rows="8" autocomplete="off" cols="40" name="job_description" id="job_description"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-job_category">
+                  <label for="job_category">
+                  Listing category				</label>
+                  <div class="field required-field">
+                    <select style="display: none;" name="job_category[]" id="job_category" class="job-manager-category-dropdown " multiple="multiple" data-placeholder="Choose one or more categories" data-no_results_text="No results match" data-multiple_text="Select Some Options">
+                      <option class="level-0" value="14">Arts &amp; Entertainment</option>
+                      <option class="level-1" value="15">&nbsp;&nbsp;&nbsp;Art Gallery</option>
+                      <option class="level-1" value="16">&nbsp;&nbsp;&nbsp;Museum</option>
+                      <option class="level-1" value="17">&nbsp;&nbsp;&nbsp;Stadium</option>
+                      <option class="level-1" value="18">&nbsp;&nbsp;&nbsp;Zoo</option>
+                      <option class="level-1" value="66">&nbsp;&nbsp;&nbsp;Movie Theater</option>
+                      <option class="level-0" value="19">Event</option>
+                      <option class="level-1" value="20">&nbsp;&nbsp;&nbsp;Conference</option>
+                      <option class="level-1" value="21">&nbsp;&nbsp;&nbsp;Festival</option>
+                      <option class="level-0" value="22">Food</option>
+                      <option class="level-1" value="23">&nbsp;&nbsp;&nbsp;Bakery</option>
+                      <option class="level-1" value="24">&nbsp;&nbsp;&nbsp;Café</option>
+                      <option class="level-1" value="25">&nbsp;&nbsp;&nbsp;Pizza Place</option>
+                      <option class="level-1" value="26">&nbsp;&nbsp;&nbsp;Restaurant</option>
+                      <option class="level-1" value="27">&nbsp;&nbsp;&nbsp;Winery</option>
+                      <option class="level-0" value="28">Nightlife</option>
+                      <option class="level-1" value="29">&nbsp;&nbsp;&nbsp;Bar</option>
+                      <option class="level-1" value="30">&nbsp;&nbsp;&nbsp;Brewery</option>
+                      <option class="level-1" value="31">&nbsp;&nbsp;&nbsp;Lounge</option>
+                      <option class="level-1" value="32">&nbsp;&nbsp;&nbsp;Nightclub</option>
+                      <option class="level-0" value="33">Outdoors &amp; Recreation</option>
+                      <option class="level-1" value="34">&nbsp;&nbsp;&nbsp;Bridge</option>
+                      <option class="level-1" value="35">&nbsp;&nbsp;&nbsp;Park</option>
+                      <option class="level-0" value="36">Service</option>
+                      <option class="level-1" value="37">&nbsp;&nbsp;&nbsp;Car Dealership</option>
+                      <option class="level-1" value="38">&nbsp;&nbsp;&nbsp;Design Studio</option>
+                      <option class="level-1" value="39">&nbsp;&nbsp;&nbsp;Dry Cleaner</option>
+                      <option class="level-1" value="40">&nbsp;&nbsp;&nbsp;Home Service</option>
+                      <option class="level-0" value="41">Shops</option>
+                      <option class="level-1" value="42">&nbsp;&nbsp;&nbsp;Bank</option>
+                      <option class="level-1" value="43">&nbsp;&nbsp;&nbsp;Bookstore</option>
+                      <option class="level-1" value="44">&nbsp;&nbsp;&nbsp;Clothing Store</option>
+                      <option class="level-1" value="45">&nbsp;&nbsp;&nbsp;Furniture / Home</option>
+                      <option class="level-0" value="67">Lodging</option>
+                      <option class="level-1" value="68">&nbsp;&nbsp;&nbsp;Hotels</option>
+                      <option class="level-1" value="69">&nbsp;&nbsp;&nbsp;Apartment</option>
+                      <option class="level-1" value="70">&nbsp;&nbsp;&nbsp;Villas</option>
+                      <option class="level-1" value="71">&nbsp;&nbsp;&nbsp;Hostel</option>
+                    </select>
+                    <div id="job_category_chosen" title="" style="width: 700px;" class="chosen-container chosen-container-multi">
+                     <!--  <ul class="chosen-choices">
+                        <li class="search-field"><input type="hidden" value="Choose one or more categories" class="default" autocomplete="off" style="width: 249px;" type="text"></li>
+                      </ul> -->
+                      <div class="chosen-drop">
+                        <ul class="chosen-results"></ul>
+                      </div>
+                    </div>
+                    <small class="field-description"><span class="description_tooltip right">Visitors can filter their search by the categories and amenities they want - so make sure you choose them wisely and include all the relevant ones</span></small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-job_location">
+                  <label for="job_location">
+                  Location <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <input class="input-text" name="job_location" id="job_location" placeholder="e.g 34 Wigmore Street, London" value="" maxlength="" type="text">
+                    <small class="field-description">Leave this blank if the location is not important.</small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-job_region">
+                  <label for="job_region">
+                  Listing Region				</label>
+                  <div class="field required-field">
+                    <select style="display: none;" name="job_region" id="job_region" class="postform">
+                      <option class="level-0" value="168">City of London</option>
+                      <option class="level-0" value="169">Westminster</option>
+                      <option class="level-0" value="171">Chelsea</option>
+                      <option class="level-0" value="170">Soho District</option>
+                      <option class="level-0" value="172">Kensignton</option>
+                      <option class="level-0" value="173">King’s Cross</option>
+                    </select>
+                    <!-- <div id="job_region_chosen" title="" style="width: 700px;" class="chosen-container chosen-container-single">
+                      <a class="chosen-single" tabindex="-1">
+                        <span>City of London</span>
+                        <div><b></b></div>
+                      </a>
+                      <div class="chosen-drop">
+                        <div class="chosen-search"><input autocomplete="off" type="text"></div>
+                        <ul class="chosen-results"></ul>
+                      </div>
+                    </div> -->
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-main_image">
+                  <label for="main_image">
+                  Gallery Images <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <div class="job-manager-uploaded-files">
+                    </div>
+                    <input class="input-text wp-job-manager-file-upload" data-file_types="jpg|jpeg|gif|png" multiple="" name="main_image[]" id="main_image" placeholder="" type="file">
+                    <div class="uploader-btn">
+                      <div class="spacer">
+                        <div class="text">Add Photo</div>
+                      </div>
+                    </div>
+                    <small class="field-description">
+                    The first image will be shown on listing cards.	</small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-company_logo">
+                  <label for="company_logo">
+                  Logo <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <div class="job-manager-uploaded-files">
+                    </div>
+                    <input class="input-text wp-job-manager-file-upload" data-file_types="jpg|jpeg|gif|png" name="company_logo" id="company_logo" placeholder="" type="file">
+                    <div class="uploader-btn">
+                      <div class="spacer">
+                        <div class="text">Add Photo</div>
+                      </div>
+                    </div>
+                    <small class="field-description">
+                    The first image will be shown on listing cards.	</small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-job_hours">
+                  <label for="job_hours">
+                  Hours of Operation <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <textarea cols="20" rows="3" class="input-text" name="job_hours" id="job_hours" placeholder="Mon - Fri: 09:00 - 23:00 
+                      Sat - Sun: 17:00 - 23:00" maxlength=""></textarea>
+                    <small class="field-description"><span class="description_tooltip right">Feel free to change the text format to fit your needs.</span></small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-company_phone">
+                  <label for="company_phone">
+                  Phone <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <input class="input-text" name="company_phone" id="company_phone" placeholder="e.g +42-898-4364" value="" maxlength="" type="text">
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-company_website">
+                  <label for="company_website">
+                  Website <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <input class="input-text" name="company_website" id="company_website" placeholder="e.g yourwebsite.com, London" value="" maxlength="" type="text">
+                    <small class="field-description"><span class="description_tooltip left">You can add more similar panels to better help the user fill the form</span></small>				
+                  </div>
+                </fieldset>
+                <fieldset class="fieldset-company_twitter">
+                  <label for="company_twitter">
+                  Twitter username <small>(optional)</small>				</label>
+                  <div class="field ">
+                    <input class="input-text" name="company_twitter" id="company_twitter" placeholder="@yourcompany" value="" maxlength="" type="text">
+                  </div>
+                </fieldset>
+                <!-- Company Information Fields -->
+                <p>
+                  <input name="job_manager_form" value="submit-job" type="hidden">
+                  <input name="job_id" value="0" type="hidden">
+                  <input name="step" value="0" type="hidden">
+                  <input name="submit_job" class="button" value="Preview" type="submit">
+                </p>
+              </form>
+              <div class="twocolumn">
+                <h5>100% Money Back Guarantee</h5>
+                <p>You have 14 days of test–driving and if you’re unhappy with it, for any reason, just drop us an email and we’ll take care of you.</p>
+                <h5>Support Best-In-Business</h5>
+                <p>We live by making our clients happy and if you had anything less than a great experience with this theme please contact us now.</p>
+              </div>
+              <hr>
+              <div class="twocolumn">
+                <h5>Can I cancel my subscription?</h5>
+                <p>Yes, you can cancel and perform other actions on your subscriptions via the My Account page.</p>
+                <h5>Which payment methods do you take?</h5>
+                <p>WooCommerce comes bundled with PayPal (for accepting credit card and PayPal account payments), BACS, and cash on delivery for accepting payments.</p>
+                <h5>Is there any discount for an annual subscription?</h5>
+                <p>Yes, we offer a 40% discount if you choose annual subscription for any plan.</p>
+                <h5>Any other questions we can answer?</h5>
+                <p>We are happy to help you. <a href="#">Contact us</a></p>
+              </div>
+            </div>
+            <!-- .entry-content -->
+          </article>
+          <!-- #post-## -->
+        </main>
+        <!-- #main -->
+      </div>
+      <!-- #primary -->
+    </div>
+    <!-- #content -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
+      <div id="footer-sidebar" class="footer-widget-area" role="complementary">
+        <aside id="nav_menu-3" class="widget  widget--footer  widget_nav_menu">
+          <div class="menu-social-menu-container">
+            <ul id="menu-social-menu" class="menu">
+              <li id="menu-item-761" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-761"><a href="https://www.facebook.com/PixelGradeMedia">Facebook</a></li>
+              <li id="menu-item-762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-762"><a href="https://twitter.com/pixelgrade">Twitter</a></li>
+              <li id="menu-item-763" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-763"><a href="https://www.youtube.com/user/PixelGradeVideos">Youtube</a></li>
+              <li id="menu-item-766" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-766"><a href="https://www.pinterest.com/pixelgrade/">Pinterest</a></li>
+              <li id="menu-item-769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-769"><a href="https://vk.com/">Vk</a></li>
+              <li id="menu-item-770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-770"><a href="https://instagram.com/sir.paco/">Instagram</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <!-- #primary-sidebar -->
+      <div class="footer-text-area">
+        <div class="site-info">
+          <div class="site-copyright-area">
+            Copyright © 2016 Company Inc.&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Address&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;Tel: 42-898-4363					
+          </div>
+          <ul id="menu-footer-menu" class="footer-menu">
+            <li id="menu-item-993" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-993"><a href="http://themeforest.net/item/listable-a-friendly-directory-wordpress-theme/13398377">Get the Theme</a></li>
+            <li id="menu-item-994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-994"><a href="https://pixelgrade.com/demos/listable-stock/permissions-and-copyright/">Contact</a></li>
+          </ul>
+        </div>
+        <!-- .site-info -->
+        <div class="theme-info">
+          <a href="https://wordpress.org/">Proudly powered by WordPress</a>
+          <span class="sep"> and </span>
+          <a href="http://themeforest.net/item/listable-a-friendly-directory-wordpress-theme/13398377?ref=pixelgrade" rel="theme">Listable</a> by <a href="https://pixelgrade.com/" rel="designer">PixelGrade</a>.			
+        </div>
+      </div>
+    </footer>
+    <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <div class="hide">
+    <div class="arrow-icon-svg">
+      <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24.394 12.81c.04-.043.08-.084.114-.13.02-.02.04-.047.055-.07l.025-.034c.258-.345.412-.773.412-1.24 0-.464-.154-.89-.412-1.237-.01-.02-.022-.036-.035-.05l-.045-.06c-.035-.044-.073-.09-.118-.13L15.138.61c-.814-.813-2.132-.813-2.946 0-.814.814-.814 2.132 0 2.947l5.697 5.7H2.08c-1.148 0-2.08.93-2.08 2.083 0 1.15.932 2.082 2.084 2.085H17.89l-5.7 5.695c-.814.815-.814 2.137 0 2.95.814.815 2.132.815 2.946 0l9.256-9.255c-.004-.003 0-.006 0-.006z" fill="currentColor" fill-rule="evenodd"></path>
+      </svg>
+    </div>
+    <div class="cluster-icon-svg">
+      <svg width="50px" height="62px" viewBox="0 0 50 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <path id="unique-path-2" d="M6.75141997,6.76666667 C0.287315594,13.2746963 -1.50665686,22.6191407 1.24745785,30.7382815 C7.20204673,48.0746963 23.0106822,58 23.0106822,58 C23.0106822,58 38.6298497,48.1382815 44.6475946,30.9969185 C44.6475946,30.9333333 44.7107506,30.8697481 44.7107506,30.8027259 C47.5280214,22.6191407 45.7340489,13.2746963 39.2699445,6.76666667 C30.3086168,-2.25555556 15.7127477,-2.25555556 6.75141997,6.76666667 Z"></path>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <path id="unique-path-4" d="M8.87079997,8.83664825 C3.24983965,14.4470186 1.6898636,22.5025742 4.08474595,29.5018334 C9.26264933,44.4470186 23.0092889,53.0033149 23.0092889,53.0033149 C23.0092889,53.0033149 36.5911736,44.5018334 41.8239953,29.7247964 C41.8239953,29.6699816 41.8789136,29.6151668 41.8789136,29.557389 C44.3287142,22.5025742 42.7687382,14.4470186 37.1477778,8.83664825 C29.355319,1.05887047 16.6632588,1.05887047 8.87079997,8.83664825 Z"></path>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <path id="unique-path-6" d="M10.28372,10.25 C5.22485568,15.2993333 3.82087724,22.5493333 5.97627136,28.8486667 C10.6363844,42.2993333 23.00836,50 23.00836,50 C23.00836,50 35.2320563,42.3486667 39.9415958,29.0493333 C39.9415958,29 39.9910222,28.9506667 39.9910222,28.8986667 C42.1958428,22.5493333 40.7918644,15.2993333 35.7330001,10.25 C28.7197871,3.25 17.296933,3.25 10.28372,10.25 Z"></path>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <path id="unique-path-8" d="M11.69664,11.6666667 C7.19987172,16.154963 5.95189088,22.5994074 7.86779676,28.1988148 C12.0101195,40.154963 23.0074311,47 23.0074311,47 C23.0074311,47 33.8729389,40.1988148 38.0591962,28.3771852 C38.0591962,28.3333333 38.1031309,28.2894815 38.1031309,28.2432593 C40.0629714,22.5994074 38.8149905,16.154963 34.3182223,11.6666667 C28.0842552,5.44444444 17.9306071,5.44444444 11.69664,11.6666667 Z"></path>
+        </defs>
+        <g id="Page---Listings-Archive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Pin-4" transform="translate(2.000000, 1.000000)">
+            <g id="Pin-Copy-4" filter="url(#filter-1)">
+              <use fill="#FFFFFF" xlink:href="#unique-path-2"></use>
+              <use id="svgCluster1" fill="currentColor" xlink:href="#unique-path-2"></use>
+            </g>
+            <g id="Pin-Copy-3" filter="url(#filter-3)">
+              <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-4"></use>
+              <use id="svgCluster2" fill="none" xlink:href="#unique-path-4"></use>
+            </g>
+            <g id="Pin-Copy-6" filter="url(#filter-5)">
+              <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-6"></use>
+              <use id="svgCluster3" fill="none" xlink:href="#unique-path-6"></use>
+            </g>
+            <g id="Pin-Copy-5" filter="url(#filter-7)">
+              <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#unique-path-8"></use>
+              <use id="svgCluster4" fill="none" xlink:href="#unique-path-8"></use>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="selected-icon-svg">
+      <svg width="48px" height="59px" viewBox="0 0 48 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+          <path id="path-2" d="M6.47133474,6.469534 C0.275396197,12.691788 -1.44415263,21.6259064 1.19570658,29.3885257 C6.90326708,45.9636772 22.0560753,55.4531486 22.0560753,55.4531486 C22.0560753,55.4531486 37.0272756,46.0244703 42.7953721,29.6358057 C42.7953721,29.5750126 42.8559081,29.5142195 42.8559081,29.4501403 C45.5563033,21.6259064 43.8367544,12.691788 37.6408159,6.469534 C29.0512523,-2.15651133 15.0608983,-2.15651133 6.47133474,6.469534 Z"></path>
+        </defs>
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g transform="translate(2.000000, 1.000000)">
+            <g id="Pin" filter="url(#filter-1)">
+              <use fill="#FFFFFF" xlink:href="#path-2"></use>
+              <use id="selected" xlink:href="#path-2"></use>
+            </g>
+            <ellipse id="oval" fill="#FFFFFF" cx="22" cy="22.0243094" rx="18" ry="18.0198895"></ellipse>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="empty-icon-svg">
+      <svg width="48px" height="60px" viewBox="0 0 48 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+        <title>path-2</title>
+        <desc>Created with Sketch.</desc>
+        <defs>
+          <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+          </filter>
+        </defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M8.47133474,8.077269 C2.2753962,14.299523 0.55584737,23.2336414 3.19570658,30.9962607 C8.90326708,47.5714122 24.0560753,57.0608836 24.0560753,57.0608836 C24.0560753,57.0608836 39.0272756,47.6322053 44.7953721,31.2435407 C44.7953721,31.1827476 44.8559081,31.1219545 44.8559081,31.0578753 C47.5563033,23.2336414 45.8367544,14.299523 39.6408159,8.077269 C31.0512523,-0.54877633 17.0608983,-0.54877633 8.47133474,8.077269 L8.47133474,8.077269 Z M24,33.607735 C29.5228475,33.607735 34,29.1305825 34,23.607735 C34,18.0848875 29.5228475,13.607735 24,13.607735 C18.4771525,13.607735 14,18.0848875 14,23.607735 C14,29.1305825 18.4771525,33.607735 24,33.607735 L24,33.607735 Z" id="path-2" fill="#FFFFFF" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+        </g>
+      </svg>
+    </div>
+    <div class="card-pin-svg">
+      <svg width="14px" height="20px" viewBox="0 0 14 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+          <path d="M7,0 C3.13383665,0 0,3.0828692 0,6.88540084 C0,10.68827 6.33390528,20 7,20 C7.66609472,20 14,10.68827 14,6.88540084 C14,3.0828692 10.8661633,0 7,0 L7,0 Z M7,9.87341772 C5.2947838,9.87341772 3.91146191,8.51274262 3.91146191,6.83544304 C3.91146191,5.15814346 5.2947838,3.79746835 7,3.79746835 C8.7052162,3.79746835 10.0885381,5.15814346 10.0885381,6.83544304 C10.0885381,8.51274262 8.7052162,9.87341772 7,9.87341772 L7,9.87341772 Z" id="Imported-Layers-Copy-5" fill="currentColor" sketch:type="MSShapeGroup"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <div id="lwa-modal-holder">
+    <div class="lwa lwa-template-modal">
+    </div>
+  </div>
+  <script type="text/javascript">
+    jQuery( document ).ready( function( $ ) {
+    	// use $(window).load() to make sure that we are running after LWA's script has finished doing it's thing
+    	$(window).load(function() {
+    		//We need to fix the LWA's data binding between login links and modals
+    		// since we will not pe outputting one modal markup per link,
+    		// but a single one in the footer
+    		// all the lwa modal links on the page will use the same markup
+    		var $the_lwa_login_modal = $('.lwa-modal').first();
+    		$('.lwa-links-modal').each(function (i, e) {
+    			$(e).parents('.lwa').data('modal', $the_lwa_login_modal);
+    		});
+    	});
+    });
+  </script>
+  <script type="text/javascript" src="//pixelgrade.com/demos/listable-stock/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.70"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var woocommerce_params = {"ajax_url":"\/demos\/listable-stock\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/demos\/listable-stock\/add-listing\/?wc-ajax=%%endpoint%%"};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="//pixelgrade.com/demos/listable-stock/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.5.5"></script>
+  <script type="text/javascript" src="//pixelgrade.com/demos/listable-stock/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.4.1"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var wc_cart_fragments_params = {"ajax_url":"\/demos\/listable-stock\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/demos\/listable-stock\/add-listing\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="//pixelgrade.com/demos/listable-stock/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.5.5"></script>
+  <script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201624"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/themes/listable/assets/js/plugins/leaflet.js?ver=1.0.0"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var listable_params = {"login_url":"https:\/\/pixelgrade.com\/demos\/listable-stock\/wp-login.php","listings_page_url":"https:\/\/pixelgrade.com\/demos\/listable-stock\/listings\/","strings":{"wp-job-manager-file-upload":"Add Photo","no_job_listings_found":"No results","results-no":"Results"}};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/themes/listable/assets/js/main.js?ver=1.7.1"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var job_manager_chosen_multiselect_args = {"search_contains":"1"};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="//pixelgrade.com/demos/listable-stock/wp-content/plugins/woocommerce/assets/js/chosen/chosen.jquery.min.js?ver=1.0.0"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager-locations//assets/js/main.js?ver=20140525"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/wp-embed.min.js"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/js/job-submission.min.js?ver=1.25.0"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/js/term-multiselect.min.js?ver=1.25.0"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/js/jquery-fileupload/jquery.iframe-transport.js?ver=1.8.3"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/js/jquery-fileupload/jquery.fileupload.js?ver=9.11.2"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var job_manager_ajax_file_upload = {"ajax_url":"\/demos\/listable-stock\/jm-ajax\/%%endpoint%%\/","js_field_html_img":"<div class=\"job-manager-uploaded-file\">\t\t\t<span class=\"job-manager-uploaded-file-preview\"><img src=\"\" \/> <a class=\"job-manager-remove-uploaded-file\" href=\"#\">[remove]<\/a><\/span>\t\t<input type=\"hidden\" class=\"input-text\" name=\"\" value=\"\" \/><\/div>","js_field_html":"<div class=\"job-manager-uploaded-file\">\t\t\t<span class=\"job-manager-uploaded-file-name\"><code><\/code> <a class=\"job-manager-remove-uploaded-file\" href=\"#\">[remove]<\/a><\/span>\t\t<input type=\"hidden\" class=\"input-text\" name=\"\" value=\"\" \/><\/div>","i18n_invalid_file_type":"Invalid file type. Accepted types:"};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-content/plugins/wp-job-manager/assets/js/ajax-file-upload.min.js?ver=1.25.0"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var userSettings = {"url":"\/demos\/listable-stock\/","uid":"0","time":"1465910468","secure":"1"};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/utils.min.js"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-admin/js/editor.min.js"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/wp-a11y.min.js"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var wpLinkL10n = {"title":"Insert\/edit link","update":"Update","save":"Add Link","noTitle":"(no title)","noMatchesFound":"No results found.","linkSelected":"Link selected.","linkInserted":"Link inserted."};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/wplink.min.js"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/jquery/ui/menu.min.js?ver=1.11.4"></script>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var uiAutocompleteL10n = {"noResults":"No search results.","oneResult":"1 result found. Use up and down arrow keys to navigate.","manyResults":"%d results found. Use up and down arrow keys to navigate."};
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.11.4"></script>
+  <script type="text/javascript">
+    tinyMCEPreInit = {
+    	baseURL: "https://pixelgrade.com/demos/listable-stock/wp-includes/js/tinymce",
+    	suffix: ".min",
+    				mceInit: {'job_description':{theme:"modern",skin:"lightgray",language:"en",formats:{alignleft: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"left"}},{selector: "img,table,dl.wp-caption", classes: "alignleft"}],aligncenter: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"center"}},{selector: "img,table,dl.wp-caption", classes: "aligncenter"}],alignright: [{selector: "p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li", styles: {textAlign:"right"}},{selector: "img,table,dl.wp-caption", classes: "alignright"}],strikethrough: {inline: "del"}},relative_urls:false,remove_script_host:false,convert_urls:false,browser_spellcheck:true,fix_list_elements:true,entities:"38,amp,60,lt,62,gt",entity_encoding:"raw",keep_styles:false,cache_suffix:"wp-mce-4310-20160418",preview_styles:"font-family font-size font-weight font-style text-decoration text-transform",end_container_on_empty_block:true,wpeditimage_disable_captions:false,wpeditimage_html5_captions:true,plugins:"lists,paste,tabfocus,wplink,wordpress",wp_lang_attr:"en-US",content_css:"https://pixelgrade.com/demos/listable-stock/wp-includes/css/dashicons.min.css?ver=4.5.2,https://pixelgrade.com/demos/listable-stock/wp-includes/js/tinymce/skins/wordpress/wp-content.css?ver=4.5.2",selector:"#job_description",resize:"vertical",menubar:false,wpautop:true,indent:false,toolbar1:"bold,italic,|,bullist,numlist,|,link,unlink,|,undo,redo",toolbar2:"",toolbar3:"",toolbar4:"",tabfocus_elements:":prev,:next",body_class:"job_description post-type-page post-status-publish locale-en-us",paste_as_text:true,paste_auto_cleanup_on_paste:true,paste_remove_spans:true,paste_remove_styles:true,paste_remove_styles_if_webkit:true,paste_strip_class_attributes:true,style_formats:[{"title":"Intro","inline":"span","classes":"intro","wrapper":true},{"title":"Two Columns","block":"div","classes":"twocolumn","wrapper":true},{"title":"Separator","block":"hr","classes":"clear"}]}},
+    	qtInit: {},
+    	ref: {plugins:"charmap,colorpicker,hr,lists,media,paste,tabfocus,textcolor,fullscreen,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wpdialogs,wptextpattern,wpview,wpembed,image",theme:"modern",language:"en"},
+    	load_ext: function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+    };
+  </script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/tinymce/tinymce.min.js?ver=4310-20160418"></script>
+  <script type="text/javascript" src="https://pixelgrade.com/demos/listable-stock/wp-includes/js/tinymce/plugins/compat3x/plugin.min.js?ver=4310-20160418"></script>
+  <script type="text/javascript">
+    tinymce.addI18n( 'en', {"Ok":"OK","Bullet list":"Bulleted list","Spellcheck":"Check Spelling","Row properties":"Table row properties","Cell properties":"Table cell properties","Paste row before":"Paste table row before","Paste row after":"Paste table row after","Cut row":"Cut table row","Copy row":"Copy table row","Merge cells":"Merge table cells","Split cell":"Split table cell","Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.":"Paste is now in plain text mode. Contents will now be pasted as plain text until you toggle this option off.\n\nIf you\u2019re looking to paste rich content from Microsoft Word, try turning this option off. The editor will clean up text pasted from Word automatically.","Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help":"Rich Text Area. Press Alt-Shift-H for help","You have unsaved changes are you sure you want to navigate away?":"The changes you made will be lost if you navigate away from this page.","Your browser doesn't support direct access to the clipboard. Please use the Ctrl+X\/C\/V keyboard shortcuts instead.":"Your browser does not support direct access to the clipboard. Please use keyboard shortcuts or your browser\u2019s edit menu instead.","Edit ":"Edit"});
+    tinymce.ScriptLoader.markDone( 'https://pixelgrade.com/demos/listable-stock/wp-includes/js/tinymce/langs/en.js' );
+  </script>
+  <script type="text/javascript">
+    var ajaxurl = "/demos/listable-stock/wp-admin/admin-ajax.php";
+    ( function() {
+    	var init, id, $wrap;
+    
+    	if ( typeof tinymce !== 'undefined' ) {
+    		for ( id in tinyMCEPreInit.mceInit ) {
+    			init = tinyMCEPreInit.mceInit[id];
+    			$wrap = tinymce.$( '#wp-' + id + '-wrap' );
+    
+    			if ( ( $wrap.hasClass( 'tmce-active' ) || ! tinyMCEPreInit.qtInit.hasOwnProperty( id ) ) && ! init.wp_skip_init ) {
+    				tinymce.init( init );
+    
+    				if ( ! window.wpActiveEditor ) {
+    					window.wpActiveEditor = id;
+    				}
+    			}
+    		}
+    	}
+    
+    	if ( typeof quicktags !== 'undefined' ) {
+    		for ( id in tinyMCEPreInit.qtInit ) {
+    			quicktags( tinyMCEPreInit.qtInit[id] );
+    
+    			if ( ! window.wpActiveEditor ) {
+    				window.wpActiveEditor = id;
+    			}
+    		}
+    	}
+    }());
+  </script>
+  <div id="wp-link-backdrop" style="display: none"></div>
+  <div id="wp-link-wrap" class="wp-core-ui" style="display: none" role="dialog" aria-labelledby="link-modal-title">
+    <form id="wp-link" tabindex="-1">
+      <input id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="b7b81cca7f" type="hidden">		
+      <h1 id="link-modal-title">Insert/edit link</h1>
+      <button type="button" id="wp-link-close"><span class="screen-reader-text">Close</span></button>
+      <div id="link-selector">
+        <div id="link-options">
+          <p class="howto" id="wplink-enter-url">Enter the destination URL</p>
+          <div>
+            <label><span>URL</span>
+            <input id="wp-link-url" aria-describedby="wplink-enter-url" type="text"></label>
+          </div>
+          <div class="wp-link-text-field">
+            <label><span>Link Text</span>
+            <input id="wp-link-text" type="text"></label>
+          </div>
+          <div class="link-target">
+            <label><span></span>
+            <input id="wp-link-target" type="checkbox"> Open link in a new tab</label>
+          </div>
+        </div>
+        <p class="howto" id="wplink-link-existing-content">Or link to existing content</p>
+        <div id="search-panel">
+          <div class="link-search-wrapper">
+            <label>
+            <span class="search-label">Search</span>
+            <input id="wp-link-search" class="link-search-field" autocomplete="off" aria-describedby="wplink-link-existing-content" type="search">
+            <span class="spinner"></span>
+            </label>
+          </div>
+          <div id="search-results" class="query-results" tabindex="0">
+            <ul></ul>
+            <div class="river-waiting">
+              <span class="spinner"></span>
+            </div>
+          </div>
+          <div id="most-recent-results" class="query-results" tabindex="0">
+            <div class="query-notice" id="query-notice-message">
+              <em class="query-notice-default">No search term specified. Showing recent items.</em>
+              <em class="query-notice-hint screen-reader-text">Search or use up and down arrow keys to select an item.</em>
+            </div>
+            <ul></ul>
+            <div class="river-waiting">
+              <span class="spinner"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="submitbox">
+        <div id="wp-link-cancel">
+          <button type="button" class="button">Cancel</button>
+        </div>
+        <div id="wp-link-update">
+          <input value="Add Link" class="button button-primary" id="wp-link-submit" name="wp-link-submit" type="submit">
+        </div>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    ;(function($){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-6079543-29', 'auto');
+      ga('send', 'pageview');
+    })(jQuery);
+  </script>
+  <div class="lwa">
+    <div class="lwa-modal" style="display:none;">
+      <form name="lwa-form" class="lwa-form  lwa-login  js-lwa-login  form-visible" action="https://pixelgrade.com/demos/listable-stock/wp-login.php" method="post">
+        <p>
+          <label for="username">Username or Email Address *</label>
+          <input name="log" id="lwa_user_login" class="input" type="text">
+        </p>
+        <p>
+          <label for="password">Password *</label>
+          <input name="pwd" id="lwa_user_pass" class="input" value="" type="password">
+        </p>
+        <p class="lwa-meta  grid">
+          <span class="grid__item w50  remember-me">
+          <input name="rememberme" id="lwa_rememberme" class="remember-me-checkbox" value="1" type="checkbox"><label for="lwa_rememberme">Remember me</label>
+          </span>
+          <span class="grid__item  w50  lost-password">
+          <a class="lwa-show-remember-pass  lwa-action-link  js-lwa-open-remember-form" href="https://pixelgrade.com/demos/listable-stock/wp-login.php?action=lostpassword" title="Password Lost and Found">Lost your password?</a>
+          </span>
+        </p>
+        <p class="lwa-submit-wrapper">
+          <button type="submit" name="wp-submit" class="lwa-wp-submit" tabindex="100"><span class="button-arrow">Log In</span></button>
+          <input name="lwa_profile_link" value="0" type="hidden">
+          <input name="login-with-ajax" value="login" type="hidden">
+        </p>
+      </form>
+      <form name="lwa-remember" class="lwa-remember  lwa-form  js-lwa-remember" action="https://pixelgrade.com/demos/listable-stock/wp-login.php?action=lostpassword" method="post" style="display:none;">
+        <p>
+          <label>Forgotten Password</label>
+          <input name="user_login" id="lwa_user_remember" type="text">
+        </p>
+        <p class="lwa-submit-wrapper">
+          <button type="submit"><span class="button-arrow">Get New Password</span></button>
+          <input name="login-with-ajax" value="remember" type="hidden">
+        </p>
+        <p class="cancel-button-wrapper">
+          <a href="#" class="lwa-action-link  js-lwa-close-remember-form">Cancel</a>
+        </p>
+      </form>
+    </div>
+  </div>
+  <div class="screen-reader-text wp-a11y-speak-region" aria-atomic="true" aria-relevant="additions text" aria-live="polite" role="status" id="wp-a11y-speak-polite"></div>
+  <div class="screen-reader-text wp-a11y-speak-region" aria-atomic="true" aria-relevant="additions text" aria-live="assertive" role="alert" id="wp-a11y-speak-assertive"></div>
+  <div style="display: none;" id="mceu_22" class="mce-toolbar-grp mce-inline-toolbar-grp mce-container mce-panel" hidefocus="1" tabindex="-1" role="group">
+    <div id="mceu_22-body" class="mce-container-body mce-stack-layout">
+      <div id="mceu_23" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar">
+        <div id="mceu_23-body" class="mce-container-body mce-flow-layout">
+          <div role="group" id="mceu_24" class="mce-container mce-flow-layout-item mce-first mce-last mce-btn-group">
+            <div id="mceu_24-body">
+              <div id="mceu_19" class="wp-link-preview"><a href="#" target="_blank" tabindex="-1">#</a></div>
+              <div aria-label="Edit " role="button" id="mceu_20" class="mce-widget mce-btn" tabindex="-1" aria-labelledby="mceu_20"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-dashicon dashicons-edit"></i></button></div>
+              <div aria-label="Remove" role="button" id="mceu_21" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_21"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-dashicon dashicons-no"></i></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: none;" id="mceu_28" class="mce-toolbar-grp mce-inline-toolbar-grp mce-container mce-panel" hidefocus="1" tabindex="-1" role="group">
+    <div id="mceu_28-body" class="mce-container-body mce-stack-layout">
+      <div id="mceu_29" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar">
+        <div id="mceu_29-body" class="mce-container-body mce-flow-layout">
+          <div role="group" id="mceu_30" class="mce-container mce-flow-layout-item mce-first mce-last mce-btn-group">
+            <div id="mceu_30-body">
+              <div id="mceu_25" class="wp-link-input"><input aria-owns="ui-id-1" aria-expanded="false" aria-autocomplete="list" role="combobox" autocomplete="off" class="ui-autocomplete-input" value="" placeholder="Paste URL or type to search" type="text"><input style="display:none" value="" type="text"></div>
+              <div aria-label="Apply" role="button" id="mceu_26" class="mce-widget mce-btn mce-primary" tabindex="-1" aria-labelledby="mceu_26"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-dashicon dashicons-editor-break"></i></button></div>
+              <div aria-label="Link options" role="button" id="mceu_27" class="mce-widget mce-btn mce-last" tabindex="-1" aria-labelledby="mceu_27"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-dashicon dashicons-admin-generic"></i></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul role="listbox" style="display: none;" id="ui-id-1" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content wplink-autocomplete"></ul>
+  <span class="ui-helper-hidden-accessible" aria-relevant="additions" aria-live="assertive" role="status"></span>
+</body>
