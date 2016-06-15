@@ -984,3 +984,404 @@ Geokit is using the domain: localhost
   Rendered tickets/_show.html.erb (7.0ms)
   Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/bundler/gems/activeadmin-0ac35b7ff052/app/views/active_admin/resource/show.html.arb (1583.5ms)
 Completed 200 OK in 1595ms (Views: 1587.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 11:56:33 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (25.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mCategory Load (21.7ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Escort"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Massage parlour"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Strip Club"]]
+  [1m[36mSubcategory Load (901.5ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6[0m  [["category_id", 1]]
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4  [["category_id", 2]]
+  [1m[36mSubcategory Load (6.9ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3[0m  [["category_id", 3]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mImage Load (74.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26386]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26387]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26388]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26389]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26390]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26391]]
+  [1m[35mImage Load (16.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 215]]
+  [1m[36mImage Load (0.5ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 216]]
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 217]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 218]]
+  Rendered home/_footer.html.erb (0.7ms)
+  [1m[35m (80.9ms)[0m  SELECT "subcategories"."city" FROM "subcategories"
+  Rendered home/index.html.erb within layouts/home_application (308.8ms)
+Completed 200 OK in 2583ms (Views: 983.6ms | ActiveRecord: 1399.9ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2016-06-15 11:56:44 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.8ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.1ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (155.7ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2016-06-15 11:56:44 +0530
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (12.7ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (136.0ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.1ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (47.5ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2016-06-15 12:02:36 +0530
+Processing by HomeController#add_listing as HTML
+Geokit is using the domain: localhost
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/_header.html.erb (3.5ms)
+  Rendered home/add_listing.html.erb within layouts/home_application (7.2ms)
+Completed 200 OK in 241ms (Views: 239.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/demos/listable-stock/add-listing/?wc-ajax=get_refreshed_fragments" for 127.0.0.1 at 2016-06-15 12:02:38 +0530
+
+ActionController::RoutingError (No route matches [POST] "/demos/listable-stock/add-listing"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 12:04:41 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Escort"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Massage parlour"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Strip Club"]]
+  [1m[36mSubcategory Load (9.2ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6[0m  [["category_id", 1]]
+  [1m[35mSubcategory Load (0.5ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4  [["category_id", 2]]
+  [1m[36mSubcategory Load (6.4ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3[0m  [["category_id", 3]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26386]]
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26387]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26388]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26389]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26390]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26391]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 215]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 216]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 217]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 218]]
+  Rendered home/_footer.html.erb (0.1ms)
+  [1m[35m (12.8ms)[0m  SELECT "subcategories"."city" FROM "subcategories"
+  Rendered home/index.html.erb within layouts/home_application (85.4ms)
+Completed 200 OK in 335ms (Views: 295.4ms | ActiveRecord: 33.0ms)
+
+
+Started GET "/subcategories?keywords=&search_location=&search_cat=&search_category=&submit=&filter_job_type%5B%5D=" for 127.0.0.1 at 2016-06-15 12:07:23 +0530
+Processing by SubcategoriesController#index as HTML
+  Parameters: {"keywords"=>"", "search_location"=>"", "search_cat"=>"", "search_category"=>"", "submit"=>"", "filter_job_type"=>[""]}
+Geokit is using the domain: localhost
+  [1m[36mSubcategory Load (105.4ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE (category_id=1 and city='Columbus') LIMIT 20[0m
+  [1m[35mSubcategory Load (8.0ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE (category_id=2 and city='Columbus') LIMIT 20
+  [1m[36mSubcategory Load (43.6ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE (category_id=3 and city='Columbus') LIMIT 20[0m
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (2.6ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (28.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 28269]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 28270]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 28271]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 28272]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered home/_listing.html.erb (59.8ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/index.html.erb within layouts/home_application (69.8ms)
+Completed 200 OK in 453ms (Views: 253.0ms | ActiveRecord: 188.6ms)
+
+
+Started GET "/subcategories/28270" for 127.0.0.1 at 2016-06-15 12:07:28 +0530
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"28270"}
+Geokit is using the domain: localhost
+  [1m[35mSubcategory Load (0.7ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = $1 LIMIT 1  [["id", 28270]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT "images"."name" FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 28270]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/_header.html.erb (2.3ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/show.html.erb within layouts/home_application (7.2ms)
+Completed 200 OK in 269ms (Views: 260.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listing" for 127.0.0.1 at 2016-06-15 12:07:32 +0530
+Processing by HomeController#add_listing as HTML
+Geokit is using the domain: localhost
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (1.7ms)
+  Rendered home/add_listing.html.erb within layouts/home_application (2.3ms)
+Completed 200 OK in 222ms (Views: 220.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/demos/listable-stock/add-listing/?wc-ajax=get_refreshed_fragments" for 127.0.0.1 at 2016-06-15 12:07:33 +0530
+
+ActionController::RoutingError (No route matches [POST] "/demos/listable-stock/add-listing"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/tecorb/.rvm/rubies/ruby-2.2.4/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /home/tecorb/.rvm/gems/ruby-2.2.4/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 12:08:04 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Escort"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Massage parlour"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Strip Club"]]
+  [1m[35mSubcategory Load (8.8ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6  [["category_id", 1]]
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4[0m  [["category_id", 2]]
+  [1m[35mSubcategory Load (6.8ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3  [["category_id", 3]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/_header.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26386]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26387]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26388]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26389]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26390]]
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26391]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 215]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 216]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 217]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 218]]
+  Rendered home/_footer.html.erb (0.0ms)
+  [1m[36m (11.8ms)[0m  [1mSELECT "subcategories"."city" FROM "subcategories"[0m
+  Rendered home/index.html.erb within layouts/home_application (88.2ms)
+Completed 200 OK in 399ms (Views: 359.6ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 12:08:04 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Escort"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Massage parlour"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Strip Club"]]
+  [1m[36mSubcategory Load (8.1ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6[0m  [["category_id", 1]]
+  [1m[35mSubcategory Load (0.4ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4  [["category_id", 2]]
+  [1m[36mSubcategory Load (6.7ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3[0m  [["category_id", 3]]
+  [1m[35mCategory Load (0.9ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (2.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26386]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26387]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26388]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26389]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26390]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26391]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 215]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 216]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 217]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 218]]
+  Rendered home/_footer.html.erb (0.0ms)
+  [1m[35m (11.3ms)[0m  SELECT "subcategories"."city" FROM "subcategories"
+  Rendered home/index.html.erb within layouts/home_application (71.7ms)
+Completed 200 OK in 331ms (Views: 295.0ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-15 12:08:05 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Escort"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Massage parlour"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Strip Club"]]
+  [1m[35mSubcategory Load (7.8ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6  [["category_id", 1]]
+  [1m[36mSubcategory Load (0.5ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4[0m  [["category_id", 2]]
+  [1m[35mSubcategory Load (8.3ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3  [["category_id", 3]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered home/_header.html.erb (1.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26386]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26387]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26388]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26389]]
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 26390]]
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 26391]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 215]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 216]]
+  [1m[36mImage Load (0.2ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 217]]
+  [1m[35mImage Load (0.2ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 218]]
+  Rendered home/_footer.html.erb (0.1ms)
+  [1m[36m (12.6ms)[0m  [1mSELECT "subcategories"."city" FROM "subcategories"[0m
+  Rendered home/index.html.erb within layouts/home_application (70.5ms)
+Completed 200 OK in 306ms (Views: 265.8ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-06-15 12:08:08 +0530
+Processing by SessionsController#index as HTML
+Geokit is using the domain: localhost
+  Rendered sessions/index.html.erb within layouts/empty (1.1ms)
+Completed 200 OK in 374ms (Views: 372.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user_login" for 127.0.0.1 at 2016-06-15 12:08:08 +0530
+Processing by SessionsController#index as HTML
+Geokit is using the domain: localhost
+  Rendered sessions/index.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 222ms (Views: 221.2ms | ActiveRecord: 0.0ms)
