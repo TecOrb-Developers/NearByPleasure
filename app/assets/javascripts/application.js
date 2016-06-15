@@ -14,3 +14,5 @@
 //= require inspinia.js
 //= require turbolinks
 //= require chartkick
+//= require jssor.slider.mini
+//= require owl.carousel

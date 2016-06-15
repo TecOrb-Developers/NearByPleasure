@@ -53,6 +53,7 @@ gem 'quiet_assets', group: :development
 # gem 'capistrano-rails', group: :development
 
 gem "font-awesome-rails"
+gem 'owlcarousel-rails'
 
 
 gem 'devise'
