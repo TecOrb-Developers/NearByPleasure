@@ -27,7 +27,7 @@
         <label><h4>Subcategory:</h4></label>
       </div>
       <div class="col-lg-8 alert alert-warning">
-        <h4><%=@subcategory.title%></h4>
+        <h4><%=@subcategory.present? ? @subcategory.title : "Not Available"%></h4>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
       <%= f.text_area :comment, rows: 3, :class =>'form-control',:id=>"comment", required: true %>
       <small class="btn btn-warning btn-sm">Cannot be blank</small>
     </div>
-    <%= f.submit 'Post', class: 'btn btn-primary btn-sm pull-right',:id=>"new_comment_submit" %><br><br>
+    <%= f.submit 'Post', class: 'btn-xlarge  pull-right',:id=>"new_comment_submit" %><br><br>
   <% end %>
 </div>
 

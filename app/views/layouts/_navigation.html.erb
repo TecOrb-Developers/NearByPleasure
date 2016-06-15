@@ -59,6 +59,9 @@
       <li <%if params[:action]=="profile"%>class="active"<%end%>>
         <a href="<%=profile_path(encrypt(current_business_user.id))%>" data-no-turbolink = true><i class="fa fa-user"></i>Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
       </li>
+      <li <%= is_active_controller('demos') %>>
+        <a href="<%=new_demo_path%>" data-no-turbolink = true><i class="fa fa-user"></i>Demo<span style="font-size:16px;" class="pull-right hidden-xs showopacity"></span></a>
+      </li>
     </ul>
   </div>
 </nav>

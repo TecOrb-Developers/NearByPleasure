@@ -99,8 +99,8 @@ module ApplicationHelper
 
 	def all_ticket
 	  @all=Ticket.all.count
-	  #@all=Ticket.where(:status=>false).count
-	 @value=Ticket.where(:status=>true).count
+	  @value=Ticket.where(:status=>false).count
+	 #@value=Ticket.where(:status=>true).count
 	 @result="#{@value}/#{@all}"
 	end
 
