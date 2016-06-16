@@ -17,6 +17,14 @@ GIT
       sass-rails
       sprockets (< 4)
 
+GIT
+  remote: git://github.com/galetahub/ckeditor.git
+  revision: 548c065e209ed3c6e504b6cd277b6ffc635682da
+  specs:
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,9 +89,13 @@ GEM
       mimemagic (>= 0.3.0)
     chartkick (2.0.0)
     choice (0.2.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
     cloudinary (1.1.7)
       aws_cf_signer
       rest-client
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -251,6 +263,7 @@ DEPENDENCIES
   byebug
   carrierwave
   chartkick
+  ckeditor!
   cloudinary
   coffee-rails (~> 4.0.0)
   devise

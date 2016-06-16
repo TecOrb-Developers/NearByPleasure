@@ -5,4 +5,7 @@ class DemosController < ApplicationController
 	def home
 		render :layout => "empty"
 	end
+	def index
+		render :layout => "empty"
+	end
 end

@@ -16,3 +16,4 @@
 //= require chartkick
 //= require jssor.slider.mini
 //= require owl.carousel
+//= require ckeditor/init
