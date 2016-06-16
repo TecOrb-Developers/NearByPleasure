@@ -10817,3 +10817,987 @@ Processing by DemosController#new as HTML
 Geokit is using the domain: localhost
   Rendered demos/new.html.erb within layouts/empty (1.6ms)
 Completed 200 OK in 561ms (Views: 556.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:34:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (30.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (15.9ms)
+Completed 200 OK in 1369ms (Views: 1343.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:39:49 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.1ms)
+Completed 200 OK in 440ms (Views: 439.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:40:28 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 442ms (Views: 441.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:41:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 436ms (Views: 434.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:41:27 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 438ms (Views: 436.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:42:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 433ms (Views: 432.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:42:33 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 438ms (Views: 436.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:45:18 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 440ms (Views: 439.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:45:39 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 440ms (Views: 439.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:45:56 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 447ms (Views: 445.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:46:14 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 441ms (Views: 438.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:47:20 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 458ms (Views: 456.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:47:43 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 439ms (Views: 437.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:48:22 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 457ms (Views: 456.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:48:52 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.6ms)
+Completed 200 OK in 449ms (Views: 448.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:52:01 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 467ms (Views: 465.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:52:29 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 446ms (Views: 444.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:52:49 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 444ms (Views: 440.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:53:30 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.7ms)
+Completed 200 OK in 444ms (Views: 443.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:54:27 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (8.1ms)
+Completed 200 OK in 446ms (Views: 445.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:55:42 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.0ms)
+Completed 200 OK in 455ms (Views: 453.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:56:11 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 443ms (Views: 442.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:56:30 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.9ms)
+Completed 200 OK in 460ms (Views: 459.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:57:13 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.4ms)
+Completed 200 OK in 444ms (Views: 442.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:58:43 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.7ms)
+Completed 200 OK in 448ms (Views: 447.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:59:14 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 453ms (Views: 452.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 12:59:47 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 444ms (Views: 443.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:00:42 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 451ms (Views: 450.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:01:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.4ms)
+Completed 200 OK in 450ms (Views: 449.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:01:26 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 449ms (Views: 448.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:03:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 452ms (Views: 451.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:03:21 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 457ms (Views: 456.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:03:48 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 446ms (Views: 445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:04:04 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (4.4ms)
+Completed 200 OK in 484ms (Views: 483.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:06:16 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.3ms)
+Completed 200 OK in 721ms (Views: 720.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:07:08 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 450ms (Views: 449.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:07:47 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 451ms (Views: 450.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:08:41 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 533ms (Views: 532.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:09:05 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 447ms (Views: 445.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:10:21 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 457ms (Views: 455.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:10:55 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (8.5ms)
+Completed 200 OK in 467ms (Views: 466.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:12:26 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.8ms)
+Completed 200 OK in 469ms (Views: 467.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:12:47 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.7ms)
+Completed 200 OK in 464ms (Views: 463.5ms | ActiveRecord: 0.0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/01.jpg"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/priya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/priya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/priya/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:13:25 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.5ms)
+Completed 200 OK in 457ms (Views: 456.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:14:16 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 424ms (Views: 422.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:14:41 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 444ms (Views: 442.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:15:08 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.3ms)
+Completed 200 OK in 434ms (Views: 433.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:15:28 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 472ms (Views: 471.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:17:19 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 472ms (Views: 469.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:18:01 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 473ms (Views: 472.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:18:27 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 461ms (Views: 460.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:19:09 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 475ms (Views: 474.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:19:32 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 463ms (Views: 461.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:20:00 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 469ms (Views: 467.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:21:14 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.8ms)
+Completed 200 OK in 456ms (Views: 454.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:21:32 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 430ms (Views: 429.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:22:28 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.8ms)
+Completed 200 OK in 452ms (Views: 451.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:24:01 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 445ms (Views: 442.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:24:23 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 547ms (Views: 546.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:25:30 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.2ms)
+Completed 200 OK in 589ms (Views: 588.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-06-16 13:28:48 +0530
+Processing by HomeController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mCategory Load (19.9ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Escort"]]
+  [1m[36mCategory Load (1.1ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1[0m  [["name", "Massage parlour"]]
+  [1m[35mCategory Load (0.9ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."name" = $1 LIMIT 1  [["name", "Strip Club"]]
+  [1m[36mSubcategory Load (164.4ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 6[0m  [["category_id", 1]]
+  [1m[35mSubcategory Load (137.7ms)[0m  SELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 4  [["category_id", 2]]
+  [1m[36mSubcategory Load (723.5ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."category_id" = $1  ORDER BY "subcategories"."id" ASC LIMIT 3[0m  [["category_id", 3]]
+  [1m[35mCategory Load (1.1ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (4.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mImage Load (107.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 1]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 2]]
+  [1m[35mImage Load (0.6ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 3]]
+  [1m[36mImage Load (1.0ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 4]]
+  [1m[35mImage Load (0.9ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 5]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 6]]
+  [1m[35mImage Load (28.7ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 2063]]
+  [1m[36mImage Load (0.8ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 2064]]
+  [1m[35mImage Load (0.8ms)[0m  SELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1  [["subcategory_id", 2065]]
+  [1m[36mImage Load (0.7ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 2066]]
+  Rendered home/_footer.html.erb (0.7ms)
+  [1m[35m (89.7ms)[0m  SELECT "subcategories"."city" FROM "subcategories"
+  Rendered home/index.html.erb within layouts/home_application (427.1ms)
+Completed 200 OK in 2435ms (Views: 726.1ms | ActiveRecord: 1530.1ms)
+
+
+Started GET "/subcategories/1" for 127.0.0.1 at 2016-06-16 13:29:01 +0530
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mSubcategory Load (0.6ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (1.0ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mSELECT "images"."name" FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 1]]
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (3.3ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/show.html.erb within layouts/home_application (9.9ms)
+Completed 200 OK in 367ms (Views: 355.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/subcategories/6" for 127.0.0.1 at 2016-06-16 13:30:43 +0530
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+Geokit is using the domain: localhost
+  [1m[36mSubcategory Load (0.8ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (1.0ms)[0m  [1mSELECT "images"."name" FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 6]]
+  [1m[35mCategory Load (0.7ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (3.2ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/show.html.erb within layouts/home_application (5.5ms)
+Completed 200 OK in 346ms (Views: 337.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:34:19 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 447ms (Views: 445.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:37:20 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.7ms)
+Completed 200 OK in 473ms (Views: 471.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:38:01 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 458ms (Views: 457.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:38:40 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.2ms)
+Completed 200 OK in 581ms (Views: 580.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:41:11 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 730ms (Views: 727.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:41:37 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 599ms (Views: 598.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:41:51 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 557ms (Views: 555.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:42:28 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 612ms (Views: 610.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:44:07 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 621ms (Views: 620.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subcategories/6" for 127.0.0.1 at 2016-06-16 13:46:33 +0530
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+Geokit is using the domain: localhost
+  [1m[36mSubcategory Load (1.0ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT "images"."name" FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 6]]
+  [1m[35mCategory Load (1.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (4.5ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/show.html.erb within layouts/home_application (7.4ms)
+Completed 200 OK in 389ms (Views: 380.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:46:41 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 549ms (Views: 547.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:49:32 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (5.4ms)
+Completed 200 OK in 500ms (Views: 499.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:51:23 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.3ms)
+Completed 200 OK in 465ms (Views: 464.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:51:58 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.8ms)
+Completed 200 OK in 479ms (Views: 478.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:52:22 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 488ms (Views: 487.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:52:53 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.1ms)
+Completed 200 OK in 499ms (Views: 497.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:53:39 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.4ms)
+Completed 200 OK in 743ms (Views: 741.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:55:47 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 481ms (Views: 480.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:56:43 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (5.6ms)
+Completed 200 OK in 486ms (Views: 484.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 13:59:03 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (7.5ms)
+Completed 200 OK in 1102ms (Views: 1099.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:02:58 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.7ms)
+Completed 200 OK in 486ms (Views: 481.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:04:04 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 472ms (Views: 471.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:05:04 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 488ms (Views: 487.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:10:51 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (4.4ms)
+Completed 200 OK in 468ms (Views: 467.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:11:23 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.0ms)
+Completed 200 OK in 493ms (Views: 491.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:11:42 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.7ms)
+Completed 200 OK in 480ms (Views: 479.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:12:01 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (7.2ms)
+Completed 200 OK in 487ms (Views: 486.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:16:52 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.5ms)
+Completed 200 OK in 1097ms (Views: 1095.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:18:04 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (5.7ms)
+Completed 200 OK in 507ms (Views: 506.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:19:47 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.7ms)
+Completed 200 OK in 550ms (Views: 549.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:20:05 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.1ms)
+Completed 200 OK in 748ms (Views: 746.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:41:41 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 478ms (Views: 477.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:42:09 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.3ms)
+Completed 200 OK in 504ms (Views: 503.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:42:42 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 469ms (Views: 467.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:42:57 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 476ms (Views: 475.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:43:55 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.6ms)
+Completed 200 OK in 495ms (Views: 494.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:44:23 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.5ms)
+Completed 200 OK in 481ms (Views: 480.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:45:09 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.3ms)
+Completed 200 OK in 499ms (Views: 498.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:45:32 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 510ms (Views: 509.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:46:18 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (4.2ms)
+Completed 200 OK in 497ms (Views: 496.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:46:36 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 475ms (Views: 474.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:47:09 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.7ms)
+Completed 200 OK in 469ms (Views: 468.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:48:16 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 548ms (Views: 543.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:48:44 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.1ms)
+Completed 200 OK in 478ms (Views: 476.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:49:34 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 485ms (Views: 483.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:49:59 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 468ms (Views: 467.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:50:17 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.8ms)
+Completed 200 OK in 482ms (Views: 481.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:50:38 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.4ms)
+Completed 200 OK in 475ms (Views: 474.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:50:56 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 506ms (Views: 501.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:51:16 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 499ms (Views: 497.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:54:31 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (0.1ms)
+Completed 200 OK in 500ms (Views: 498.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:56:49 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (5.7ms)
+Completed 200 OK in 412ms (Views: 411.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:57:03 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.3ms)
+Completed 200 OK in 482ms (Views: 481.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 14:57:19 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 483ms (Views: 481.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:01:28 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.8ms)
+Completed 200 OK in 426ms (Views: 425.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:03:34 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 428ms (Views: 427.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:04:12 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (5.0ms)
+Completed 200 OK in 446ms (Views: 443.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:05:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 431ms (Views: 429.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/subcategories/6" for 127.0.0.1 at 2016-06-16 15:07:27 +0530
+Processing by SubcategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+Geokit is using the domain: localhost
+  [1m[36mSubcategory Load (1.0ms)[0m  [1mSELECT  "subcategories".* FROM "subcategories" WHERE "subcategories"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.5ms)[0m  [1mSELECT "images"."name" FROM "images" WHERE "images"."subcategory_id" = $1[0m  [["subcategory_id", 6]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered home/_header.html.erb (2.5ms)
+  Rendered home/_footer.html.erb (0.1ms)
+  Rendered subcategories/show.html.erb within layouts/home_application (5.6ms)
+Completed 200 OK in 333ms (Views: 326.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:07:30 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.5ms)
+Completed 200 OK in 560ms (Views: 558.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:08:05 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (4.3ms)
+Completed 200 OK in 419ms (Views: 418.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:09:54 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (3.2ms)
+Completed 200 OK in 481ms (Views: 480.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:10:25 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 467ms (Views: 466.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:17:02 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (2.1ms)
+Completed 200 OK in 551ms (Views: 548.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:17:16 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.4ms)
+Completed 200 OK in 464ms (Views: 463.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/demos/new" for 127.0.0.1 at 2016-06-16 15:18:31 +0530
+Processing by DemosController#new as HTML
+Geokit is using the domain: localhost
+  Rendered demos/new.html.erb within layouts/empty (1.6ms)
+Completed 200 OK in 485ms (Views: 483.7ms | ActiveRecord: 0.0ms)
