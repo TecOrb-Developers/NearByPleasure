@@ -141,7 +141,7 @@ Rails.application.routes.draw do
   get 'update_lat_long'=>"upload_csv#update_lat_long"
   get 'update_image'=>'upload_csv#update_image'
   post 'lat_long_csv'=>"upload_csv#lat_long_csv"
-
+  get 'demohome'=>"demos#home"
   #===========APIS============================================
 
   post 'signup'=>"users#signup"

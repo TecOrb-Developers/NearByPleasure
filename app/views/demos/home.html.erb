@@ -1,0 +1,204 @@
+<style type="text/css"> 
+
+.head-transparent {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar-fixed-top {
+  border-bottom: transparent !important;
+  position: absolute!important;
+}
+
+.nav.navbar-right > li > a {
+    color: white;
+    padding: 7px 13px 6px 33px !important;
+		margin-top: 12% !important;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+}
+/*.nav > li a{
+	background-color: rgba(90, 85, 85, 0.6);
+}*/
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: ;
+    color: yellowgreen !important;
+}
+
+
+.icons:hover img {
+    -webkit-transform:scale(1.50); /* Safari and Chrome */
+    -moz-transform:scale(1.50); /* Firefox */
+    -ms-transform:scale(1.50); /* IE 9 */
+    -o-transform:scale(1.50); /* Opera */
+     transform:scale(1.50);
+}
+
+.error{
+  color: red !important;
+}
+
+</style>
+  <link rel="stylesheet" type="text/css" href="/assets/agency.css">    
+
+	<nav class="navbar navbar-dark bg-primary navbar-fixed-top head-transparent">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <i class="fa fa-arrows-h" aria-hidden="true"></i>
+        </button>
+        	<a class="navbar-brand" href="<%=root_path%>" data-no-turbolink = true>
+        		<span class="hidden-lg hidden-md hidden-sm">SNR </span><span class="hidden-xs"><strong>Find near by Desires</strong></span>
+        	</a>
+      </div>
+      
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right pull-right" data-no-turbolink = true>
+          
+          <li>
+          <a href="#" data-no-turbolink= true style="background-color: transparent;margin-top: 9% !important"> <strong style="background-color: transparent;border: 2px solid white; border-radius: 5px; padding: 5px 10px 6px 20px !important; ">Add Listing <i class="fa fa-caret-right" aria-hidden="true"></i> </strong> </a>&nbsp;&nbsp;&nbsp;
+          <!-- style="opacity: 0.4;filter: alpha(opacity=40); border:1px solid grey" -->
+          </li>
+          <li>
+            <a href="#" data-no-turbolink = true>How it Works </a>
+          </li>
+          <li>
+            <a href="#" data-no-turbolink = true>Support &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          </li>
+          
+
+          <%if !current_user%>
+           	<li>
+              <a href="#login" data-toggle="modal" style="padding-top: 2%">Log-In &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </li>
+          <%else%>
+          	<li>
+              <%= link_to "Dashboard",home_dashboard_path,:class=>"hyper"%>
+            </li>
+            <li>
+              <%= link_to "Log-out",session_path(current_user.id),method: :delete,:class=>"hyper"%>
+            </li>              
+          <%end%>
+        </ul>
+        
+      </div>
+
+    </div><!--/.container-fluid -->
+  </nav> 
+
+  
+
+
+<header class="content-section">
+  <div class="pattern-overlay">
+    <div class="container"><br><br><br><br><br><br>
+      <div class="intro-text">
+      	<h1 class="page-title">
+          <span id='div1' class='display'>
+            Find<span style="color: pink"> Escorts</span> @
+           <span style="color: blue">Anytime</span></span>
+          <span id='div2' class='display'>
+            Your satisfaction make us the <span  style="color: #FF69B4">No.1 </span>
+          </span>
+          <span id='div3' class='display'>
+            Full relexed at <span style="color: #8B4513"> Massage parlours</span>
+          </span>
+        </h1>
+      
+      	<p class=""><strong>Find the best escorts in the world, anywhere you are,all over the US and Canada <br> at any day and any time. Find Strip clubs and many more.</strong></p>
+        <br><br>
+        
+        <form role="form" class="form-inline">
+	        <div class="form-group">
+            <input type="text" placeholder="Keywords" class="form-control input-lg round-input">
+	        </div>
+	        <div class="form-group">
+            <input type="text" placeholder="Location" class="form-control input-lg round-input">
+	        </div>
+	        <div class="form-group">
+            <!-- <input type="text" placeholder="What are you looking for?" class="form-control input-lg round-input"> -->
+            <select class="form-control input-lg round-input" placeholder="What are you looking for?">
+              <option> What are you looking for?</option>
+              <option> Select 1</option>
+              <option> Select 2</option>
+              <option> Select 3</option>
+              <option> Select 4</option>
+            </select>
+	        </div>
+	        <button class="btn btn-lg btn-danger round-input" type="submit">Search</button>
+	      </form>
+        <div style="margin-top: 5%">
+        <center>
+          <a href="#" class="icons"><img src="/assets/escort-icon.png"  height="8%" width="8%" title="Find Escorts"></a>
+          <a href="#" class="icons"><img src="/assets/strip-club-icon.png"  height="8%" width="8%" title="Find Strip Clubs"></a>
+          <a href="#" class="icons"><img src="/assets/massage-icon.png"  height="8%" width="11%" title="Find Massage parlours"></a>
+        </center>
+        </div>
+      </div> 
+    </div>
+  </div>
+</header>
+<section id="escorts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <center><h1>Most Sexy and popular Escorts </h1></center><hr>
+      </div>        
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="panel">
+          <div class="panel-body">
+            <img src="http://tecorb.com/admin/Max/cityvibe/cityvibe/scottsdale-escorts-jade-green-2176565.jpg" width="100%" height="300vh">
+          </div>
+          <div class="panel-footer bg-white">
+            <h2 class="error">Leena edurbs <span><i class="fa fa-heart-o fa-2x error pull-right" aria-hidden="true"></i></span></h2>
+            Look No further book me fast
+            <p><i class="fa fa-home fa-2x error" aria-hidden="true"></i> Phonix <strong>USA</strong>
+            <span><i class="fa fa-heart-o fa-2x error pull-right" aria-hidden="true"></i></span>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="panel">
+          <div class="panel-body">
+            <img src="http://tecorb.com/admin/Max/cityvibe/cityvibe/phoenix-escorts-victoriaofaz-1712735.jpg" width="100%" height="300vh">
+          </div>
+          <div class="panel-footer bg-white">
+            <h2 class="error">Isabel Monic</h2>
+            Sweet bubble blundy 
+            <p><i class="fa fa-home fa-2x error" aria-hidden="true"></i> Phonix <strong>USA</strong></p>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+	
+  var activeDiv = 1;
+  showDiv(activeDiv); // show first one because all are hidden by default
+  var timer = setInterval(changeDiv, 4000);
+
+  function changeDiv() {
+    activeDiv++;
+    if (activeDiv == 4) {
+        activeDiv = 1;
+    }
+    showDiv(activeDiv);
+  }
+
+  function showDiv(num) {
+    $('span.display').hide(); // hide all
+    $('#div' + num).fadeIn(); // show active
+  }
+</script>
